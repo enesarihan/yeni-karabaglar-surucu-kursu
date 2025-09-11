@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yeni Karabağlar Sürücü Kursu Web Sitesi
 
-## Getting Started
+Bu proje, Karabağlar, İzmir'de faaliyet gösteren Yeni Karabağlar Sürücü Kursu için geliştirilmiş modern bir web sitesidir.
 
-First, run the development server:
+## 🚀 Özellikler
 
+- **Modern Tasarım**: Temiz ve profesyonel görünüm
+- **Responsive**: Tüm cihazlarda mükemmel görünüm
+- **SEO Optimizasyonu**: Arama motorları için optimize edilmiş
+- **Hızlı Performans**: Next.js 15 ve Turbopack ile
+- **Animasyonlar**: Framer Motion ile akıcı animasyonlar
+- **İletişim Formları**: Kolay iletişim için form sistemi
+- **Floating Contact**: Sabit iletişim butonu
+
+## 🛠 Teknolojiler
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animasyonlar**: Framer Motion
+- **İkonlar**: Heroicons
+- **TypeScript**: Tam tip güvenliği
+- **SEO**: Built-in Next.js SEO optimizasyonları
+
+## 📄 Sayfalar
+
+### Ana Sayfa (/)
+- Hero bölümü
+- Eğitmenler tanıtımı
+- Hakkımızda bilgileri
+- Öğrenci yorumları
+- İletişim formu
+
+### Ehliyet Süreçleri (/ehliyet-surecleri)
+- Gerekli belgeler
+- Sınav süreçleri
+- Ücret bilgileri
+- Sık sorulan sorular
+
+## 🎨 Renk Paleti
+
+- **Primary**: #006d77 (Koyu teal)
+- **Secondary**: #83c5be (Açık teal)
+- **Background**: #edf6f9 (Açık mavi-gri)
+
+## 🚀 Kurulum ve Çalıştırma
+
+### Gereksinimler
+- Node.js 18+ 
+- npm veya yarn
+
+### Kurulum
 ```bash
+# Bağımlılıkları yükle
+npm install
+
+# Development sunucusunu başlat
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build
+npm run build
+
+# Production sunucusunu başlat
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```bash
+npm run dev
+```
+Tarayıcıda [http://localhost:3000](http://localhost:3000) adresini açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Bileşenler
 
-## Learn More
+### Layout Bileşenleri
+- `Navbar`: Responsive navigasyon menüsü
+- `Footer`: Alt bilgi bölümü
+- `FloatingContact`: Sabit iletişim butonu
 
-To learn more about Next.js, take a look at the following resources:
+### Section Bileşenleri
+- `Hero`: Ana tanıtım bölümü
+- `Teachers`: Eğitmen profilleri
+- `About`: Hakkımızda bilgileri
+- `Reviews`: Öğrenci yorumları
+- `Contact`: İletişim formu ve bilgileri
+- `DriverLicenseProcess`: Ehliyet süreçleri detayları
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 SEO Optimizasyonları
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Meta tags optimizasyonu
+- Open Graph protokolü
+- JSON-LD structured data
+- Sitemap.xml otomatik oluşturma
+- Robots.txt konfigürasyonu
+- Performans optimizasyonları
 
-## Deploy on Vercel
+## 📞 İletişim Bilgileri
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Telefon**: +90 (232) 123 45 67
+- **E-posta**: info@yenikarabaglarsurucu.com
+- **Adres**: Karabağlar Mah. Atatürk Cad. No:123, Karabağlar, İzmir
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Lisans
+
+Bu proje Yeni Karabağlar Sürücü Kursu için özel olarak geliştirilmiştir.
+
+## 🤝 Katkıda Bulunma
+
+Proje geliştirme ve iyileştirmeler için önerilerinizi bekliyoruz.
+
+---
+
+**Geliştirici Notları:**
+- Tüm bileşenler TypeScript ile yazılmıştır
+- Responsive design mobile-first yaklaşımı ile uygulanmıştır
+- SEO en iyi uygulamaları takip edilmiştir
+- Performans optimizasyonları uygulanmıştır
+- Accessibility standartlarına uyulmuştur

@@ -1,0 +1,218 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { StarIcon, AcademicCapIcon, ClockIcon } from '@heroicons/react/24/solid';
+import { User, UserCheck, Briefcase } from 'lucide-react';
+
+const Teachers = () => {
+  const teachers = [
+    {
+      id: 1,
+      name: 'Mehmet Yılmaz',
+      title: 'Baş Eğitmen',
+      experience: '20 yıl',
+      speciality: 'Direksiyon Eğitimi',
+      rating: 4.9,
+      icon: UserCheck,
+      description: 'Sabırlı ve deneyimli yaklaşımıyla öğrencilerini başarıya ulaştırır.',
+      achievements: ['500+ Başarılı Öğrenci', 'Emniyet Müdürlüğü Sertifikası', 'Pedagoji Eğitimi']
+    },
+    {
+      id: 2,
+      name: 'Ayşe Kaya',
+      title: 'Trafik Eğitmeni',
+      experience: '15 yıl',
+      speciality: 'Trafik Kuralları',
+      rating: 4.8,
+      icon: User,
+      description: 'Trafik kurallarını etkili öğretim yöntemleriyle aktarır.',
+      achievements: ['300+ Başarılı Öğrenci', 'Trafik Eğitimi Sertifikası', 'İlk Yardım Eğitimi']
+    },
+    {
+      id: 3,
+      name: 'Ali Demir',
+      title: 'Sürüş Eğitmeni',
+      experience: '12 yıl',
+      speciality: 'Pratik Sürüş',
+      rating: 4.9,
+      icon: Briefcase,
+      description: 'Güvenli sürüş tekniklerini pratik uygulamalarla öğretir.',
+      achievements: ['400+ Başarılı Öğrenci', 'Savunma Sürüşü Sertifikası', 'Motor Eğitimi']
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
+  return (
+    <section id="teachers" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            Deneyimli Eğitmenlerimiz
+          </h2>
+          <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+            Lisanslı ve deneyimli eğitmenlerimiz, güvenli sürüş için gerekli 
+            tüm bilgi ve becerileri size aktaracak.
+          </p>
+        </motion.div>
+
+        {/* Teachers Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {teachers.map((teacher) => (
+            <motion.div
+              key={teacher.id}
+              variants={itemVariants}
+              className="group"
+            >
+              <div className="bg-gradient-to-br from-accent to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-secondary/20">
+                {/* Teacher Avatar */}
+                <div className="text-center mb-6">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <teacher.icon className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-1">
+                    {teacher.name}
+                  </h3>
+                  <p className="text-secondary font-medium mb-2">
+                    {teacher.title}
+                  </p>
+                  
+                  {/* Rating */}
+                  <div className="flex items-center justify-center space-x-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon
+                        key={i}
+                        className={`w-4 h-4 ${
+                          i < Math.floor(teacher.rating)
+                            ? 'text-yellow-400'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                    <span className="text-sm text-foreground/70 ml-2">
+                      {teacher.rating}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Teacher Info */}
+                <div className="space-y-4">
+                  {/* Experience & Specialty */}
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center space-x-2">
+                      <ClockIcon className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium text-foreground">
+                        {teacher.experience}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <AcademicCapIcon className="w-5 h-5 text-secondary" />
+                      <span className="text-sm font-medium text-foreground">
+                        {teacher.speciality}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-foreground/70 text-sm leading-relaxed">
+                    {teacher.description}
+                  </p>
+
+                  {/* Achievements */}
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-primary">
+                      Başarıları:
+                    </h4>
+                    <div className="space-y-1">
+                      {teacher.achievements.map((achievement, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span className="text-xs text-foreground/70">
+                            {achievement}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="mt-6 pt-6 border-t border-secondary/20">
+                  <div className="text-center">
+                    <span className="text-sm text-primary font-medium">
+                      Detaylı bilgi için iletişime geçin
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Eğitmenlerimizle Tanışmak İster Misiniz?
+            </h3>
+            <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+              Deneyimli eğitmenlerimiz hakkında daha fazla bilgi almak ve 
+              kişisel görüşme ayarlamak için bize ulaşın.
+            </p>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
+            >
+              Hemen İletişime Geç
+            </motion.a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Teachers;
