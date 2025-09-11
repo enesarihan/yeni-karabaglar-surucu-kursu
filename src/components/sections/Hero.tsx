@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { CheckCircleIcon, StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -286,24 +286,19 @@ const Hero = () => {
                 {heroImages.map((image, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 1.2, rotateY: 15 }}
+                    initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ 
                       opacity: index === currentSlide ? 1 : 0,
-                      scale: index === currentSlide ? 1 : 1.1,
-                      rotateY: index === currentSlide ? 0 : 15,
-                      x: index === currentSlide ? 0 : (index > currentSlide ? 100 : -100)
+                      scale: index === currentSlide ? 1 : 1.02
                     }}
-                    exit={{ opacity: 0, scale: 0.9, rotateY: -15 }}
                     transition={{ 
-                      duration: 1.2, 
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                      opacity: { duration: 0.8 },
-                      scale: { duration: 1.2 },
-                      rotateY: { duration: 1.0 },
-                      x: { duration: 0.8 }
+                      duration: 0.6,
+                      ease: [0.22, 0.61, 0.36, 1],
+                      opacity: { duration: 0.6 },
+                      scale: { duration: 0.6 }
                     }}
                     className="absolute inset-0"
-                    style={{ perspective: '1000px' }}
+                    style={{ willChange: 'transform, opacity' }}
                   >
                     <motion.div
                       animate={{
@@ -406,7 +401,7 @@ const Hero = () => {
                       
                       {/* Progress Bar */}
                       <motion.div
-                        className="mt-6 w-20 h-1 bg-white/30 rounded-full overflow-hidden"
+                        className="hidden md:block mt-6 w-20 h-1 bg-white/30 rounded-full overflow-hidden"
                         initial={{ width: 0 }}
                         animate={{ width: index === currentSlide ? 80 : 0 }}
                         transition={{ delay: 1, duration: 0.8 }}
@@ -423,7 +418,7 @@ const Hero = () => {
 
                     {/* Particle Effects */}
                     {index === currentSlide && (
-                      <div className="absolute inset-0 pointer-events-none">
+                      <div className="hidden md:block absolute inset-0 pointer-events-none">
                         {[...Array(6)].map((_, i) => (
                           <motion.div
                             key={i}
@@ -461,14 +456,6 @@ const Hero = () => {
                       boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
                     }}
                     whileTap={{ scale: 0.95 }}
-                    animate={{
-                      boxShadow: [
-                        "0 10px 30px rgba(255,255,255,0.1)",
-                        "0 15px 40px rgba(255,255,255,0.2)",
-                        "0 10px 30px rgba(255,255,255,0.1)"
-                      ]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
                   >
                     <motion.div
                       animate={{ x: [-2, 2, -2] }}
@@ -487,14 +474,6 @@ const Hero = () => {
                       boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
                     }}
                     whileTap={{ scale: 0.95 }}
-                    animate={{
-                      boxShadow: [
-                        "0 10px 30px rgba(255,255,255,0.1)",
-                        "0 15px 40px rgba(255,255,255,0.2)",
-                        "0 10px 30px rgba(255,255,255,0.1)"
-                      ]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
                   >
                     <motion.div
                       animate={{ x: [2, -2, 2] }}
@@ -570,7 +549,7 @@ const Hero = () => {
                       {/* Progress fill */}
                       {index === currentSlide && (
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/40"
+                          className="hidden md:block absolute inset-0 bg-gradient-to-r from-white/80 to-white/40"
                           initial={{ width: "0%" }}
                           animate={{ width: "100%" }}
                           transition={{ duration: 5, ease: "linear" }}
