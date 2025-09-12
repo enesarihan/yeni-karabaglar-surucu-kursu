@@ -9,6 +9,8 @@ import { blogPosts } from '@/app/blog/data';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Slider görsellerini bloglardan türet: en yeni 6 yazı
   const heroImages = blogPosts.slice(-6).map(p => ({
@@ -45,6 +47,27 @@ const Hero = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+    const deltaX = touchStartX - touchEndX;
+    const threshold = 40; // px
+    if (deltaX > threshold) {
+      nextSlide();
+    } else if (deltaX < -threshold) {
+      prevSlide();
+    }
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   return (
@@ -277,7 +300,11 @@ const Hero = () => {
             className="relative"
           >
             {/* Fashion Slider Container */}
-            <div className="relative bg-gradient-to-br from-slate-900/50 via-teal-900/30 to-slate-800/50 backdrop-blur-xl rounded-none shadow-2xl overflow-hidden hover:shadow-teal-500/20 hover:shadow-3xl transition-all duration-500">
+            <div className="relative bg-gradient-to-br from-slate-900/50 via-teal-900/30 to-slate-800/50 backdrop-blur-xl rounded-none shadow-2xl overflow-hidden hover:shadow-teal-500/20 hover:shadow-3xl transition-all duration-500"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div className="relative overflow-hidden h-[480px] md:h-[600px]">
                 {/* Image Slides */}
                 {heroImages.map((image, index) => (
@@ -449,7 +476,7 @@ const Hero = () => {
                 ))}
 
                 {/* Enhanced Navigation Controls */}
-                <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none z-10">
+                <div className="absolute inset-0 md:flex hidden items-center justify-between px-4 pointer-events-none z-10">
                   <motion.button
                     onClick={prevSlide}
                     className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"

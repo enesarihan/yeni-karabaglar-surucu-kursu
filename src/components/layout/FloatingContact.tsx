@@ -5,8 +5,9 @@ import { useState } from 'react';
 import {
   PhoneIcon,
   ChatBubbleLeftRightIcon,
-  XMarkIcon
+  XMarkIcon,
 } from '@heroicons/react/24/solid';
+import {FaWhatsapp} from 'react-icons/fa'
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const FloatingContact = () => {
       text: 'Hemen Ara'
     },
     {
-      icon: ChatBubbleLeftRightIcon,
+      icon: FaWhatsapp,
       label: 'WhatsApp',
       href: 'https://wa.me/902322644003?text=Merhaba, sürücü kursu hakkında bilgi almak istiyorum.',
       color: 'bg-green-600 hover:bg-green-700',
