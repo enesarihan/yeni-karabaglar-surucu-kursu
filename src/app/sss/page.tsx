@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Kayıt için gerekli belgeler nelerdir?',
-    a: 'Kimlik kartı fotokopisi, öğrenim belgesi, sürücü olur sağlık raporu, 3 adet biyometrik fotoğraf ve adli sicil kaydı.'
+    a: 'Kimlik kartı fotokopisi, öğrenim belgesi, sağlık raporu(sürücü olur), 3 adet biyometrik fotoğraf ve adli sicil kaydı.'
   },
   {
     q: 'Sağlık raporunu nereden alabilirim ve geçerlilik süresi nedir?',

@@ -23,10 +23,10 @@ const Hero = () => {
   }));
 
   const features = [
-    'Deneyimli ve lisanslı eğitmenler',
-    'Yüksek sınav başarı oranı',
-    'Esnek ders saatleri',
-    'Uygun fiyat garantisi'
+    '30+ yıllık deneyimli ve lisanslı eğitmenler',
+    'İzmir\'de en yüksek ehliyet sınav başarı oranı',
+    'B sınıfı ve A2 sınıfı ehliyet için 14 saatlik direksiyon dersi',
+    'Karabağlar\'da en uygun sürücü kursu fiyatları'
   ];
 
   useEffect(() => {
@@ -122,7 +122,7 @@ const Hero = () => {
             >
               <div className="w-2 h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
-                Yüksek Puanlı Sürücü Kursu • 4.9/5
+                İzmir'de En İyi Sürücü Kursu • 4.9/5
               </span>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
@@ -153,7 +153,7 @@ const Hero = () => {
                     backgroundClip: 'text',
                   }}
                 >
-                  İZMİR'İN
+                  KARABAĞLAR
                 </motion.h1>
                 <motion.h2 
                   className="text-2xl sm:text-3xl md:text-5xl font-light text-slate-700 tracking-wide leading-tight"
@@ -161,7 +161,7 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  EN İYİ SÜRÜCÜ KURSU
+                  SÜRÜCÜ KURSU
                 </motion.h2>
                 <motion.div
                   className="w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full"
@@ -177,10 +177,10 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                <span className="text-teal-600 font-semibold">Yeni Karabağlar</span>'da 15+ yıllık deneyimimizle, 
-                modern ve güvenli sürüş eğitimi. 
+                <span className="text-teal-600 font-semibold">İzmir Karabağlar Sürücü Kursu</span>'nda 30+ yıllık deneyimimizle, 
+                 B sınıfı ve A2 sınıfı ehliyet için güvenli ve başarı odaklı sürüş eğitimi. 
                 <span className="block mt-3 text-lg text-slate-500">
-                  Ehliyet almanın en profesyonel yolu.
+                  MTSK lisanslı deneyimli eğitmen kadromuzla İzmir'de en yüksek başarı oranı.
                 </span>
               </motion.p>
             </motion.div>
@@ -255,9 +255,9 @@ const Hero = () => {
               className="grid grid-cols-3 gap-8 pt-12 border-t border-slate-200"
             >
               {[
-                { number: '500+', label: 'Başarılı Öğrenci', suffix: '' },
-                { number: '15', label: 'Yıllık Deneyim', suffix: '+' },
-                { number: '95', label: 'Başarı Oranı', suffix: '%' }
+                { number: '15000+', label: 'Ehliyet Alan Öğrenci', suffix: '' },
+                { number: '30', label: 'Yıllık Deneyim', suffix: '+' },
+                { number: '99', label: 'Sınav Başarı Oranı', suffix: '%' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}

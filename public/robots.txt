@@ -2,5 +2,11 @@ User-agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
 
-Sitemap: https://yenikarabaglarsurucu.com/sitemap.xml
+# Sitemap
+Sitemap: https://yenikarabaglar.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

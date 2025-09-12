@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,17 +9,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yeni Karabağlar Sürücü Kursu | İzmir'de Ehliyet Kursu",
-  description: "Karabağlar'da güvenilir sürücü kursu. Deneyimli eğitmenler, uygun fiyatlar ve başarı garantisi ile ehliyet alın. Hemen iletişime geçin!",
-  keywords: "Karabağlar sürücü kursu, İzmir ehliyet kursu, sürücü kursu, ehliyet, sürüş dersleri",
+  title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu 2025",
+  description: "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler. Hemen kayıt ol!",
+  keywords: "izmir sürücü kursu, karabağlar sürücü kursu, ehliyet kursu izmir, b sınıfı ehliyet, a2 sınıfı ehliyet, direksiyon dersleri, sürücü kursu karabağlar, ehliyet sınavı, mtsk, sürücü belgesi, motorlu taşıt sürücü kursu, izmir ehliyet, karabağlar ehliyet, sürüş eğitimi, ehliyet fiyatları, ehliyet süreçleri, ehliyet sınıfları, sürücü kursu fiyatları, ehliyet randevu, e-sınav, sağlık raporu, biyometrik fotoğraf, adli sicil kaydı",
   authors: [{ name: "Yeni Karabağlar Sürücü Kursu" }],
-  robots: "index, follow",
+  creator: "Yeni Karabağlar Sürücü Kursu",
+  publisher: "Yeni Karabağlar Sürücü Kursu",
+  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  alternates: {
+    canonical: "https://yenikarabaglar.com",
+  },
   openGraph: {
-    title: "Yeni Karabağlar Sürücü Kursu | İzmir'de Ehliyet Kursu",
-    description: "Karabağlar'da güvenilir sürücü kursu. Deneyimli eğitmenler, uygun fiyatlar ve başarı garantisi ile ehliyet alın.",
+    title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu 2025",
+    description: "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler.",
     type: "website",
     locale: "tr_TR",
+    url: "https://yenikarabaglar.com",
+    siteName: "Yeni Karabağlar Sürücü Kursu",
+    images: [
+      {
+        url: "https://yenikarabaglar.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Yeni Karabağlar Sürücü Kursu Logo",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu",
+    description: "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi.",
+    images: ["https://yenikarabaglar.com/logo.png"],
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  category: "education",
 };
 
 export const viewport = {
@@ -33,6 +59,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
+      <head>
+        <StructuredData />
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>

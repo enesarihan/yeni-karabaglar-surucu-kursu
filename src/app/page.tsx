@@ -5,7 +5,6 @@ import MiniContact from '@/components/sections/MiniContact';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import ExternalLinks from '@/components/sections/ExternalLinks';
-import Advantages from '@/components/sections/Advantages';
 import Reviews from '@/components/sections/Reviews';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
@@ -25,7 +24,6 @@ export default function Home() {
         <DocumentsRoadmap />
         <Services />
         <ExternalLinks />        
-        <Advantages />
         <Contact />
       </main>
       <Footer />

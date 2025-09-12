@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {
   PhoneIcon,
   ChatBubbleLeftRightIcon,
-  XMarkIcon,
+  PlusIcon
 } from '@heroicons/react/24/solid';
 import {FaWhatsapp} from 'react-icons/fa'
 
@@ -73,7 +73,7 @@ const FloatingContact = () => {
         whileTap={{ scale: 0.9 }}
       >
         {isOpen ? (
-          <XMarkIcon className="w-6 h-6" />
+          <PlusIcon className="w-6 h-6" />
         ) : (
           <div className="relative">
             <ChatBubbleLeftRightIcon className="w-6 h-6" />

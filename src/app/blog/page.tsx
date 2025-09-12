@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { ArrowRight, FileText, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { blogPosts as postsData, categories as categoriesData } from './data';
+import { blogPosts as postsData } from './data';
 
 export default function BlogPage() {
   return (
@@ -32,25 +32,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-8 bg-white/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categoriesData.map((category, index) => (
-              <motion.button
-                key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center space-x-2 px-4 py-2 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:bg-primary hover:text-white"
-              >
-                <span className="font-medium">{category.name}</span>
-                <span className="text-sm opacity-70">({category.count})</span>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Blog Posts */}
       <section className="py-16">

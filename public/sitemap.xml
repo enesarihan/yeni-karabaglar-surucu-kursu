@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yenikarabaglarsurucu.com/</loc>
-    <lastmod>2024-09-11</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://yenikarabaglar.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yenikarabaglarsurucu.com/ehliyet-surecleri</loc>
-    <lastmod>2024-09-11</lastmod>
+    <loc>https://yenikarabaglar.com/ehliyet-surecleri</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/ehliyet-siniflari</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/sss</loc>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yenikarabaglarsurucu.com/ehliyet-siniflari</loc>
-    <lastmod>2024-09-11</lastmod>
+    <loc>https://yenikarabaglar.com/blog</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/blog/ehliyet-alma-sureci</loc>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/blog/b-sinifi-ehliyet</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/blog/a2-sinifi-ehliyet</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/blog/trafik-kurallari</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yenikarabaglar.com/blog/surucu-kursu-fiyatlari</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

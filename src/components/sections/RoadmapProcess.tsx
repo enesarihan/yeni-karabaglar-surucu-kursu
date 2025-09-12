@@ -8,7 +8,6 @@ import {
   Car,
   CheckCircle,
   Clock,
-  MapPin,
   AlertCircle,
   ChevronRight,
   Calendar,
@@ -24,16 +23,15 @@ const RoadmapProcess = () => {
       title: 'Belge Hazırlığı',
       subtitle: 'Gerekli Evrakları Toplayın',
       icon: FileText,
-      duration: '1-2 Gün',
+     
       color: 'from-blue-500 to-blue-600',
       description: 'Ehliyet başvurusu için gerekli tüm belgeleri hazırlayın.',
       details: [
         'T.C. Kimlik Kartı (Asıl ve fotokopi)',
-        'Nüfus cüzdanı fotokopisi',
         'İkametgah belgesi (6 aydan yeni)',
-        'İlkokul diploması veya okuma yazma belgesi',
-        'Biyometrik fotoğraf (4 adet)',
-        'Askerlik durumu belgesi (Erkekler için)'
+        'Mezuniyet belgesi',
+        'Biyometrik fotoğraf (3 adet)',
+        'Adli sicil kaydı'
       ],
       tips: [
         'Belgelerin hepsinin güncel olduğundan emin olun',
@@ -46,15 +44,12 @@ const RoadmapProcess = () => {
       title: 'Sağlık Kontrolleri',
       subtitle: 'Sağlık ve Psikoteknik Raporu',
       icon: UserCheck,
-      duration: '1 Gün',
+     
       color: 'from-green-500 to-green-600',
       description: 'Sürücü belgesi için gerekli sağlık muayenelerini yaptırın.',
       details: [
-        'Devlet hastanesinden sağlık raporu',
-        'Yetkili kurumdan psikoteknik rapor',
-        'Göz doktoru muayenesi',
-        'Genel sağlık değerlendirmesi',
-        'Refleks ve koordinasyon testleri'
+        'Yetkili hastaneden sağlık raporu(sürücü olur)',
+
       ],
       tips: [
         'Randevu alarak gidip bekleme süresini azaltın',
@@ -67,7 +62,7 @@ const RoadmapProcess = () => {
       title: 'Kursa Kayıt',
       subtitle: 'Sürücü Kursuna Başvuru',
       icon: BookOpen,
-      duration: '1 Gün',
+   
       color: 'from-purple-500 to-purple-600',
       description: 'Seçtiğiniz sürücü kursuna kayıt olun ve eğitime başlayın.',
       details: [
@@ -88,7 +83,7 @@ const RoadmapProcess = () => {
       title: 'Teorik Eğitim',
       subtitle: 'Trafik Kuralları Dersleri',
       icon: BookOpen,
-      duration: '2-3 Hafta',
+     
       color: 'from-orange-500 to-orange-600',
       description: 'Trafik kuralları ve işaretleri hakkında teorik eğitim alın.',
       details: [
@@ -110,7 +105,7 @@ const RoadmapProcess = () => {
       title: 'Teorik Sınav',
       subtitle: 'Bilgisayarlı Test Sınavı',
       icon: CheckCircle,
-      duration: '1 Gün',
+     
       color: 'from-red-500 to-red-600',
       description: 'Emniyet Müdürlüğü\'nde teorik sınavınıza girin.',
       details: [
@@ -131,7 +126,7 @@ const RoadmapProcess = () => {
       title: 'Pratik Eğitim',
       subtitle: 'Direksiyon Dersleri',
       icon: Car,
-      duration: '2-4 Hafta',
+     
       color: 'from-teal-500 to-teal-600',
       description: 'Eğitmenle birlikte araç kullanmayı öğrenin.',
       details: [
@@ -153,7 +148,7 @@ const RoadmapProcess = () => {
       title: 'Pratik Sınav',
       subtitle: 'Direksiyon Sınavı',
       icon: Car,
-      duration: '1 Gün',
+      
       color: 'from-indigo-500 to-indigo-600',
       description: 'Sınav memuru eşliğinde direksiyon sınavınıza girin.',
       details: [
@@ -174,7 +169,7 @@ const RoadmapProcess = () => {
       title: 'Ehliyet Teslimi',
       subtitle: 'Sürücü Belgenizi Alın',
       icon: CheckCircle,
-      duration: '1-7 Gün',
+     
       color: 'from-green-600 to-green-700',
       description: 'Başarılı olduktan sonra ehliyetinizi teslim alın.',
       details: [
@@ -276,7 +271,7 @@ const RoadmapProcess = () => {
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-500">
                         <Clock className="w-4 h-4" />
-                        <span>{step.duration}</span>
+                       
                       </div>
                     </div>
 
@@ -356,32 +351,7 @@ const RoadmapProcess = () => {
           </div>
         </motion.div>
 
-        {/* Quick Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {[
-            { number: '8', label: 'Adım', icon: MapPin },
-            { number: '4-8', label: 'Hafta Süre', icon: Clock },
-            { number: '%95', label: 'Başarı Oranı', icon: CheckCircle },
-            { number: '500+', label: 'Mezun Öğrenci', icon: Users }
-          ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
-                <stat.icon className="w-6 h-6 text-teal-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-gray-600 font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
+       
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { StarIcon, AcademicCapIcon, ClockIcon } from '@heroicons/react/24/solid';
+import { AcademicCapIcon, ClockIcon } from '@heroicons/react/24/solid';
 import { User, UserCheck, Briefcase } from 'lucide-react';
 
 const Teachers = () => {
@@ -12,7 +12,6 @@ const Teachers = () => {
       title: 'Baş Eğitmen',
       experience: '20 yıl',
       speciality: 'Direksiyon Eğitimi',
-      rating: 4.9,
       icon: UserCheck,
       description: 'Sabırlı ve deneyimli yaklaşımıyla öğrencilerini başarıya ulaştırır.',
       achievements: ['500+ Başarılı Öğrenci', 'Emniyet Müdürlüğü Sertifikası', 'Pedagoji Eğitimi']
@@ -23,7 +22,6 @@ const Teachers = () => {
       title: 'Trafik Eğitmeni',
       experience: '15 yıl',
       speciality: 'Trafik Kuralları',
-      rating: 4.8,
       icon: User,
       description: 'Trafik kurallarını etkili öğretim yöntemleriyle aktarır.',
       achievements: ['300+ Başarılı Öğrenci', 'Trafik Eğitimi Sertifikası', 'İlk Yardım Eğitimi']
@@ -34,7 +32,6 @@ const Teachers = () => {
       title: 'Sürüş Eğitmeni',
       experience: '12 yıl',
       speciality: 'Pratik Sürüş',
-      rating: 4.9,
       icon: Briefcase,
       description: 'Güvenli sürüş tekniklerini pratik uygulamalarla öğretir.',
       achievements: ['400+ Başarılı Öğrenci', 'Savunma Sürüşü Sertifikası', 'Motor Eğitimi']
@@ -108,23 +105,6 @@ const Teachers = () => {
                   <p className="text-secondary font-medium mb-2">
                     {teacher.title}
                   </p>
-                  
-                  {/* Rating */}
-                  <div className="flex items-center justify-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        className={`w-4 h-4 ${
-                          i < Math.floor(teacher.rating)
-                            ? 'text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                    <span className="text-sm text-foreground/70 ml-2">
-                      {teacher.rating}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Teacher Info */}

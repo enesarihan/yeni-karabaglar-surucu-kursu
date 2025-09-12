@@ -17,58 +17,58 @@ const About = () => {
   const features = [
     {
       icon: ShieldCheckIcon,
-      title: 'Güvenilir Eğitim',
-      description: 'Emniyet Müdürlüğü onaylı programlarla güvenli sürüş eğitimi veriyoruz.',
+      title: 'MTSK Lisanslı Eğitim',
+      description: 'Motorlu Taşıt Sürücü Kursu lisansı ile resmi ehliyet eğitimi veriyoruz.',
       color: 'text-green-500'
     },
     {
       icon: AcademicCapIcon,
-      title: 'Deneyimli Kadro',
-      description: 'Alanında uzman, lisanslı eğitmenlerle kaliteli eğitim garantisi.',
+      title: '30+ Yıllık Deneyimli Kadro',
+      description: 'İzmir\'de en deneyimli, MTSK lisanslı eğitmenlerle kaliteli sürücü kursu eğitimi.',
       color: 'text-blue-500'
     },
     {
       icon: ClockIcon,
-      title: 'Esnek Saatler',
-      description: 'Size uygun saatlerde ders programı düzenleyebiliyoruz.',
+      title: 'Esnek Ders Saatleri',
+      description: 'B sınıfı ve A2 sınıfı ehliyet için size uygun saatlerde direksiyon dersleri.',
       color: 'text-purple-500'
     },
     {
       icon: CurrencyDollarIcon,
-      title: 'Uygun Fiyat',
-      description: 'Kaliteli eğitimi en uygun fiyatlarla sunuyoruz.',
+      title: 'Karabağlar\'da En Uygun Fiyat',
+      description: 'İzmir sürücü kursu fiyatları arasında en uygun ehliyet kursu ücretleri.',
       color: 'text-yellow-500'
     },
     {
       icon: TrophyIcon,
-      title: 'Yüksek Başarı',
-      description: '%95 sınav başarı oranıyla öğrencilerimizi hedefe ulaştırıyoruz.',
+      title: 'İzmir\'de En Yüksek Başarı',
+      description: '%99 ehliyet sınav başarı oranıyla Karabağlar\'da en başarılı sürücü kursu.',
       color: 'text-orange-500'
     },
     {
       icon: HeartIcon,
-      title: 'Sabırlı Yaklaşım',
+      title: 'Sabırlı ve Anlayışlı Yaklaşım',
       description: 'Her öğrenciye özel ilgi göstererek sabırla eğitim veriyoruz.',
       color: 'text-red-500'
     },
     {
       icon: TruckIcon,
-      title: 'Modern Araçlar',
-      description: 'Güncel ve bakımlı araçlarla güvenli eğitim ortamı sağlıyoruz.',
+      title: 'Modern Eğitim Araçları',
+      description: 'B sınıfı ve A2 sınıfı ehliyet için güncel ve bakımlı araçlarla güvenli eğitim.',
       color: 'text-indigo-500'
     },
     {
       icon: UserGroupIcon,
-      title: 'Kişisel Takip',
-      description: 'Her öğrencinin gelişimini yakından takip ediyor, destek oluyoruz.',
+      title: 'Birebir Takip ve Destek',
+      description: 'Her öğrencinin ehliyet sürecini yakından takip ediyor, başarıya ulaştırıyoruz.',
       color: 'text-pink-500'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Mezun Öğrenci', icon: GraduationCap },
-    { number: '15+', label: 'Yıllık Deneyim', icon: Calendar },
-    { number: '95%', label: 'Başarı Oranı', icon: Trophy },
+    { number: '15000+', label: 'Ehliyet Alan Öğrenci', icon: GraduationCap },
+    { number: '30+', label: 'Yıllık Deneyim', icon: Calendar },
+    { number: '%99', label: 'Sınav Başarı Oranı', icon: Trophy },
     { number: '24/7', label: 'Destek Hattı', icon: Phone }
   ];
 
@@ -105,11 +105,11 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Neden Bizi Seçmelisiniz?
+            İzmir'de Neden En İyi Sürücü Kursu?
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Karabağlar'da 15 yılı aşkın deneyimimizle, binlerce öğrenciye 
-            güvenli sürüş eğitimi verdik. İşte bizi özel kılan özellikler.
+            Karabağlar'da 30+ yıllık deneyimimizle, 15000+ öğrenciye 
+            B sınıfı ve A2 sınıfı ehliyet eğitimi verdik. İzmir'de en yüksek başarı oranına sahip sürücü kursu.
           </p>
         </motion.div>
 
