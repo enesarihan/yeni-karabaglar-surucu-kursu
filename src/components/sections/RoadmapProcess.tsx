@@ -221,7 +221,7 @@ const RoadmapProcess = () => {
             Ehliyet Alma Süreci
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ehliyet almak için izlemeniz gereken adımları roadmap şeklinde hazırladık. 
+            Ehliyet almak için izlemeniz gereken adımları bir yol haritası şeklinde hazırladık. 
             Her adımda ne yapmanız gerektiğini detaylıca öğrenin.
           </p>
         </motion.div>

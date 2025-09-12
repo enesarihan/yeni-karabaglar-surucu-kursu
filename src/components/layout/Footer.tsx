@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   PhoneIcon,
@@ -48,9 +49,16 @@ const Footer = () => {
               className="lg:col-span-2"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-primary font-bold text-xl">YK</span>
-                </div>
+                <Image
+                  src="/logo.png"
+                  alt="Yeni Karabağlar Sürücü Kursu Logosu"
+                  width={1080}
+                  height={1080}
+                  className="h-48 w-auto bg-white rounded-lg p-1"
+                  quality={100}
+                  sizes="(max-width: 1024px) 160px, 200px"
+                  priority
+                />
                 <div>
                   <h3 className="text-2xl font-bold">Yeni Karabağlar</h3>
                   <p className="text-white/80">Sürücü Kursu</p>

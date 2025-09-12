@@ -183,33 +183,6 @@ const Teachers = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Eğitmenlerimizle Tanışmak İster Misiniz?
-            </h3>
-            <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Deneyimli eğitmenlerimiz hakkında daha fazla bilgi almak ve 
-              kişisel görüşme ayarlamak için bize ulaşın.
-            </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
-            >
-              Hemen İletişime Geç
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

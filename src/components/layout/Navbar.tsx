@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Car, Users, MessageCircle, Home, Settings, Building2 } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Car, Users, MessageCircle, Home, Settings, Building2, CircleHelp, BookOpen } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,23 +74,25 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-28">
           
-          {/* Simple Logo */}
+          {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             <Link href="/" className="flex items-center">
-              <div>
-                <div className="font-bold text-xl text-gray-900">
-                  <span className="sm:hidden">Yeni Karabağlar</span>
-                  <span className="hidden sm:inline">Yeni Karabağlar Sürücü Kursu</span>
-                </div>
-                <div className="text-sm font-medium text-teal-600">
-                  İzmir'in En İyi Sürücü Kursu
-                </div>
-              </div>
+              <span className="sr-only">Yeni Karabağlar Sürücü Kursu</span>
+              <Image
+                src="/logo.png"
+                alt="Yeni Karabağlar Sürücü Kursu Logosu"
+                width={2048}
+                height={2048}
+                className="h-52 w-auto mt-2"
+                quality={100}
+                sizes="(max-width: 1024px) 160px, 200px"
+                priority
+              />
             </Link>
           </motion.div>
 
@@ -117,6 +120,8 @@ const Navbar = () => {
                 />
               </Link>
             </motion.div>
+            
+            
 
             {/* Kurumsal Dropdown */}
             <div 
@@ -267,6 +272,52 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
+            {/* S.S.S. - Ehliyet'ten sonra */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href="/sss"
+                className="relative flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 group"
+              >
+                <CircleHelp className="w-4 h-4" />
+                <span>S.S.S.</span>
+                <motion.div
+                  className="absolute bottom-1 left-4 right-4 h-0.5 bg-teal-600 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Link>
+            </motion.div>
+
+            {/* Blog */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href="/blog"
+                className="relative flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 group"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>Blog</span>
+                <motion.div
+                  className="absolute bottom-1 left-4 right-4 h-0.5 bg-teal-600 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Link>
+            </motion.div>
+
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -356,6 +407,38 @@ const Navbar = () => {
                       </motion.div>
                     ))}
                   </div>
+
+                  {/* S.S.S. - Ehliyet'ten sonra (mobil) */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: (navItems.length + ehliyetPages.length) * 0.1 }}
+                  >
+                    <Link
+                      href="/sss"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-xl transition-all duration-300 font-medium"
+                    >
+                      <CircleHelp className="w-5 h-5" />
+                      <span>S.S.S.</span>
+                    </Link>
+                  </motion.div>
+
+                  {/* Blog - S.S.S.'ten sonra (mobil) */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: (navItems.length + ehliyetPages.length + 1) * 0.1 }}
+                  >
+                    <Link
+                      href="/blog"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-xl transition-all duration-300 font-medium"
+                    >
+                      <BookOpen className="w-5 h-5" />
+                      <span>Blog</span>
+                    </Link>
+                  </motion.div>
 
                   {/* Kurumsal Pages */}
                   <div className="border-t border-gray-100 pt-4">

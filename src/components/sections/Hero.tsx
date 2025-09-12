@@ -4,41 +4,21 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { CheckCircleIcon, StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { blogPosts } from '@/app/blog/data';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const heroImages = [
-    {
-      src: "https://images.unsplash.com/photo-1630406144797-821be1f35d75?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Modern araç ile sürücü kursu eğitimi",
-      title: "Modern Araçlarla Eğitim",
-      subtitle: "Güvenli ve konforlu öğrenme deneyimi",
-      badge: "Yeni Teknoloji"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Direksiyon dersi alan öğrenci",
-      title: "Birebir Eğitim",
-      subtitle: "Deneyimli eğitmenlerle özel dersler",
-      badge: "Kişisel Eğitim"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Trafik işaretleri ve güvenli sürüş",
-      title: "Trafik Kuralları",
-      subtitle: "Kapsamlı teorik ve pratik eğitim",
-      badge: "Tam Kapsamlı"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Park etme dersi",
-      title: "Park Etme Teknikleri",
-      subtitle: "Her türlü park senaryosu için hazırlık",
-      badge: "Pratik Eğitim"
-    }
-  ];
+  // Slider görsellerini bloglardan türet: en yeni 6 yazı
+  const heroImages = blogPosts.slice(-6).map(p => ({
+    src: p.image,
+    alt: p.title,
+    title: p.title,
+    subtitle: p.excerpt,
+    badge: p.category,
+    href: `/blog/${p.id}`
+  }));
 
   const features = [
     'Deneyimli ve lisanslı eğitmenler',
@@ -68,20 +48,37 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden pt-12 pb-24 sm:pb-16">
       {/* Clean White Background with Subtle Elements */}
       <div className="absolute inset-0">
         {/* Subtle Geometric Shapes */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-2xl opacity-30"></div>
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-16 left-16 w-[28rem] h-[28rem] bg-gradient-to-br from-teal-400 to-cyan-400 rounded-full blur-[80px]"></div>
+          <div className="absolute bottom-16 right-16 w-[26rem] h-[26rem] bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full blur-[80px]"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-[70px] opacity-60"></div>
         </div>
         
         {/* Light Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 opacity-[0.08]">
           <div className="w-full h-full bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(180deg,#000_1px,transparent_1px)] bg-[size:100px_100px]"></div>
         </div>
+
+        {/* Soft top-to-bottom overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-100/70 via-transparent to-slate-300/70 pointer-events-none"></div>
+
+        {/* Diagonal subtle stripes */}
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
+          <div className="w-full h-full bg-[repeating-linear-gradient(135deg,rgba(0,0,0,0.6)_0,rgba(0,0,0,0.6)_1px,transparent_1px,transparent_16px)]"></div>
+        </div>
+
+        {/* Corner accents */}
+        <div className="pointer-events-none">
+          <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-primary/20 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-tl from-secondary/20 to-transparent"></div>
+        </div>
+
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_60%,rgba(0,0,0,0.08)_100%)] pointer-events-none"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
@@ -102,11 +99,11 @@ const Hero = () => {
             >
               <div className="w-2 h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
-                Premium Sürücü Kursu
+                Yüksek Puanlı Sürücü Kursu • 4.9/5
               </span>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-3 h-3 text-teal-500" />
+                  <StarIcon key={i} className="w-3 h-3 text-yellow-400" />
                 ))}
               </div>
             </motion.div>
@@ -281,7 +278,7 @@ const Hero = () => {
           >
             {/* Fashion Slider Container */}
             <div className="relative bg-gradient-to-br from-slate-900/50 via-teal-900/30 to-slate-800/50 backdrop-blur-xl rounded-none shadow-2xl overflow-hidden hover:shadow-teal-500/20 hover:shadow-3xl transition-all duration-500">
-              <div className="relative overflow-hidden h-[500px] md:h-[600px]">
+              <div className="relative overflow-hidden h-[480px] md:h-[600px]">
                 {/* Image Slides */}
                 {heroImages.map((image, index) => (
                   <motion.div
@@ -372,10 +369,10 @@ const Hero = () => {
                         stiffness: 100,
                         damping: 15
                       }}
-                      className="absolute bottom-8 left-8 right-8 text-white"
+                      className="absolute left-4 right-4 bottom-24 md:bottom-8 text-white z-20"
                     >
                       <motion.h3 
-                        className="text-3xl md:text-4xl font-black mb-4 leading-tight"
+                        className="text-2xl md:text-3xl font-extrabold mb-3 leading-tight"
                         animate={{
                           textShadow: [
                             "0 2px 10px rgba(0,0,0,0.8)",
@@ -388,7 +385,7 @@ const Hero = () => {
                         {image.title}
                       </motion.h3>
                       <motion.p 
-                        className="text-white/95 text-lg md:text-xl leading-relaxed max-w-md font-medium"
+                        className="text-white/90 text-base md:text-lg leading-relaxed max-w-md"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: index === currentSlide ? 1 : 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
@@ -398,16 +395,22 @@ const Hero = () => {
                       >
                         {image.subtitle}
                       </motion.p>
+
+                      <div className="mt-4">
+                        <Link href={image.href} className="inline-flex items-center px-4 py-2 bg-white/90 text-slate-900 rounded-md text-sm font-medium hover:bg-white transition-colors">
+                          Devamını Oku
+                        </Link>
+                      </div>
                       
                       {/* Progress Bar */}
                       <motion.div
-                        className="hidden md:block mt-6 w-20 h-1 bg-white/30 rounded-full overflow-hidden"
+                        className="hidden md:block mt-6 w-24 h-1.5 bg-gradient-to-r from-primary/60 to-secondary/60 rounded-full overflow-hidden"
                         initial={{ width: 0 }}
-                        animate={{ width: index === currentSlide ? 80 : 0 }}
+                        animate={{ width: index === currentSlide ? 96 : 0 }}
                         transition={{ delay: 1, duration: 0.8 }}
                       >
                         <motion.div
-                          className="h-full bg-gradient-to-r from-white to-blue-200 rounded-full"
+                          className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
                           animate={{
                             x: index === currentSlide ? ["-100%", "0%"] : "-100%"
                           }}
@@ -446,7 +449,7 @@ const Hero = () => {
                 ))}
 
                 {/* Enhanced Navigation Controls */}
-                <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none z-10">
                   <motion.button
                     onClick={prevSlide}
                     className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
@@ -485,15 +488,15 @@ const Hero = () => {
                 </div>
 
                 {/* Enhanced Progress Indicators */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                <div className="absolute bottom-3 md:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-4 z-10">
                   {heroImages.map((_, index) => (
                     <motion.button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`relative h-3 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
+                      className={`relative h-2.5 md:h-3 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
                         index === currentSlide 
-                          ? 'w-16 bg-white/20 shadow-2xl' 
-                          : 'w-10 bg-white/10 hover:bg-white/20'
+                          ? 'w-16 bg-primary/30 shadow-2xl' 
+                          : 'w-10 bg-primary/20 hover:bg-primary/30'
                       }`}
                       whileHover={{ 
                         scale: 1.1,
@@ -503,9 +506,9 @@ const Hero = () => {
                       animate={{
                         boxShadow: index === currentSlide 
                           ? [
-                              "0 4px 15px rgba(59, 130, 246, 0.4)",
-                              "0 8px 25px rgba(59, 130, 246, 0.6)",
-                              "0 4px 15px rgba(59, 130, 246, 0.4)"
+                              "0 4px 15px rgba(13, 148, 136, 0.4)",
+                              "0 8px 25px rgba(45, 212, 191, 0.6)",
+                              "0 4px 15px rgba(13, 148, 136, 0.4)"
                             ]
                           : "0 2px 8px rgba(255,255,255,0.1)"
                       }}
@@ -516,7 +519,7 @@ const Hero = () => {
                     >
                       {/* Background gradient */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-white/30 to-white/10"
+                        className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/30"
                         animate={{
                           opacity: index === currentSlide ? [0.3, 0.6, 0.3] : 0.1
                         }}
@@ -526,7 +529,7 @@ const Hero = () => {
                       {/* Active indicator */}
                       {index === currentSlide && (
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-primary via-blue-500 to-indigo-600"
+                          className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary"
                           layoutId="activeSlideIndicator"
                           transition={{ 
                             type: "spring", 
@@ -536,10 +539,7 @@ const Hero = () => {
                           }}
                           animate={{
                             background: [
-                              "linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)",
-                              "linear-gradient(90deg, #6366f1, #8b5cf6, #3b82f6)",
-                              "linear-gradient(90deg, #8b5cf6, #3b82f6, #6366f1)",
-                              "linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)"
+                              "linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to))"
                             ],
                             transition: { duration: 4, repeat: Infinity }
                           }}

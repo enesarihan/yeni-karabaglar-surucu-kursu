@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { StarIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
-import { User, UserCheck, Users, Briefcase } from 'lucide-react';
+// Avatar olarak isim baş harfleri kullanılacak; ekstra ikonlara gerek yok
 
 const Reviews = () => {
   const [currentReview, setCurrentReview] = useState(0);
@@ -11,63 +11,103 @@ const Reviews = () => {
   const reviews = [
     {
       id: 1,
-      name: 'Elif Yılmaz',
-      age: 22,
-      icon: User,
+      name: 'Aziz',
+      age: 27,
       rating: 5,
-      text: 'Yeni Karabağlar Sürücü Kursu\'nda aldığım eğitim mükemmeldi. Mehmet hocam çok sabırlı ve anlayışlıydı. İlk seferde sınavı geçtim!',
+      text: 'Kesinlikle öneriyorum; sürecin başından sonuna kadar çok ilgililerdi. Özellikle Ali hocama teşekkür ederim. Sıfırdan araba sürmeyi öğrendim ve ilk sınavda geçtim. 🙂',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-08-15'
+      date: '2025-08-10'
     },
     {
       id: 2,
-      name: 'Ahmet Demir',
-      age: 28,
-      icon: UserCheck,
+      name: 'Gonca Yavaş',
+      age: 29,
       rating: 5,
-      text: 'Çok profesyonel bir ekip. Araçlar temiz ve bakımlı, eğitmenler deneyimli. Herkese tavsiye ederim.',
+      text: 'Ali hocama çok teşekkür ediyorum. Sıcak kanlı yaklaşımı, hatalarımda yapıcı ve anlayışlı şekilde yardımcı olması, samimiyetiyle gerçekten 5 yıldızı hak ediyor. Başarılarının devamını diliyorum.',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-07-22'
+      date: '2025-02-01'
     },
     {
       id: 3,
-      name: 'Zeynep Kaya',
-      age: 25,
-      icon: Users,
+      name: 'Berfin Dağ',
+      age: 26,
       rating: 5,
-      text: 'Ayşe hocamın trafik kuralları dersleri çok faydalıydı. Teorik sınavı rahatça geçtim. Teşekkürler!',
+      text: 'Başvuru yapmadan önce yorumları inceleyip geldim. Hayatımda hiç araç kullanmadığım için çok heyecanlıydım; Ali hocamın sakin ve sabırlı tavırlarıyla bu heyecanımı yendim. Derslerimiz keyifliydi, zaman nasıl geçti anlamadım. Ali hocam ilk seferde geçeceğime hep inandırdı ve bugün direksiyon sınavımı tekte geçtim. Başta Ali hocam olmak üzere emeği geçen herkese teşekkür eder, şiddetle tavsiye ederim.',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-09-01'
+      date: '2025-05-15'
     },
     {
       id: 4,
-      name: 'Mustafa Özkan',
-      age: 35,
-      icon: Briefcase,
+      name: 'Alperen Okumuş',
+      age: 24,
       rating: 5,
-      text: 'İş saatlerim nedeniyle esnek ders programına ihtiyacım vardı. Bu konuda çok yardımcı oldular.',
+      text: 'Yazılı sınavdan direksiyon sınavına kadar her aşamada ilgilendiler. Direksiyon hocam Ali hocama ayrıca teşekkür ederim. Ehliyet almak için kesinlikle doğru adres.',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-06-10'
+      date: '2025-04-01'
     },
     {
       id: 5,
-      name: 'Fatma Şen',
-      age: 30,
-      icon: User,
+      name: 'Melek İsa Altahle',
+      age: 23,
       rating: 5,
-      text: 'Ali hocayla aldığım direksiyon dersleri harika geçti. Güvenli sürüş tekniklerini çok iyi öğretti.',
+      text: 'Kurumdan ileri derecede memnunum. Bugün son dersimdi; pazar günü sınavım var. Bu süreci Serpil hocam ve Nüket hocam sayesinde çok keyifli ve verimli geçirdim. Destekleriniz için teşekkür ederim. Önce eğitim, ama Serpil hocamla kurduğumuz gönül bağı da benim için çok değerli.',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-08-28'
+      date: '2025-05-20'
     },
     {
       id: 6,
-      name: 'Oğuz Çelik',
-      age: 24,
-      icon: UserCheck,
+      name: 'Gonca Yavaş',
+      age: 29,
       rating: 5,
-      text: 'Fiyatlar çok uygun ve kalite mükemmel. Arkadaşlarıma da tavsiye ettim, onlar da çok memnun kaldı.',
+      text: 'Yazılı ve direksiyon dersleri için doğru adres. Güler yüzlü ekip ve anlayışlı hocalar... Serpil hocam sayesinde direksiyon sınavını tek seferde geçtim. İyi ki varsınız, sevgiler. 🚘',
       course: 'B Sınıfı Ehliyet',
-      date: '2024-07-05'
+      date: '2024-12-01'
+    },
+    // Yeni eklenen yorumlar
+    {
+      id: 7,
+      name: 'Sümeyye Akkuş',
+      age: 22,
+      rating: 5,
+      text: 'Yeni Karabağlar Sürücü Kursu\'na çok teşekkür ederim; yazılı ve direksiyon sınavını tek seferde geçtim. Değerli Serpil hocama ayrıca teşekkür ederim; emeği, sabrı ve güler yüzüyle hayran bıraktı. Gözünüz kapalı Serpil hocaya güvenebilirsiniz. ❤️💪',
+      course: 'B Sınıfı Ehliyet',
+      date: '2025-03-01'
+    },
+    {
+      id: 8,
+      name: 'Fırat Güven',
+      age: 31,
+      rating: 5,
+      text: 'Yazılı derslerini veren hocalara çok teşekkür ederim; verdikleri bilgiler çok aydınlatıcı ve yararlıydı, yazılıyı tekte geçtim. Özellikle direksiyon dersi veren Ali hocam sabrı ve azmiyle harika bir insandır; dersler sayesinde direksiyon sınavını da tekte geçtim. Ehliyet almak istiyorsanız doğru adres: Yeni Karabağlar Sürücü Kursu. 😊🙏',
+      course: 'B Sınıfı Ehliyet',
+      date: '2025-02-10'
+    },
+    {
+      id: 9,
+      name: 'Ahmet Bayezid Cebeci',
+      age: 27,
+      rating: 5,
+      text: 'Hem yazılı hem de direksiyon sınavını ilk seferde geçmek istiyorsanız gönül rahatlığıyla tercih edebilirsiniz. Ali hocam sakin ve hoşgörülü yaklaşımıyla hataları tek tek açıklıyor; sadece sınavı geçmeyi değil, gerçekten araba kullanmayı öğretiyor.',
+      course: 'B Sınıfı Ehliyet',
+      date: '2024-11-01'
+    },
+    {
+      id: 10,
+      name: 'Nehir Erbaş',
+      age: 21,
+      rating: 5,
+      text: 'Ali hocama çok teşekkür ediyorum; ilgisi, sabrı ve sakinliğiyle derslerimiz çok güzel geçti. Kesinlikle öğrenmek isteyen herkes Ali hocayla tanışmalı.',
+      course: 'B Sınıfı Ehliyet',
+      date: '2025-06-01'
+    },
+    {
+      id: 11,
+      name: 'Berna Ertürk',
+      age: 28,
+      rating: 5,
+      text: 'Güzel bir deneyim, doğru bir tercih oldu. Bir şey öğrenecekseniz en büyük şansınız öğretmeninizdir. Sevgili Serpil hocam, iyi ki yollarımız kesişti. Öğrettiklerinize, sabrınıza ve azminize minnettarım. Başlamadan önce pes edebilirdim; buna asla izin vermediğiniz için teşekkür ederim. 💕🌸',
+      course: 'B Sınıfı Ehliyet',
+      date: '2024-10-01'
     }
   ];
 
@@ -135,10 +175,14 @@ const Reviews = () => {
             >
               {/* Avatar */}
               <div className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6">
-                {(() => {
-                  const IconComponent = reviews[currentReview].icon;
-                  return <IconComponent className="w-10 h-10 text-white" />;
-                })()}
+                <span className="text-white text-2xl font-bold">
+                  {reviews[currentReview].name
+                    .split(' ')
+                    .filter(Boolean)
+                    .slice(0, 2)
+                    .map((w) => w[0]?.toUpperCase())
+                    .join('')}
+                </span>
               </div>
 
               {/* Rating */}
