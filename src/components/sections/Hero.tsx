@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { Phone, MapPin } from 'lucide-react';
 import { blogPosts } from '@/app/blog/data';
 
 const Hero = () => {
@@ -25,7 +26,7 @@ const Hero = () => {
   const features = [
     '30+ yıllık deneyimli ve lisanslı eğitmenler',
     'İzmir\'de en yüksek ehliyet sınav başarı oranı',
-    'B sınıfı ve A2 sınıfı ehliyet için 14 saatlik direksiyon dersi',
+    '14 saatlik direksiyon dersi',
     'Karabağlar\'da en uygun sürücü kursu fiyatları'
   ];
 
@@ -178,7 +179,7 @@ const Hero = () => {
                 transition={{ delay: 0.8 }}
               >
                 <span className="text-teal-600 font-semibold">İzmir Karabağlar Sürücü Kursu</span>'nda 30+ yıllık deneyimimizle, 
-                 B sınıfı ve A2 sınıfı ehliyet için güvenli ve başarı odaklı sürüş eğitimi. 
+                ehliyet için güvenli ve başarı odaklı sürüş eğitimi. 
                 <span className="block mt-3 text-lg text-slate-500">
                   MTSK lisanslı deneyimli eğitmen kadromuzla İzmir'de en yüksek başarı oranı.
                 </span>
@@ -213,38 +214,76 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-6 pt-4"
+              className="space-y-6 pt-4"
             >
-              <Link
-                href="#contact"
-                className="group relative bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 text-white px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/30"
+              {/* Primary CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-6">
+                <Link
+                  href="#contact"
+                  className="group relative bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 text-white px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/30 flex-1 sm:flex-none"
+                >
+                  <span className="relative z-10 flex items-center justify-center space-x-3">
+                    <span>Şimdi Kayıt Ol</span>
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      →
+                    </motion.span>
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600"
+                    initial={{ x: '-100%' }}
+                    whileHover={{ x: '0%' }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </Link>
+                
+                <Link
+                  href="tel:+902322644003"
+                  className="group min-w-[265px] border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none"
+                >
+                  <span className="flex items-center justify-center space-x-3">
+                    <Phone className="w-5 h-5 text-blue-500" />
+                    <span>İletişim</span>
+                  </span>
+                </Link>
+              </div>
+
+              {/* Secondary CTA - Yol Tarifi */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="flex justify-center"
               >
-                <span className="relative z-10 flex items-center justify-center space-x-3">
-                  <span>Şimdi Kayıt Ol</span>
-                  <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600"
-                  initial={{ x: '-100%' }}
-                  whileHover={{ x: '0%' }}
-                  transition={{ duration: 0.5 }}
-                />
-              </Link>
-              
-              <Link
-                href="tel:+902322644003"
-                className="group border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm"
-              >
-                <span className="flex items-center justify-center space-x-3">
-                  <span>📞</span>
-                  <span>İletişim</span>
-                </span>
-              </Link>
+                <Link
+                  href="https://www.google.com/maps/dir//Kestelli+Park%C4%B1n%C4%B1n+Kar%C5%9F%C4%B1s%C4%B1,+G%C3%BClyaka,+3011.+Sk.+No:6%2FA,+35110+Karaba%C4%9Flar%2F%C4%B0zmir/@38.3907474,27.0404317,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14bbdf2f7ce592ab:0x70dc51c5b26bbdac!2m2!1d27.1228155!2d38.3907677?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative bg-gradient-to-r from-slate-100 to-slate-200 text-slate-700 px-8 py-4 font-medium text-base tracking-wide hover:from-slate-200 hover:to-slate-300 transition-all duration-300 shadow-lg hover:shadow-xl border border-slate-300/50 hover:border-teal-400/50"
+                >
+                  <span className="relative z-10 flex items-center justify-center space-x-3">
+                    <motion.div
+                      animate={{ rotate: [0, 5, -5, 0] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      <MapPin className="w-5 h-5 text-red-500" />
+                    </motion.div>
+                    <span className="group-hover:text-slate-800 transition-colors duration-300">Yol Tarifi Al</span>
+                    <motion.span
+                      animate={{ x: [0, 3, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                      className="text-teal-500 group-hover:text-teal-600 transition-colors duration-300"
+                    >
+                      →
+                    </motion.span>
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-teal-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Fashion Stats */}

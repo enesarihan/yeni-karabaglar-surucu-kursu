@@ -2,103 +2,102 @@
 
 import { motion } from 'framer-motion';
 import { 
-  BookOpen, 
   Car, 
   GraduationCap, 
   Clock, 
   Shield, 
   Users,
-  CheckCircle
+  CheckCircle,
+  Bike
 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'B Sınıfı Ehliyet Teorik Eğitimi',
-      description: 'İzmir\'de B sınıfı ehliyet için trafik kuralları, işaretler ve güvenli sürüş teknikleri hakkında kapsamlı teorik eğitim.',
+      title: 'B Sınıfı Ehliyet Paketi',
+      description: 'İzmir\'de trafiğe güvenle çıkmanız için gereken her şey bu pakette! Uzman eğitmenlerle güncel müfredata uygun teorik dersler ve birebir direksiyon eğitimleri sizi bekliyor.',
       features: [
-        'Güncel trafik kuralları ve mevzuat',
-        'İnteraktif ders materyalleri',
-        'E-sınav deneme testleri',
-        'MTSK lisanslı uzman eğitmenler'
+        'Milli Eğitim Bakanlığı onaylı teorik dersler',
+        'Birebir direksiyon eğitimi (16 ders saati)',
+        'Simülatör ile riskten uzak ilk sürüş deneyimi',
+        'Son model, klimalı ve konforlu eğitim araçları'
       ],
-      icon: BookOpen,
-      color: 'from-blue-500 to-blue-600',
-      duration: '4 Hafta'
+      icon: Car,
+      color: 'from-blue-500 to-blue-700',
+      duration: 'Yaklaşık 2 Ay'
     },
     {
       id: 2,
-      title: 'A2 Sınıfı Ehliyet Direksiyon Dersleri',
-      description: 'İzmir Karabağlar\'da A2 sınıfı ehliyet için deneyimli eğitmenlerimizle birebir pratik sürüş dersleri.',
+      title: 'A2 Sınıfı Motosiklet Ehliyeti',
+      description: 'Motosiklet tutkunları için özel olarak tasarlanmış eğitim programı. İzmir Karabağlar\'daki pistimizde temel hakimiyet ve şehir içi sürüş tekniklerini öğrenin.',
       features: [
-        'Birebir direksiyon eğitimi',
-        'Modern motosiklet filosu',
-        'Parkur ve şehir trafiği eğitimi',
-        'Güvenli sürüş teknikleri'
+        'Her seviyeye uygun başlangıç eğitimi',
+        'Birebir uygulamalı direksiyon dersleri (12 ders saati)',
+        'Güvenlik ekipmanları (kask, mont vb.) temini',
+        'Modern ve bakımlı eğitim motosikletleri'
       ],
-      icon: Car,
-      color: 'from-green-500 to-green-600',
-      duration: '6-8 Hafta'
+        icon: Bike, // Motosiklet için Bike ikonu kullanıyoruz
+      color: 'from-green-500 to-green-700',
+      duration: 'Yaklaşık 1.5 Ay'
     },
     {
       id: 3,
-      title: 'Ehliyet Sınav Hazırlığı',
-      description: 'İzmir ehliyet sınavlarına özel hazırlık programları, deneme sınavları ve başarı garantisi.',
+      title: 'İleri ve Güvenli Sürüş Teknikleri',
+      description: 'Ehliyetiniz var ancak trafiğe çıkmaktan çekiniyor musunuz? Veya sürüş becerilerinizi en üst seviyeye mi taşımak istiyorsunuz? Bu eğitim tam size göre.',
       features: [
-        'Teorik deneme sınavları',
-        'Pratik sınav simülasyonu',
-        'Sınav stratejileri',
-        'Bireysel değerlendirme'
+        'Defansif (savunmacı) sürüş stratejileri',
+        'Zorlu hava ve yol koşullarında araç kontrolü',
+        'Acil durum fren ve manevra çalışmaları',
+        'Park etme teknikleri (paralel, dikey, L park)'
       ],
-      icon: GraduationCap,
-      color: 'from-purple-500 to-purple-600',
-      duration: '2 Hafta'
+      icon: Shield,
+      color: 'from-red-500 to-red-700',
+      duration: 'Kişiye Özel'
     },
     {
       id: 4,
-      title: 'Esnek Ehliyet Ders Saatleri',
-      description: 'İzmir\'de iş ve okul hayatınıza uygun esnek ehliyet ders saatleri ve hafta sonu eğitim imkanı.',
+      title: 'Esnek Ders Programları',
+      description: 'Yoğun iş veya okul temponuza tam uyum sağlayan kişiselleştirilmiş ders planlaması. Ehliyet alma sürecinizi ertelemeyin, zamanı siz yönetin.',
       features: [
-        'Hafta içi ve hafta sonu dersler',
-        'Sabah-öğle-akşam seçenekleri',
-        'Bireysel ehliyet programı',
-        'Telafi direksiyon dersleri'
+        'Hafta içi ve hafta sonu ders imkanı',
+        'Sabah, öğle ve akşam seansları',
+        'Online teorik derslere katılma seçeneği',
+        'Kaçırdığınız dersler için telafi programı'
       ],
       icon: Clock,
-      color: 'from-orange-500 to-orange-600',
-      duration: 'Esnek'
+      color: 'from-orange-500 to-orange-700',
+      duration: 'Size Özel'
     },
     {
       id: 5,
-      title: 'Güvenli Sürüş Eğitimi',
-      description: 'İzmir trafiğinde savunma sürüşü teknikleri ve acil durum yönetimi eğitimi.',
+      title: 'Sınav Başarı Paketi',
+      description: 'Teorik e-sınav ve direksiyon sınavına %100 hazır olun. Sınav heyecanını yenmeniz ve ilk denemede başarılı olmanız için özel olarak tasarlandı.',
       features: [
-        'Savunma sürüşü teknikleri',
-        'Acil fren ve manevra teknikleri',
-        'Kötü hava koşullarında sürüş',
-        'Trafik risk yönetimi'
+        'Gerçek sınav formatında deneme e-sınavları',
+        'Direksiyon sınav parkuru ön hazırlık dersleri',
+        'Sınavda dikkat edilmesi gereken püf noktaları',
+        'Eksiklerinize yönelik birebir ek ders imkanı'
       ],
-      icon: Shield,
-      color: 'from-red-500 to-red-600',
-      duration: '1 Hafta'
+      icon: GraduationCap,
+      color: 'from-purple-500 to-purple-700',
+      duration: '1-2 Hafta'
     },
     {
       id: 6,
-      title: 'Kurumsal Ehliyet Eğitimleri',
-      description: 'İzmir\'de kurumsal ehliyet eğitimleri ve grup halinde özel sürücü kursu programları.',
+      title: 'Kurumsal Sürücü Eğitimleri',
+      description: 'Şirket personelinize yönelik özel filo ve grup eğitimleri. Hem çalışanlarınızın sürüş güvenliğini artırın hem de kurumsal avantajlardan yararlanın.',
       features: [
-        'Kurumsal ehliyet anlaşmaları',
-        'Grup sürücü kursu indirimleri',
-        'Özel ehliyet programları',
-        'Toplu kayıt avantajları'
+        'Şirketlere özel grup indirimleri',
+        'Personelinize özel esnek ders saatleri',
+        'Güvenli ve ekonomik sürüş seminerleri',
+        'Detaylı raporlama ve sertifikalandırma'
       ],
       icon: Users,
-      color: 'from-teal-500 to-teal-600',
-      duration: 'Özel'
+      color: 'from-teal-500 to-teal-700',
+      duration: 'Anlaşmaya Özel'
     }
   ];
-
 
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -112,11 +111,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            İzmir'de Ehliyet Hizmetlerimiz
+            İzmir'de Direksiyonun Başına Güvenle Geçin
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            B sınıfı ve A2 sınıfı ehliyet alma sürecinizde ihtiyacınız olan tüm hizmetleri 
-            İzmir'de en deneyimli ekibimizle sunuyoruz.
+            Hayalinizdeki ehliyete kavuşmanız için modern eğitim metotları, uzman kadro ve kişiye özel programlarımızla yanınızdayız. B ve A2 sınıfı ehliyetlerde başarıya giden en doğru adres.
           </p>
         </motion.div>
 
@@ -177,9 +175,7 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-
-       
-
+        
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
