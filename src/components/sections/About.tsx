@@ -42,7 +42,7 @@ const About = () => {
     {
       icon: TrophyIcon,
       title: 'İzmir\'de En Yüksek Başarı',
-      description: '%99 ehliyet sınav başarı oranıyla Karabağlar\'da en başarılı sürücü kursu.',
+      description: '%99 memnuniyet oranıyla Karabağlar\'da en başarılı sürücü kursu.',
       color: 'text-orange-500'
     },
     {
@@ -68,7 +68,7 @@ const About = () => {
   const stats = [
     { number: '15000+', label: 'Ehliyet Alan Öğrenci', icon: GraduationCap },
     { number: '30+', label: 'Yıllık Deneyim', icon: Calendar },
-    { number: '%99', label: 'Sınav Başarı Oranı', icon: Trophy },
+    { number: '%99', label: 'Memnuniyet Oranı', icon: Trophy },
     { number: '24/7', label: 'Destek Hattı', icon: Phone }
   ];
 

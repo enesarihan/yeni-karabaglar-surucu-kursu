@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Car, Users, MessageCircle, Home, Settings, Building2, CircleHelp, BookOpen } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Car,Map, Users, MessageCircle, Home, Settings, Building2, CircleHelp, BookOpen } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
       name: 'Ehliyet Süreçleri', 
       href: '/ehliyet-surecleri',
       description: 'Ehliyet alma süreçleri hakkında detaylı bilgi',
-      icon: Car
+      icon: Map
     },
     { 
       name: 'Ehliyet Sınıfları', 

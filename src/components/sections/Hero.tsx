@@ -25,7 +25,7 @@ const Hero = () => {
 
   const features = [
     '30+ yıllık deneyimli ve lisanslı eğitmenler',
-    'İzmir\'de en yüksek ehliyet sınav başarı oranı',
+    'İzmir\'de en yüksek memnuniyet oranı',
     '14 saatlik direksiyon dersi',
     'Karabağlar\'da en uygun sürücü kursu fiyatları'
   ];
@@ -296,7 +296,7 @@ const Hero = () => {
               {[
                 { number: '15000+', label: 'Ehliyet Alan Öğrenci', suffix: '' },
                 { number: '30', label: 'Yıllık Deneyim', suffix: '+' },
-                { number: '99', label: 'Sınav Başarı Oranı', suffix: '%' }
+                { number: '99', label: ' Oranı', suffix: '%' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -360,7 +360,7 @@ const Hero = () => {
                       opacity: { duration: 0.6 },
                       scale: { duration: 0.6 }
                     }}
-                    className="absolute inset-0"
+                    className={`absolute inset-0 ${index === currentSlide ? 'pointer-events-auto' : 'pointer-events-none'}`}
                     style={{ willChange: 'transform, opacity' }}
                   >
                     <motion.div
@@ -435,7 +435,7 @@ const Hero = () => {
                         stiffness: 100,
                         damping: 15
                       }}
-                      className="absolute left-4 right-4 bottom-24 md:bottom-8 text-white z-20"
+                      className="absolute left-4 right-4 bottom-32 md:bottom-16 text-white z-20 pointer-events-none"
                     >
                       <motion.h3 
                         className="text-2xl md:text-3xl font-extrabold mb-3 leading-tight"
@@ -462,27 +462,14 @@ const Hero = () => {
                         {image.subtitle}
                       </motion.p>
 
-                      <div className="mt-4">
-                        <Link href={image.href} className="inline-flex items-center px-4 py-2 bg-white/90 text-slate-900 rounded-md text-sm font-medium hover:bg-white transition-colors">
+                      <div className="mt-4 relative z-30">
+                        <Link 
+                          href={image.href} 
+                          className="relative z-30 inline-block px-6 py-4 bg-white/90 text-slate-900 rounded-md text-sm font-medium hover:bg-white transition-colors pointer-events-auto"
+                        >
                           Devamını Oku
                         </Link>
                       </div>
-                      
-                      {/* Progress Bar */}
-                      <motion.div
-                        className="hidden md:block mt-6 w-24 h-1.5 bg-gradient-to-r from-primary/60 to-secondary/60 rounded-full overflow-hidden"
-                        initial={{ width: 0 }}
-                        animate={{ width: index === currentSlide ? 96 : 0 }}
-                        transition={{ delay: 1, duration: 0.8 }}
-                      >
-                        <motion.div
-                          className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
-                          animate={{
-                            x: index === currentSlide ? ["-100%", "0%"] : "-100%"
-                          }}
-                          transition={{ delay: 1.2, duration: 4, ease: "linear" }}
-                        />
-                      </motion.div>
                     </motion.div>
 
                     {/* Particle Effects */}
@@ -554,15 +541,15 @@ const Hero = () => {
                 </div>
 
                 {/* Enhanced Progress Indicators */}
-                <div className="absolute bottom-3 md:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-4 z-10">
+                <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3 z-10">
                   {heroImages.map((_, index) => (
                     <motion.button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`relative h-2.5 md:h-3 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
+                      className={`relative h-1.5 md:h-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
                         index === currentSlide 
-                          ? 'w-16 bg-primary/30 shadow-2xl' 
-                          : 'w-10 bg-primary/20 hover:bg-primary/30'
+                          ? 'w-12 bg-primary/30 shadow-2xl' 
+                          : 'w-8 bg-primary/20 hover:bg-primary/30'
                       }`}
                       whileHover={{ 
                         scale: 1.1,
