@@ -296,7 +296,7 @@ const Hero = () => {
               {[
                 { number: '15000+', label: 'Ehliyet Alan Öğrenci', suffix: '' },
                 { number: '30', label: 'Yıllık Deneyim', suffix: '+' },
-                { number: '99', label: ' Oranı', suffix: '%' }
+                { number: '99', label: 'Memnuniyet Oranı', suffix: '%' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}

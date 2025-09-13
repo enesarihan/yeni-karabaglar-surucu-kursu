@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   PhoneIcon,
   ChatBubbleLeftRightIcon,
@@ -11,6 +11,15 @@ import {FaWhatsapp} from 'react-icons/fa'
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTooltip(false);
+    }, 10000); // 10 saniye sonra tooltip'i gizle
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const contactOptions = [
     {
@@ -89,7 +98,7 @@ const FloatingContact = () => {
 
       {/* Tooltip */}
       <AnimatePresence>
-        {!isOpen && (
+        {!isOpen && showTooltip && (
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
