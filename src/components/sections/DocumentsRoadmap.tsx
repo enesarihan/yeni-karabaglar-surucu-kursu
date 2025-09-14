@@ -1,15 +1,41 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { CheckCircle, FileText, IdCard, Image as ImageIcon, Stethoscope } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  FileText,
+  IdCard,
+  Image as ImageIcon,
+  Stethoscope,
+} from "lucide-react";
 
 const DocumentsRoadmap = () => {
   const steps = [
-    { icon: IdCard, title: 'Kimlik Kartı Fotokopisi', desc: 'T.C. kimlik kartınızın fotokopisi' },
-    { icon: FileText, title: 'Öğrenim Belgesi', desc: 'Diploma veya öğrenim durum belgesi' },
-    { icon: Stethoscope, title: 'Ehliyet Almak için Sağlık Raporu', desc: 'Yetkili kurumlardan sürücü olur raporu' },
-    { icon: ImageIcon, title: '3 Adet Biyometrik Fotoğraf', desc: 'Son 6 ay içinde çekilmiş' },
-    { icon: FileText, title: 'Adli Sicil Kaydı', desc: 'E-Devlet’ten alınmış güncel belge' }
+    {
+      icon: IdCard,
+      title: "Kimlik Kartı Fotokopisi",
+      desc: "T.C. kimlik kartınızın fotokopisi",
+    },
+    {
+      icon: FileText,
+      title: "Öğrenim Belgesi",
+      desc: "Diploma veya öğrenim durum belgesi",
+    },
+    {
+      icon: Stethoscope,
+      title: "Ehliyet Almak için Sağlık Raporu",
+      desc: "Yetkili kurumlardan sürücü olur raporu",
+    },
+    {
+      icon: ImageIcon,
+      title: "3 Adet Biyometrik Fotoğraf",
+      desc: "Son 6 ay içinde çekilmiş",
+    },
+    {
+      icon: FileText,
+      title: "Adli Sicil Kaydı",
+      desc: "E-Devlet’ten alınmış güncel belge",
+    },
   ];
 
   return (
@@ -23,10 +49,12 @@ const DocumentsRoadmap = () => {
           className="text-center mb-10"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-primary mb-3">
-            Gerekli Belgeler
+            Güncel Ehliyet Başvuru Evrakları (2025)
           </h3>
           <p className="text-foreground/70 max-w-2xl mx-auto">
-            Türkiye’de ehliyet başvurusu için temel belgeleri küçük bir yol haritasında özetledik.
+            Sürücü belgesi başvurunuzu sorunsuz bir şekilde tamamlamak üzere,
+            hazırlamanız gereken resmi evrakların güncel ve eksiksiz listesini
+            aşağıda bulabilirsiniz.
           </p>
         </motion.div>
 
@@ -40,7 +68,9 @@ const DocumentsRoadmap = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: index * 0.03 }}
-                className={`relative flex items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:items-center`}
+                className={`relative flex items-start ${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } md:items-center`}
               >
                 <div className="flex-shrink-0 relative md:mx-8">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center shadow-lg">
@@ -48,12 +78,20 @@ const DocumentsRoadmap = () => {
                   </div>
                 </div>
 
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:ml-0' : 'md:mr-0'}`}>
+                <div
+                  className={`flex-1 ${
+                    index % 2 === 0 ? "md:ml-0" : "md:mr-0"
+                  }`}
+                >
                   <div className="bg-white rounded-xl p-5 shadow-md border border-secondary/10">
                     <div className="flex items-start justify-between">
                       <div>
-                        <h4 className="text-lg font-semibold text-primary">{step.title}</h4>
-                        <p className="text-sm text-foreground/70 mt-1">{step.desc}</p>
+                        <h4 className="text-lg font-semibold text-primary">
+                          {step.title}
+                        </h4>
+                        <p className="text-sm text-foreground/70 mt-1">
+                          {step.desc}
+                        </p>
                       </div>
                       <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
                     </div>
@@ -69,5 +107,3 @@ const DocumentsRoadmap = () => {
 };
 
 export default DocumentsRoadmap;
-
-

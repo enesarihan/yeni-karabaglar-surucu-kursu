@@ -1,12 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-import { Phone, MapPin } from 'lucide-react';
-import { blogPosts } from '@/app/blog/data';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import {
+  StarIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/solid";
+import { Phone, MapPin } from "lucide-react";
+import { blogPosts } from "@/app/blog/data";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,20 +18,20 @@ const Hero = () => {
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Slider görsellerini bloglardan türet: en yeni 6 yazı
-  const heroImages = blogPosts.slice(-6).map(p => ({
+  const heroImages = blogPosts.slice(-6).map((p) => ({
     src: p.image,
     alt: p.title,
     title: p.title,
     subtitle: p.excerpt,
     badge: p.category,
-    href: `/blog/${p.id}`
+    href: `/blog/${p.id}`,
   }));
 
   const features = [
-    '30+ yıllık deneyimli ve lisanslı eğitmenler',
-    'İzmir\'de en yüksek memnuniyet oranı',
-    '14 saatlik direksiyon dersi',
-    'Karabağlar\'da en uygun sürücü kursu fiyatları'
+    "30+ yıllık deneyimli ve lisanslı eğitmenler",
+    "İzmir'de en yüksek memnuniyet oranı",
+    "14 saatlik direksiyon dersi",
+    "İzmir'de en uygun sürücü kursu fiyatları",
   ];
 
   useEffect(() => {
@@ -43,7 +47,9 @@ const Hero = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroImages.length) % heroImages.length
+    );
   };
 
   const goToSlide = (index: number) => {
@@ -81,7 +87,7 @@ const Hero = () => {
           <div className="absolute bottom-16 right-16 w-[26rem] h-[26rem] bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full blur-[80px]"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-[70px] opacity-60"></div>
         </div>
-        
+
         {/* Light Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.08]">
           <div className="w-full h-full bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(180deg,#000_1px,transparent_1px)] bg-[size:100px_100px]"></div>
@@ -123,7 +129,7 @@ const Hero = () => {
             >
               <div className="w-2 h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
-                İzmir'de En İyi Sürücü Kursu • 4.9/5
+                İzmir'in En İyi Sürücü Kursu • 4.9/5
               </span>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
@@ -140,23 +146,24 @@ const Hero = () => {
               className="space-y-8"
             >
               <div className="space-y-4">
-                <motion.h1 
+                <motion.h1
                   className="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tight pt-2"
                   animate={{
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
                   transition={{ duration: 8, repeat: Infinity }}
                   style={{
-                    background: 'linear-gradient(90deg, #1e293b, #22d3ee, #06b6d4, #1e293b)',
-                    backgroundSize: '200% 100%',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
+                    background:
+                      "linear-gradient(90deg, #1e293b, #22d3ee, #06b6d4, #1e293b)",
+                    backgroundSize: "200% 100%",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                   }}
                 >
-                  KARABAĞLAR
+                  YENİ KARABAĞLAR
                 </motion.h1>
-                <motion.h2 
+                <motion.h2
                   className="text-2xl sm:text-3xl md:text-5xl font-light text-slate-700 tracking-wide leading-tight"
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -171,17 +178,21 @@ const Hero = () => {
                   transition={{ delay: 0.7, duration: 1 }}
                 />
               </div>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                <span className="text-teal-600 font-semibold">İzmir Karabağlar Sürücü Kursu</span>'nda 30+ yıllık deneyimimizle, 
-                ehliyet için güvenli ve başarı odaklı sürüş eğitimi. 
+                <span className="text-teal-600 font-semibold">
+                  İzmir Karabağlar Sürücü Kursu
+                </span>
+                'nda 30+ yıllık deneyimimizle, ehliyet için güvenli ve başarı
+                odaklı sürüş eğitimi.
                 <span className="block mt-3 text-lg text-slate-500">
-                  MTSK lisanslı deneyimli eğitmen kadromuzla İzmir'de en yüksek başarı oranı.
+                  MTSK lisanslı deneyimli eğitmen kadromuzla İzmir'de en yüksek
+                  memnuniyet oranı.
                 </span>
               </motion.p>
             </motion.div>
@@ -194,8 +205,8 @@ const Hero = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
               {features.map((feature, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
@@ -233,12 +244,12 @@ const Hero = () => {
                   </span>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: '0%' }}
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
                     transition={{ duration: 0.5 }}
                   />
                 </Link>
-                
+
                 <Link
                   href="tel:+902322644003"
                   className="group min-w-[265px] border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none"
@@ -270,7 +281,9 @@ const Hero = () => {
                     >
                       <MapPin className="w-5 h-5 text-red-500" />
                     </motion.div>
-                    <span className="group-hover:text-slate-800 transition-colors duration-300">Yol Tarifi Al</span>
+                    <span className="group-hover:text-slate-800 transition-colors duration-300">
+                      Yol Tarifi Al
+                    </span>
                     <motion.span
                       animate={{ x: [0, 3, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
@@ -279,9 +292,7 @@ const Hero = () => {
                       →
                     </motion.span>
                   </span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-teal-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  />
+                  <motion.div className="absolute inset-0 bg-gradient-to-r from-teal-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
               </motion.div>
             </motion.div>
@@ -294,9 +305,9 @@ const Hero = () => {
               className="grid grid-cols-3 gap-8 pt-12 border-t border-slate-200"
             >
               {[
-                { number: '15000+', label: 'Ehliyet Alan Öğrenci', suffix: '' },
-                { number: '30', label: 'Yıllık Deneyim', suffix: '+' },
-                { number: '99', label: 'Memnuniyet Oranı', suffix: '%' }
+                { number: "15000+", label: "Ehliyet Alan Öğrenci", suffix: "" },
+                { number: "30", label: "Yıllık Deneyim", suffix: "+" },
+                { number: "99", label: "Memnuniyet Oranı", suffix: "%" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -305,18 +316,19 @@ const Hero = () => {
                   transition={{ delay: 1.2 + index * 0.2 }}
                   className="text-center group"
                 >
-                  <motion.div 
+                  <motion.div
                     className="text-4xl md:text-5xl font-thin tracking-wider text-slate-800 mb-2"
                     animate={{
                       textShadow: [
-                        '0 0 10px rgba(20, 184, 166, 0.3)',
-                        '0 0 20px rgba(20, 184, 166, 0.5)',
-                        '0 0 10px rgba(20, 184, 166, 0.3)'
-                      ]
+                        "0 0 10px rgba(20, 184, 166, 0.3)",
+                        "0 0 20px rgba(20, 184, 166, 0.5)",
+                        "0 0 10px rgba(20, 184, 166, 0.3)",
+                      ],
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
-                    {stat.number}<span className="text-teal-500">{stat.suffix}</span>
+                    {stat.number}
+                    <span className="text-teal-500">{stat.suffix}</span>
                   </motion.div>
                   <div className="text-xs font-light text-slate-500 uppercase tracking-widest">
                     {stat.label}
@@ -324,7 +336,11 @@ const Hero = () => {
                   <motion.div
                     className="w-8 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent mx-auto mt-2"
                     animate={{ opacity: [0.3, 1, 0.3] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: index * 0.5,
+                    }}
                   />
                 </motion.div>
               ))}
@@ -339,7 +355,8 @@ const Hero = () => {
             className="relative"
           >
             {/* Fashion Slider Container */}
-            <div className="relative bg-gradient-to-br from-slate-900/50 via-teal-900/30 to-slate-800/50 backdrop-blur-xl rounded-none shadow-2xl overflow-hidden hover:shadow-teal-500/20 hover:shadow-3xl transition-all duration-500"
+            <div
+              className="relative bg-gradient-to-br from-slate-900/50 via-teal-900/30 to-slate-800/50 backdrop-blur-xl rounded-none shadow-2xl overflow-hidden hover:shadow-teal-500/20 hover:shadow-3xl transition-all duration-500"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
@@ -350,27 +367,31 @@ const Hero = () => {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 1.05 }}
-                    animate={{ 
+                    animate={{
                       opacity: index === currentSlide ? 1 : 0,
-                      scale: index === currentSlide ? 1 : 1.02
+                      scale: index === currentSlide ? 1 : 1.02,
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 0.6,
                       ease: [0.22, 0.61, 0.36, 1],
                       opacity: { duration: 0.6 },
-                      scale: { duration: 0.6 }
+                      scale: { duration: 0.6 },
                     }}
-                    className={`absolute inset-0 ${index === currentSlide ? 'pointer-events-auto' : 'pointer-events-none'}`}
-                    style={{ willChange: 'transform, opacity' }}
+                    className={`absolute inset-0 ${
+                      index === currentSlide
+                        ? "pointer-events-auto"
+                        : "pointer-events-none"
+                    }`}
+                    style={{ willChange: "transform, opacity" }}
                   >
                     <motion.div
                       animate={{
-                        scale: index === currentSlide ? [1, 1.02, 1] : 1
+                        scale: index === currentSlide ? [1, 1.02, 1] : 1,
                       }}
                       transition={{
                         duration: 8,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                       className="w-full h-full"
                     >
@@ -384,87 +405,95 @@ const Hero = () => {
                         quality={90}
                       />
                     </motion.div>
-                    
+
                     {/* Enhanced Premium Overlay */}
-                    <motion.div 
+                    <motion.div
                       className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"
                       animate={{
-                        background: index === currentSlide 
-                          ? "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3), transparent)"
-                          : "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5), transparent)"
+                        background:
+                          index === currentSlide
+                            ? "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3), transparent)"
+                            : "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5), transparent)",
                       }}
                       transition={{ duration: 0.8 }}
                     />
-                    
+
                     {/* Animated Badge */}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, y: -30, scale: 0.8 }}
-                      animate={{ 
-                        opacity: index === currentSlide ? 1 : 0, 
+                      animate={{
+                        opacity: index === currentSlide ? 1 : 0,
                         y: index === currentSlide ? 0 : -30,
                         scale: index === currentSlide ? 1 : 0.8,
-                        rotate: index === currentSlide ? [0, 2, 0] : 0
+                        rotate: index === currentSlide ? [0, 2, 0] : 0,
                       }}
-                      transition={{ 
-                        delay: 0.4, 
+                      transition={{
+                        delay: 0.4,
                         duration: 0.8,
-                        rotate: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                        rotate: {
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
                       }}
                       className="absolute top-6 left-6"
                     >
-                      <motion.span 
+                      <motion.span
                         className="bg-gradient-to-r from-teal-600/80 to-cyan-600/80 backdrop-blur-xl text-white px-6 py-3 rounded-none text-xs font-light tracking-widest uppercase"
-                        whileHover={{ scale: 1.05, backgroundColor: "rgba(20, 184, 166, 0.9)" }}
+                        whileHover={{
+                          scale: 1.05,
+                          backgroundColor: "rgba(20, 184, 166, 0.9)",
+                        }}
                       >
                         {image.badge}
                       </motion.span>
                     </motion.div>
-                    
+
                     {/* Enhanced Content Overlay */}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, y: 50, x: -30 }}
-                      animate={{ 
-                        opacity: index === currentSlide ? 1 : 0, 
+                      animate={{
+                        opacity: index === currentSlide ? 1 : 0,
                         y: index === currentSlide ? 0 : 50,
-                        x: index === currentSlide ? 0 : -30
+                        x: index === currentSlide ? 0 : -30,
                       }}
-                      transition={{ 
-                        delay: 0.6, 
+                      transition={{
+                        delay: 0.6,
                         duration: 1.0,
                         type: "spring",
                         stiffness: 100,
-                        damping: 15
+                        damping: 15,
                       }}
                       className="absolute left-4 right-4 bottom-32 md:bottom-16 text-white z-20 pointer-events-none"
                     >
-                      <motion.h3 
+                      <motion.h3
                         className="text-2xl md:text-3xl font-extrabold mb-3 leading-tight"
                         animate={{
                           textShadow: [
                             "0 2px 10px rgba(0,0,0,0.8)",
                             "0 4px 20px rgba(0,0,0,0.9)",
-                            "0 2px 10px rgba(0,0,0,0.8)"
-                          ]
+                            "0 2px 10px rgba(0,0,0,0.8)",
+                          ],
                         }}
                         transition={{ duration: 4, repeat: Infinity }}
                       >
                         {image.title}
                       </motion.h3>
-                      <motion.p 
+                      <motion.p
                         className="text-white/90 text-base md:text-lg leading-relaxed max-w-md"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: index === currentSlide ? 1 : 0 }}
                         transition={{ delay: 0.8, duration: 0.6 }}
                         style={{
-                          textShadow: "0 2px 8px rgba(0,0,0,0.7)"
+                          textShadow: "0 2px 8px rgba(0,0,0,0.7)",
                         }}
                       >
                         {image.subtitle}
                       </motion.p>
 
                       <div className="mt-4 relative z-30">
-                        <Link 
-                          href={image.href} 
+                        <Link
+                          href={image.href}
                           className="relative z-30 inline-block px-6 py-4 bg-white/90 text-slate-900 rounded-md text-sm font-medium hover:bg-white transition-colors pointer-events-auto"
                         >
                           Devamını Oku
@@ -486,13 +515,13 @@ const Hero = () => {
                             animate={{
                               y: [-10, -30, -10],
                               opacity: [0, 1, 0],
-                              scale: [0.5, 1, 0.5]
+                              scale: [0.5, 1, 0.5],
                             }}
                             transition={{
                               duration: 3,
                               repeat: Infinity,
                               delay: i * 0.5,
-                              ease: "easeInOut"
+                              ease: "easeInOut",
                             }}
                           />
                         ))}
@@ -506,10 +535,10 @@ const Hero = () => {
                   <motion.button
                     onClick={prevSlide}
                     className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
-                    whileHover={{ 
-                      scale: 1.1, 
+                    whileHover={{
+                      scale: 1.1,
                       backgroundColor: "rgba(255,255,255,0.4)",
-                      boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+                      boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -520,14 +549,14 @@ const Hero = () => {
                       <ChevronLeftIcon className="w-8 h-8 text-white group-hover:scale-125 transition-transform duration-300" />
                     </motion.div>
                   </motion.button>
-                  
+
                   <motion.button
                     onClick={nextSlide}
                     className="w-16 h-16 bg-gradient-to-l from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
-                    whileHover={{ 
-                      scale: 1.1, 
+                    whileHover={{
+                      scale: 1.1,
                       backgroundColor: "rgba(255,255,255,0.4)",
-                      boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+                      boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -547,58 +576,60 @@ const Hero = () => {
                       key={index}
                       onClick={() => goToSlide(index)}
                       className={`relative h-1.5 md:h-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
-                        index === currentSlide 
-                          ? 'w-12 bg-primary/30 shadow-2xl' 
-                          : 'w-8 bg-primary/20 hover:bg-primary/30'
+                        index === currentSlide
+                          ? "w-12 bg-primary/30 shadow-2xl"
+                          : "w-8 bg-primary/20 hover:bg-primary/30"
                       }`}
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.1,
-                        boxShadow: "0 8px 25px rgba(255,255,255,0.3)"
+                        boxShadow: "0 8px 25px rgba(255,255,255,0.3)",
                       }}
                       whileTap={{ scale: 0.95 }}
                       animate={{
-                        boxShadow: index === currentSlide 
-                          ? [
-                              "0 4px 15px rgba(13, 148, 136, 0.4)",
-                              "0 8px 25px rgba(45, 212, 191, 0.6)",
-                              "0 4px 15px rgba(13, 148, 136, 0.4)"
-                            ]
-                          : "0 2px 8px rgba(255,255,255,0.1)"
+                        boxShadow:
+                          index === currentSlide
+                            ? [
+                                "0 4px 15px rgba(13, 148, 136, 0.4)",
+                                "0 8px 25px rgba(45, 212, 191, 0.6)",
+                                "0 4px 15px rgba(13, 148, 136, 0.4)",
+                              ]
+                            : "0 2px 8px rgba(255,255,255,0.1)",
                       }}
-                      transition={{ 
-                        duration: 2, 
-                        repeat: index === currentSlide ? Infinity : 0 
+                      transition={{
+                        duration: 2,
+                        repeat: index === currentSlide ? Infinity : 0,
                       }}
                     >
                       {/* Background gradient */}
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/30"
                         animate={{
-                          opacity: index === currentSlide ? [0.3, 0.6, 0.3] : 0.1
+                          opacity:
+                            index === currentSlide ? [0.3, 0.6, 0.3] : 0.1,
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
-                      
+
                       {/* Active indicator */}
                       {index === currentSlide && (
                         <motion.div
                           className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary"
                           layoutId="activeSlideIndicator"
-                          transition={{ 
-                            type: "spring", 
-                            stiffness: 400, 
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
                             damping: 30,
-                            duration: 0.6
+                            duration: 0.6,
                           }}
                           animate={{
                             background: [
-                              "linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to))"
+                              "linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to))",
                             ],
-                            transition: { duration: 4, repeat: Infinity }
+                            transition: { duration: 4, repeat: Infinity },
                           }}
                         />
                       )}
-                      
+
                       {/* Progress fill */}
                       {index === currentSlide && (
                         <motion.div
@@ -609,19 +640,19 @@ const Hero = () => {
                           key={currentSlide} // Reset animation when slide changes
                         />
                       )}
-                      
+
                       {/* Sparkle effect */}
                       {index === currentSlide && (
                         <motion.div
                           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-white"
                           animate={{
                             scale: [0, 1.5, 0],
-                            opacity: [0, 1, 0]
+                            opacity: [0, 1, 0],
                           }}
                           transition={{
                             duration: 1.5,
                             repeat: Infinity,
-                            delay: 0.5
+                            delay: 0.5,
                           }}
                         />
                       )}

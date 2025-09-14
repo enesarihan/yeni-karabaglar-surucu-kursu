@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   ShieldCheckIcon,
   AcademicCapIcon,
@@ -9,67 +9,83 @@ import {
   TrophyIcon,
   HeartIcon,
   TruckIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-import { GraduationCap, Calendar, Trophy, Phone, Target, Lightbulb, Handshake } from 'lucide-react';
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
+import {
+  GraduationCap,
+  Calendar,
+  Trophy,
+  Phone,
+  Target,
+  Lightbulb,
+  Handshake,
+} from "lucide-react";
 
 const About = () => {
   const features = [
     {
       icon: ShieldCheckIcon,
-      title: 'MTSK Lisanslı Eğitim',
-      description: 'Motorlu Taşıt Sürücü Kursu lisansı ile resmi ehliyet eğitimi veriyoruz.',
-      color: 'text-green-500'
+      title: "MTSK Lisanslı Eğitim",
+      description:
+        "Motorlu Taşıt Sürücü Kursu lisansı ile resmi ehliyet eğitimi veriyoruz.",
+      color: "text-green-500",
     },
     {
       icon: AcademicCapIcon,
-      title: '30+ Yıllık Deneyimli Kadro',
-      description: 'İzmir\'de en deneyimli, MTSK lisanslı eğitmenlerle kaliteli sürücü kursu eğitimi.',
-      color: 'text-blue-500'
+      title: "30+ Yıllık Deneyimli Kadro",
+      description:
+        "İzmir'de en deneyimli, MTSK lisanslı eğitmenlerle kaliteli sürücü kursu eğitimi.",
+      color: "text-blue-500",
     },
     {
       icon: ClockIcon,
-      title: 'Esnek Ders Saatleri',
-      description: 'B sınıfı ve A2 sınıfı ehliyet için size uygun saatlerde direksiyon dersleri.',
-      color: 'text-purple-500'
+      title: "Esnek Ders Saatleri",
+      description:
+        "B sınıfı ve A2 sınıfı ehliyet için size uygun saatlerde direksiyon dersleri.",
+      color: "text-purple-500",
     },
     {
       icon: CurrencyDollarIcon,
-      title: 'Karabağlar\'da En Uygun Fiyat',
-      description: 'İzmir sürücü kursu fiyatları arasında en uygun ehliyet kursu ücretleri.',
-      color: 'text-yellow-500'
+      title: "Karabağlar'da En Uygun Fiyat",
+      description:
+        "İzmir sürücü kursu fiyatları arasında en uygun ehliyet kursu ücretleri.",
+      color: "text-yellow-500",
     },
     {
       icon: TrophyIcon,
-      title: 'İzmir\'de En Yüksek Başarı',
-      description: '%99 memnuniyet oranıyla Karabağlar\'da en başarılı sürücü kursu.',
-      color: 'text-orange-500'
+      title: "İzmir'de En Yüksek Başarı",
+      description:
+        "%99 memnuniyet oranıyla Karabağlar'da en başarılı sürücü kursu.",
+      color: "text-orange-500",
     },
     {
       icon: HeartIcon,
-      title: 'Sabırlı ve Anlayışlı Yaklaşım',
-      description: 'Her öğrenciye özel ilgi göstererek sabırla eğitim veriyoruz.',
-      color: 'text-red-500'
+      title: "Sabırlı ve Anlayışlı Yaklaşım",
+      description:
+        "Her öğrenciye özel ilgi göstererek sabırla eğitim veriyoruz.",
+      color: "text-red-500",
     },
     {
       icon: TruckIcon,
-      title: 'Modern Eğitim Araçları',
-      description: 'B sınıfı ve A2 sınıfı ehliyet için güncel ve bakımlı araçlarla güvenli eğitim.',
-      color: 'text-indigo-500'
+      title: "Modern Eğitim Araçları",
+      description:
+        "B sınıfı ve A2 sınıfı ehliyet için güncel ve bakımlı araçlarla güvenli eğitim.",
+      color: "text-indigo-500",
     },
     {
       icon: UserGroupIcon,
-      title: 'Birebir Takip ve Destek',
-      description: 'Her öğrencinin ehliyet sürecini yakından takip ediyor, başarıya ulaştırıyoruz.',
-      color: 'text-pink-500'
-    }
+      title: "Birebir Takip ve Destek",
+      description:
+        "Her öğrencinin ehliyet sürecini yakından takip ediyor, başarıya ulaştırıyoruz.",
+      color: "text-pink-500",
+    },
   ];
 
   const stats = [
-    { number: '15000+', label: 'Ehliyet Alan Öğrenci', icon: GraduationCap },
-    { number: '30+', label: 'Yıllık Deneyim', icon: Calendar },
-    { number: '%99', label: 'Memnuniyet Oranı', icon: Trophy },
-    { number: '24/7', label: 'Destek Hattı', icon: Phone }
+    { number: "15000+", label: "Ehliyet Alan Öğrenci", icon: GraduationCap },
+    { number: "30+", label: "Yıllık Deneyim", icon: Calendar },
+    { number: "%99", label: "Memnuniyet Oranı", icon: Trophy },
+    { number: "24/7", label: "Destek Hattı", icon: Phone },
   ];
 
   const containerVariants = {
@@ -77,9 +93,9 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -88,13 +104,16 @@ const About = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-accent via-white to-secondary/10">
+    <section
+      id="about"
+      className="py-20 bg-gradient-to-br from-accent via-white to-secondary/10"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -105,11 +124,14 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            İzmir'de Neden En İyi Sürücü Kursu?
+            Rakamlarla Kanıtlanmış Başarı: İzmir'in En Köklü Sürücü Kursu
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Karabağlar'da 30+ yıllık deneyimimizle, 15000+ öğrenciye 
-            B sınıfı ve A2 sınıfı ehliyet eğitimi verdik. İzmir'de en yüksek başarı oranına sahip sürücü kursu.
+            Karabağlar'da 30 yılı aşkın süredir direksiyon başındayız. Bu
+            süreçte 15.000'den fazla kursiyerimizi B ve A2 sınıfı ehliyet
+            hayallerine kavuşturduk. İzmir'deki en yüksek memnuniyet oranımız,
+            tecrübemizin ve her öğrencimize gösterdiğimiz özel ilginin en net
+            kanıtıdır.
           </p>
         </motion.div>
 
@@ -151,13 +173,11 @@ const About = () => {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="group"
-            >
+            <motion.div key={index} variants={itemVariants} className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-secondary/10 h-full">
-                <div className={`${feature.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`${feature.color} mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <feature.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-lg font-bold text-primary mb-3">
@@ -179,15 +199,14 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Misyonumuz
-          </h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">Misyonumuz</h3>
           <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
-            Karabağlar ve çevresindeki tüm sürücü adaylarına, en kaliteli eğitimi 
-            en uygun koşullarda sunarak, trafikte güvenli ve bilinçli sürücüler 
-            yetiştirmektir. Her öğrencimizin başarısı, bizim en büyük gururumuzdur.
+            Karabağlar ve çevresindeki tüm sürücü adaylarına, en kaliteli
+            eğitimi en uygun koşullarda sunarak, trafikte güvenli ve bilinçli
+            sürücüler yetiştirmektir. Her öğrencimizin başarısı, bizim en büyük
+            gururumuzdur.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
