@@ -1,106 +1,105 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { 
-  Car, 
-  GraduationCap, 
-  Clock, 
-  Shield, 
+import { motion } from "framer-motion";
+import {
+  Car,
+  GraduationCap,
+  Clock,
+  Shield,
   Users,
   CheckCircle,
-  Bike
-} from 'lucide-react';
+  Bike,
+} from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'B Sınıfı Ehliyet Paketi',
-      description: 'İzmir\'de trafiğe güvenle çıkmanız için gereken her şey bu pakette! Uzman eğitmenlerle güncel müfredata uygun teorik dersler ve birebir direksiyon eğitimleri sizi bekliyor.',
+      title: "B Sınıfı Ehliyet Paketi",
+      description:
+        "İzmir'de trafiğe güvenle çıkmanız için gereken her şey bu pakette! Uzman eğitmenlerle güncel müfredata uygun teorik dersler ve birebir direksiyon eğitimleri sizi bekliyor.",
       features: [
-        'Milli Eğitim Bakanlığı onaylı teorik dersler',
-        'Birebir direksiyon eğitimi (16 ders saati)',
-        'Simülatör ile riskten uzak ilk sürüş deneyimi',
-        'Son model, klimalı ve konforlu eğitim araçları'
+        "Milli Eğitim Bakanlığı onaylı teorik dersler",
+        "Birebir direksiyon eğitimi (14 ders saati)",
+        "Son model, klimalı ve konforlu eğitim araçları",
       ],
       icon: Car,
-      color: 'from-blue-500 to-blue-700',
-      duration: 'Yaklaşık 2 Ay'
+      color: "from-blue-500 to-blue-700",
     },
     {
       id: 2,
-      title: 'A2 Sınıfı Motosiklet Ehliyeti',
-      description: 'Motosiklet tutkunları için özel olarak tasarlanmış eğitim programı. İzmir Karabağlar\'daki pistimizde temel hakimiyet ve şehir içi sürüş tekniklerini öğrenin.',
+      title: "A2 Sınıfı Motosiklet Ehliyeti",
+      description:
+        "Motosiklet tutkunları için özel olarak tasarlanmış eğitim programı. İzmir Karabağlar'daki pistimizde temel hakimiyet ve şehir içi sürüş tekniklerini öğrenin.",
       features: [
-        'Her seviyeye uygun başlangıç eğitimi',
-        'Birebir uygulamalı direksiyon dersleri (12 ders saati)',
-        'Güvenlik ekipmanları (kask, mont vb.) temini',
-        'Modern ve bakımlı eğitim motosikletleri'
+        "Her seviyeye uygun başlangıç eğitimi",
+        "Güvenlik ekipmanları (kask, mont vb.) temini",
+        "Modern ve bakımlı eğitim motosikletleri",
       ],
-        icon: Bike, // Motosiklet için Bike ikonu kullanıyoruz
-      color: 'from-green-500 to-green-700',
-      duration: 'Yaklaşık 1.5 Ay'
+      icon: Bike,
+      color: "from-green-500 to-green-700",
     },
     {
       id: 3,
-      title: 'İleri ve Güvenli Sürüş Teknikleri',
-      description: 'Ehliyetiniz var ancak trafiğe çıkmaktan çekiniyor musunuz? Veya sürüş becerilerinizi en üst seviyeye mi taşımak istiyorsunuz? Bu eğitim tam size göre.',
+      title: "İleri ve Güvenli Sürüş Teknikleri",
+      description:
+        "Ehliyetiniz var ancak trafiğe çıkmaktan çekiniyor musunuz? Veya sürüş becerilerinizi en üst seviyeye mi taşımak istiyorsunuz? Bu eğitim tam size göre.",
       features: [
-        'Defansif (savunmacı) sürüş stratejileri',
-        'Zorlu hava ve yol koşullarında araç kontrolü',
-        'Acil durum fren ve manevra çalışmaları',
-        'Park etme teknikleri (paralel, dikey, L park)'
+        "Zorlu hava ve yol koşullarında araç kontrolü",
+        "Acil durum fren ve manevra çalışmaları",
+        "Park etme teknikleri (paralel, dikey, L park)",
       ],
       icon: Shield,
-      color: 'from-red-500 to-red-700',
-      duration: 'Kişiye Özel'
+      color: "from-red-500 to-red-700",
     },
     {
       id: 4,
-      title: 'Esnek Ders Programları',
-      description: 'Yoğun iş veya okul temponuza tam uyum sağlayan kişiselleştirilmiş ders planlaması. Ehliyet alma sürecinizi ertelemeyin, zamanı siz yönetin.',
+      title: "Esnek Ders Programları",
+      description:
+        "Yoğun iş veya okul temponuza tam uyum sağlayan kişiselleştirilmiş ders planlaması. Ehliyet alma sürecinizi ertelemeyin, zamanı siz yönetin.",
       features: [
-        'Hafta içi ve hafta sonu ders imkanı',
-        'Sabah, öğle ve akşam seansları',
-        'Online teorik derslere katılma seçeneği',
-        'Kaçırdığınız dersler için telafi programı'
+        "Hafta içi ve cumartesi günleri ders imkanı",
+        "Sabah, öğle ve akşam seansları",
+        "Kaçırdığınız dersler için telafi programı",
       ],
       icon: Clock,
-      color: 'from-orange-500 to-orange-700',
-      duration: 'Size Özel'
+      color: "from-orange-500 to-orange-700",
     },
     {
       id: 5,
-      title: 'Sınav Başarı Paketi',
-      description: 'Teorik e-sınav ve direksiyon sınavına %100 hazır olun. Sınav heyecanını yenmeniz ve ilk denemede başarılı olmanız için özel olarak tasarlandı.',
+      title: "Sınav Başarı Paketi",
+      description:
+        "Teorik e-sınav ve direksiyon sınavına %100 hazır olun. Sınav heyecanını yenmeniz ve ilk denemede başarılı olmanız için özel olarak tasarlandı.",
       features: [
-        'Gerçek sınav formatında deneme e-sınavları',
-        'Direksiyon sınav parkuru ön hazırlık dersleri',
-        'Sınavda dikkat edilmesi gereken püf noktaları',
-        'Eksiklerinize yönelik birebir ek ders imkanı'
+        "Gerçek sınav formatında deneme e-sınavları",
+        "Direksiyon sınav parkuru ön hazırlık dersleri",
+        "Sınavda dikkat edilmesi gereken püf noktaları",
+        "Eksiklerinize yönelik birebir ek ders imkanı",
       ],
       icon: GraduationCap,
-      color: 'from-purple-500 to-purple-700',
-      duration: '1-2 Hafta'
+      color: "from-purple-500 to-purple-700",
     },
     {
       id: 6,
-      title: 'Kurumsal Sürücü Eğitimleri',
-      description: 'Şirket personelinize yönelik özel filo ve grup eğitimleri. Hem çalışanlarınızın sürüş güvenliğini artırın hem de kurumsal avantajlardan yararlanın.',
+      title: "Kurumsal Sürücü Eğitimleri",
+      description:
+        "Şirket personelinize yönelik özel filo ve grup eğitimleri. Hem çalışanlarınızın sürüş güvenliğini artırın hem de kurumsal avantajlardan yararlanın.",
       features: [
-        'Şirketlere özel grup indirimleri',
-        'Personelinize özel esnek ders saatleri',
-        'Güvenli ve ekonomik sürüş seminerleri',
-        'Detaylı raporlama ve sertifikalandırma'
+        "Şirketlere özel grup indirimleri",
+        "Personelinize özel esnek ders saatleri",
+        "Güvenli ve ekonomik sürüş seminerleri",
+        "Detaylı raporlama ve sertifikalandırma",
       ],
       icon: Users,
-      color: 'from-teal-500 to-teal-700',
-      duration: 'Anlaşmaya Özel'
-    }
+      color: "from-teal-500 to-teal-700",
+    },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section
+      id="services"
+      className="py-20 bg-gradient-to-br from-gray-50 to-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -111,10 +110,13 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            İzmir'de Direksiyonun Başına Güvenle Geçin
+            İzmir'de Ehliyet Almanın En Kolay Yolu: Yeni Karabağlar Sürücü Kursu
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Hayalinizdeki ehliyete kavuşmanız için modern eğitim metotları, uzman kadro ve kişiye özel programlarımızla yanınızdayız. B ve A2 sınıfı ehliyetlerde başarıya giden en doğru adres.
+            Direksiyon başına geçme korkunuza son veriyoruz! İzmir'deki modern
+            sürücü kursumuzda, sabırlı ve profesyonel kadromuzla B ve A2 sınıfı
+            ehliyet eğitimleri sunuyoruz. Kişiye özel ders programlarımızla
+            kendinize olan güveninizi artırın ve özgürlüğe ilk adımı atın.
           </p>
         </motion.div>
 
@@ -130,7 +132,9 @@ const Services = () => {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
             >
               {/* Service Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+              >
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
@@ -140,9 +144,6 @@ const Services = () => {
                   <h3 className="text-xl font-bold text-primary">
                     {service.title}
                   </h3>
-                  <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
-                    {service.duration}
-                  </span>
                 </div>
                 <p className="text-foreground/70 leading-relaxed">
                   {service.description}
@@ -152,9 +153,14 @@ const Services = () => {
               {/* Service Features */}
               <div className="space-y-3">
                 {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-3">
+                  <div
+                    key={featureIndex}
+                    className="flex items-center space-x-3"
+                  >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-foreground/80 text-sm">{feature}</span>
+                    <span className="text-foreground/80 text-sm">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -175,7 +181,7 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-        
+
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -189,8 +195,8 @@ const Services = () => {
               Hemen Başlayın!
             </h3>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Profesyonel eğitim kadromuz ve modern imkanlarımızla 
-              ehliyet alma sürecinizi kolaylaştırıyoruz.
+              Profesyonel eğitim kadromuz ve modern imkanlarımızla ehliyet alma
+              sürecinizi kolaylaştırıyoruz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

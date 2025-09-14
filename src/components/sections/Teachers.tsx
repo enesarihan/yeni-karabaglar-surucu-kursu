@@ -1,41 +1,54 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { AcademicCapIcon, ClockIcon } from '@heroicons/react/24/solid';
-import { User, UserCheck, Briefcase } from 'lucide-react';
+import { motion } from "framer-motion";
+import { AcademicCapIcon, ClockIcon } from "@heroicons/react/24/solid";
+import { User, UserCheck, Briefcase } from "lucide-react";
 
 const Teachers = () => {
   const teachers = [
     {
       id: 1,
-      name: 'Mehmet Yılmaz',
-      title: 'Baş Eğitmen',
-      experience: '20 yıl',
-      speciality: 'Direksiyon Eğitimi',
+      name: "Mehmet Yılmaz",
+      title: "Baş Eğitmen",
+      experience: "20 yıl",
+      speciality: "Direksiyon Eğitimi",
       icon: UserCheck,
-      description: 'Sabırlı ve deneyimli yaklaşımıyla öğrencilerini başarıya ulaştırır.',
-      achievements: ['500+ Başarılı Öğrenci', 'Emniyet Müdürlüğü Sertifikası', 'Pedagoji Eğitimi']
+      description:
+        "Sabırlı ve deneyimli yaklaşımıyla öğrencilerini başarıya ulaştırır.",
+      achievements: [
+        "500+ Başarılı Öğrenci",
+        "Emniyet Müdürlüğü Sertifikası",
+        "Pedagoji Eğitimi",
+      ],
     },
     {
       id: 2,
-      name: 'Ayşe Kaya',
-      title: 'Trafik Eğitmeni',
-      experience: '15 yıl',
-      speciality: 'Trafik Kuralları',
+      name: "Ayşe Kaya",
+      title: "Trafik Eğitmeni",
+      experience: "15 yıl",
+      speciality: "Trafik Kuralları",
       icon: User,
-      description: 'Trafik kurallarını etkili öğretim yöntemleriyle aktarır.',
-      achievements: ['300+ Başarılı Öğrenci', 'Trafik Eğitimi Sertifikası', 'İlk Yardım Eğitimi']
+      description: "Trafik kurallarını etkili öğretim yöntemleriyle aktarır.",
+      achievements: [
+        "300+ Başarılı Öğrenci",
+        "Trafik Eğitimi Sertifikası",
+        "İlk Yardım Eğitimi",
+      ],
     },
     {
       id: 3,
-      name: 'Ali Demir',
-      title: 'Sürüş Eğitmeni',
-      experience: '12 yıl',
-      speciality: 'Pratik Sürüş',
+      name: "Ali Demir",
+      title: "Sürüş Eğitmeni",
+      experience: "12 yıl",
+      speciality: "Pratik Sürüş",
       icon: Briefcase,
-      description: 'Güvenli sürüş tekniklerini pratik uygulamalarla öğretir.',
-      achievements: ['400+ Başarılı Öğrenci', 'Savunma Sürüşü Sertifikası', 'Motor Eğitimi']
-    }
+      description: "Güvenli sürüş tekniklerini pratik uygulamalarla öğretir.",
+      achievements: [
+        "400+ Başarılı Öğrenci",
+        "Savunma Sürüşü Sertifikası",
+        "Motor Eğitimi",
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -43,9 +56,9 @@ const Teachers = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -54,9 +67,9 @@ const Teachers = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
@@ -74,8 +87,8 @@ const Teachers = () => {
             Deneyimli Eğitmenlerimiz
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            Lisanslı ve deneyimli eğitmenlerimiz, güvenli sürüş için gerekli 
-            tüm bilgi ve becerileri size aktaracak.
+            Lisanslı ve deneyimli eğitmenlerimiz, güvenli sürüş için gerekli tüm
+            bilgi ve becerileri size aktaracak.
           </p>
         </motion.div>
 
@@ -148,15 +161,6 @@ const Teachers = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
-
-                {/* Hover Effect */}
-                <div className="mt-6 pt-6 border-t border-secondary/20">
-                  <div className="text-center">
-                    <span className="text-sm text-primary font-medium">
-                      Detaylı bilgi için iletişime geçin
-                    </span>
                   </div>
                 </div>
               </div>

@@ -14,7 +14,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Türkiye'de Ehliyet Sınıfları ve Hangi Araçları Kullanabilirsiniz?",
-    excerpt: 'A, B, C, D, E sınıfı ehliyetlerin detayları, yaş sınırları ve kullanım alanları hakkında kapsamlı rehber.',
+    excerpt:
+      "A, B, C, D, E sınıfı ehliyetlerin detayları, yaş sınırları ve kullanım alanları hakkında kapsamlı rehber.",
     content: `Ehliyet sınıfları, sürücülerin hangi tür araçları kullanabileceğini belirleyen önemli kategorilerdir. Bu yazıda her sınıfın detaylarını, yaş şartlarını ve pratik kullanım alanlarını inceleyeceğiz.
 
 ## A Sınıfı Ehliyet
@@ -53,16 +54,18 @@ Römork çekme için gereklidir. B, C veya D sınıfı ehliyet sahibi olmak şar
 - Her sınıf için ayrı sınav gerekir
 
 Bu bilgiler güncel mevzuata göre hazırlanmıştır. Detaylı bilgi için kursumuzla iletişime geçebilirsiniz.`,
-    image: 'https://images.unsplash.com/photo-1719688550640-e27dda479c57?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Ehliyet Sınıfları',
-    readTime: '8 dk',
-    date: '2024-01-15',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1719688550640-e27dda479c57?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Ehliyet Sınıfları",
+    readTime: "8 dk",
+    date: "2024-01-15",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 2,
     title: "Trafik Kuralları: Türkiye'de Bilmeniz Gereken Temel Kurallar",
-    excerpt: 'Hız sınırları, park kuralları, kavşak geçişleri ve ceza puanları hakkında detaylı bilgiler.',
+    excerpt:
+      "Hız sınırları, park kuralları, kavşak geçişleri ve ceza puanları hakkında detaylı bilgiler.",
     content: `Trafik kuralları, güvenli sürüşün temelini oluşturur. Bu yazıda Türkiye'de geçerli olan temel trafik kurallarını detaylıca inceleyeceğiz.
 
 ## Hız Sınırları
@@ -113,16 +116,18 @@ Kavşaklarda öncelik sırası:
 - Acil durumlar hariç
 
 Bu kurallara uymak hem güvenliğiniz hem de ceza almamanız için kritik önem taşır.`,
-    image: 'https://images.unsplash.com/photo-1642242817106-85002a1de97c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Trafik Kuralları',
-    readTime: '10 dk',
-    date: '2024-01-12',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1642242817106-85002a1de97c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Trafik Kuralları",
+    readTime: "10 dk",
+    date: "2024-01-12",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 3,
-    title: 'İlk Yardım Eğitimi: Sürücüler İçin Hayat Kurtaran Bilgiler',
-    excerpt: 'Trafik kazalarında ilk müdahale, yaralı taşıma teknikleri ve acil durum prosedürleri.',
+    title: "İlk Yardım Eğitimi: Sürücüler İçin Hayat Kurtaran Bilgiler",
+    excerpt:
+      "Trafik kazalarında ilk müdahale, yaralı taşıma teknikleri ve acil durum prosedürleri.",
     content: `Trafik kazalarında ilk müdahale, hayat kurtarıcı önem taşır. Bu yazıda sürücülerin bilmesi gereken temel ilk yardım bilgilerini detaylıca ele alacağız.
 
 ## Kaza Anında Yapılması Gerekenler
@@ -189,16 +194,18 @@ Yaralının bilincini kontrol etmek için:
 - Acil servise ulaştırın
 
 Bu bilgiler temel ilk yardım eğitimi yerine geçmez. Mutlaka sertifikalı ilk yardım eğitimi alın.`,
-    image: 'https://images.unsplash.com/photo-1630964046403-8b745c1e3c69?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'İlk Yardım',
-    readTime: '12 dk',
-    date: '2024-01-10',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1630964046403-8b745c1e3c69?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "İlk Yardım",
+    readTime: "12 dk",
+    date: "2024-01-10",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 4,
-    title: 'Motor ve Araç Bilgisi: Sürücü Adayları İçin Teknik Rehber',
-    excerpt: 'Araç parçaları, bakım işlemleri, yakıt tüketimi ve güvenli sürüş için teknik bilgiler.',
+    title: "Motor ve Araç Bilgisi: Sürücü Adayları İçin Teknik Rehber",
+    excerpt:
+      "Araç parçaları, bakım işlemleri, yakıt tüketimi ve güvenli sürüş için teknik bilgiler.",
     content: `Aracınızı tanımak, güvenli ve ekonomik sürüşün temelidir. Bu rehberde en kritik sistemleri, periyodik bakımları ve yakıt tasarruf tekniklerini detaylandırıyoruz.
 
 ## Temel Sistemler
@@ -236,16 +243,18 @@ Bu bilgiler temel ilk yardım eğitimi yerine geçmez. Mutlaka sertifikalı ilk 
 - Far ve sinyalin aktif kullanımı
 
 Bu temel prensipleri uygulayarak hem güvenliğinizi artırır hem de bakım maliyetlerinizi düşürebilirsiniz.`,
-    image: 'https://images.unsplash.com/photo-1429772011165-0c2e054367b8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Araç Bilgisi',
-    readTime: '10 dk',
-    date: '2024-01-08',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1429772011165-0c2e054367b8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Araç Bilgisi",
+    readTime: "10 dk",
+    date: "2024-01-08",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 5,
-    title: 'Çevre Bilinci ve Yakıt Tasarrufu: Sürücülük ve Doğa',
-    excerpt: 'Ekolojik sürüş teknikleri, yakıt tasarrufu yöntemleri ve çevre dostu sürücülük.',
+    title: "Çevre Bilinci ve Yakıt Tasarrufu: Sürücülük ve Doğa",
+    excerpt:
+      "Ekolojik sürüş teknikleri, yakıt tasarrufu yöntemleri ve çevre dostu sürücülük.",
     content: `Ekolojik sürüş, hem cebinizi hem de doğayı korur. Küçük alışkanlık değişimleriyle büyük fark yaratabilirsiniz.
 
 ## Planlama
@@ -270,16 +279,18 @@ Bu temel prensipleri uygulayarak hem güvenliğinizi artırır hem de bakım mal
 - Doğru tekerlek balans ve rot ayarı
 
 Bu yöntemlerle yakıt tüketimini %10-20 oranında azaltmak mümkündür.`,
-    image: 'https://images.unsplash.com/photo-1472313420546-a46e561861d8?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Çevre Bilinci',
-    readTime: '8 dk',
-    date: '2024-01-05',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1472313420546-a46e561861d8?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Çevre Bilinci",
+    readTime: "8 dk",
+    date: "2024-01-05",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 6,
-    title: 'Psikoteknik Değerlendirme: Sürücü Olmaya Uygun Musunuz?',
-    excerpt: 'Psikoteknik test süreci, değerlendirme kriterleri ve sürücü adayları için öneriler.',
+    title: "Psikoteknik Değerlendirme: Sürücü Olmaya Uygun Musunuz?",
+    excerpt:
+      "Psikoteknik test süreci, değerlendirme kriterleri ve sürücü adayları için öneriler.",
     content: `Psikoteknik değerlendirme; dikkat, algı, koordinasyon, muhakeme ve hız gibi bilişsel becerileri ölçer. Özellikle ticari araç sürücüleri için zorunludur.
 
 ## Kimler Almalı?
@@ -304,16 +315,18 @@ Bu yöntemlerle yakıt tüketimini %10-20 oranında azaltmak mümkündür.`,
 - Test yönergelerini dikkatle dinleyin
 
 Raporunuzun geçerlilik süresi ve yenileme şartları için güncel mevzuatı takip edin.`,
-    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&h=600&fit=crop',
-    category: 'Psikoteknik',
-    readTime: '9 dk',
-    date: '2024-01-03',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&h=600&fit=crop",
+    category: "Psikoteknik",
+    readTime: "9 dk",
+    date: "2024-01-03",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 7,
-    title: 'Direksiyon Sınavında En Çok Yapılan Hatalar',
-    excerpt: 'Kalkış, park, sinyal, omuz kontrolü ve şerit disiplini gibi kritik noktalar.',
+    title: "Direksiyon Sınavında En Çok Yapılan Hatalar",
+    excerpt:
+      "Kalkış, park, sinyal, omuz kontrolü ve şerit disiplini gibi kritik noktalar.",
     content: `Direksiyon sınavı, doğru alışkanlıkların sergilendiği bir pratik sınavdır. En çok yapılan hataları bilmek, başarı şansınızı artırır.
 
 ## Kalkış ve Duruş
@@ -336,17 +349,19 @@ Raporunuzun geçerlilik süresi ve yenileme şartları için güncel mevzuatı t
 - Yaya geçidi önceliği
 - Sağdan geçiş yasağına dikkat
 
-Sınav öncesi aynı güzergâhta prova yapmanız başarı oranını ciddi artırır.`,
-    image: 'https://images.unsplash.com/photo-1478442231640-a78bbd3bcd62?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Sınav İpuçları',
-    readTime: '9 dk',
-    date: '2024-02-02',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+Sınav öncesi aynı güzergâhta prova yapmanız  oranını ciddi artırır.`,
+    image:
+      "https://images.unsplash.com/photo-1478442231640-a78bbd3bcd62?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Sınav İpuçları",
+    readTime: "9 dk",
+    date: "2024-02-02",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 8,
-    title: 'Teorik Sınavda Başarı Stratejileri',
-    excerpt: 'Soru dağılımı, tekrar planı ve çıkmış sorularla çalışma yöntemleri.',
+    title: "Teorik Sınavda Başarı Stratejileri",
+    excerpt:
+      "Soru dağılımı, tekrar planı ve çıkmış sorularla çalışma yöntemleri.",
     content: `Teorik sınav, doğru planlama ve tekrar stratejisiyle rahatlıkla geçilebilir.
 
 ## Soru Dağılımı
@@ -366,16 +381,18 @@ Sınav öncesi aynı güzergâhta prova yapmanız başarı oranını ciddi artı
 - Sınavdan önce iyi uyku
 
 Bu planı düzenli uygularsanız %90+ başarı mümkündür.`,
-    image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200&h=600&fit=crop',
-    category: 'Sınav İpuçları',
-    readTime: '8 dk',
-    date: '2024-02-05',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200&h=600&fit=crop",
+    category: "Sınav İpuçları",
+    readTime: "8 dk",
+    date: "2024-02-05",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 9,
-    title: 'Yeni Başlayanlar İçin Trafikte Güvenlik',
-    excerpt: 'Takip mesafesi, kör nokta, gece sürüşü ve yağmurlu havalarda dikkat.',
+    title: "Yeni Başlayanlar İçin Trafikte Güvenlik",
+    excerpt:
+      "Takip mesafesi, kör nokta, gece sürüşü ve yağmurlu havalarda dikkat.",
     content: `Yeni sürücüler için en önemli konu riskleri erken fark etmek ve savunmacı sürüş uygulamaktır.
 
 ## Takip Mesafesi
@@ -395,16 +412,18 @@ Bu planı düzenli uygularsanız %90+ başarı mümkündür.`,
 - Fren mesafesi artar, hızı düşürün
 
 Her yol koşulunda savunmacı sürüş, güvenliğinizi katlar.`,
-    image: 'https://images.unsplash.com/photo-1602562775100-bdff2108c7d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Güvenli Sürüş',
-    readTime: '9 dk',
-    date: '2024-02-12',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1602562775100-bdff2108c7d6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Güvenli Sürüş",
+    readTime: "9 dk",
+    date: "2024-02-12",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 10,
-    title: 'Kış Koşullarında Sürüş: Zincir, Kış Lastiği ve Teknikler',
-    excerpt: 'Kaygan zeminde fren, yokuş kalkış ve buzlanma için pratik öneriler.',
+    title: "Kış Koşullarında Sürüş: Zincir, Kış Lastiği ve Teknikler",
+    excerpt:
+      "Kaygan zeminde fren, yokuş kalkış ve buzlanma için pratik öneriler.",
     content: `Kış koşullarında sürüş, doğru ekipman ve tekniklerle güvenli hale gelir.
 
 ## Ekipman
@@ -422,16 +441,17 @@ Her yol koşulunda savunmacı sürüş, güvenliğinizi katlar.`,
 - Cam buğusuna karşı iç sirkülasyonu kapatın
 
 Kış aylarında ekstra dikkat ve hazırlık şarttır.`,
-    image: 'https://images.unsplash.com/photo-1581037558250-d23ff79ca9ea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Güvenli Sürüş',
-    readTime: '9 dk',
-    date: '2024-02-18',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1581037558250-d23ff79ca9ea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Güvenli Sürüş",
+    readTime: "9 dk",
+    date: "2024-02-18",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 11,
-    title: 'Şehir İçi Park Teknikleri: Paralel ve L Park',
-    excerpt: 'Adım adım anlatım ve pratik ipuçlarıyla park etme artık kolay.',
+    title: "Şehir İçi Park Teknikleri: Paralel ve L Park",
+    excerpt: "Adım adım anlatım ve pratik ipuçlarıyla park etme artık kolay.",
     content: `Park, doğru referans noktaları ve adımlarla kolaylaşır.
 
 ## Paralel Park
@@ -451,16 +471,17 @@ Kış aylarında ekstra dikkat ve hazırlık şarttır.`,
 - Gerekirse düzeltme manevrası yapın
 
 Pratik yaptıkça refleksleriniz gelişir.`,
-    image: 'https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Pratik Sürüş',
-    readTime: '8 dk',
-    date: '2024-02-22',
-    author: 'Yeni Karabağlar Sürücü Kursu'
+    image:
+      "https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Pratik Sürüş",
+    readTime: "8 dk",
+    date: "2024-02-22",
+    author: "Yeni Karabağlar Sürücü Kursu",
   },
   {
     id: 12,
-    title: 'Uzun Yol Sürüşü İçin Hazırlık Rehberi',
-    excerpt: 'Araç kontrol listesi, mola planı ve ergonomi önerileri.',
+    title: "Uzun Yol Sürüşü İçin Hazırlık Rehberi",
+    excerpt: "Araç kontrol listesi, mola planı ve ergonomi önerileri.",
     content: `Uzun yolculuklar keyiflidir ancak hazırlık ister.
 
 ## Araç Kontrol Listesi
@@ -479,19 +500,20 @@ Pratik yaptıkça refleksleriniz gelişir.`,
 - Su ve hafif atıştırmalık bulundurun
 
 Doğru planlama ile güvenli ve konforlu bir yolculuk yapabilirsiniz.`,
-    image: 'https://images.unsplash.com/photo-1624573833706-96296ddfa3a5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Yolculuk',
-    readTime: '8 dk',
-    date: '2024-02-28',
-    author: 'Yeni Karabağlar Sürücü Kursu'
-  }
+    image:
+      "https://images.unsplash.com/photo-1624573833706-96296ddfa3a5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Yolculuk",
+    readTime: "8 dk",
+    date: "2024-02-28",
+    author: "Yeni Karabağlar Sürücü Kursu",
+  },
 ];
 
 export const categories = Array.from(
-  blogPosts.reduce((map, post) => {
-    map.set(post.category, (map.get(post.category) || 0) + 1);
-    return map;
-  }, new Map<string, number>()).entries()
+  blogPosts
+    .reduce((map, post) => {
+      map.set(post.category, (map.get(post.category) || 0) + 1);
+      return map;
+    }, new Map<string, number>())
+    .entries()
 ).map(([name, count]) => ({ name, count }));
-
-
