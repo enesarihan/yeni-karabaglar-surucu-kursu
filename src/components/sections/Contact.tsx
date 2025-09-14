@@ -56,7 +56,6 @@ const Contact = () => {
       icon: PhoneIcon,
       title: 'Telefon',
       info: '0 (232) 264 40 03',
-      subInfo: 'Pazartesi - Cumartesi: 08:00 - 18:00',
       href: 'tel:+902322644003',
       color: 'text-green-500'
     },
@@ -68,23 +67,15 @@ const Contact = () => {
       href: 'https://www.google.com/maps/place/Kestelli+Park%C4%B1n%C4%B1n+Kar%C5%9F%C4%B1s%C4%B1,+G%C3%BClyaka,+3011.+Sk.+No:6/A,+35110+Karaba%C4%9Flar/%C4%B0zmir',
       color: 'text-red-500'
     },
-    {
-      icon: ClockIcon,
-      title: 'Çalışma Saatleri',
-      info: 'Pazartesi - Cumartesi',
-      subInfo: '08:00 - 18:00',
-      href: '#',
-      color: 'text-purple-500'
-    }
   ];
 
   const workingHours = [
-    { day: 'Pazartesi', hours: '08:00 - 18:00' },
-    { day: 'Salı', hours: '08:00 - 18:00' },
-    { day: 'Çarşamba', hours: '08:00 - 18:00' },
-    { day: 'Perşembe', hours: '08:00 - 18:00' },
-    { day: 'Cuma', hours: '08:00 - 18:00' },
-    { day: 'Cumartesi', hours: '08:00 - 16:00' },
+    { day: 'Pazartesi', hours: '08:00 - 20:00' },
+    { day: 'Salı', hours: '08:00 - 20:00' },
+    { day: 'Çarşamba', hours: '08:00 - 20:00' },
+    { day: 'Perşembe', hours: '08:00 - 20:00' },
+    { day: 'Cuma', hours: '08:00 - 20:00' },
+    { day: 'Cumartesi', hours: '09:00 - 18:30' },
     { day: 'Pazar', hours: 'Kapalı' }
   ];
 
@@ -115,8 +106,8 @@ const Contact = () => {
               "longitude": "27.1202577763527"
             },
             "openingHours": [
-              "Mo-Fr 08:00-18:00",
-              "Sa 08:00-16:00"
+              "Mo-Fr 08:00-20:00",
+              "Sa 09:00-18:30"
             ],
             "priceRange": "₺₺",
             "aggregateRating": {
