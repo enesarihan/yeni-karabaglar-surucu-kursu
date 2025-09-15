@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import {
   PhoneIcon,
   ChatBubbleLeftRightIcon,
-  PlusIcon
-} from '@heroicons/react/24/solid';
-import {FaWhatsapp} from 'react-icons/fa'
+  PlusIcon,
+} from "@heroicons/react/24/solid";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,18 +24,18 @@ const FloatingContact = () => {
   const contactOptions = [
     {
       icon: PhoneIcon,
-      label: 'Telefon',
-      href: 'tel:+902322644003',
-      color: 'bg-green-500 hover:bg-green-600',
-      text: 'Hemen Ara'
+      label: "Telefon",
+      href: "tel:+905324328695",
+      color: "bg-blue-500 hover:bg-blue-600",
+      text: "Hemen Ara",
     },
     {
       icon: FaWhatsapp,
-      label: 'WhatsApp',
-      href: 'https://wa.me/902322644003?text=Merhaba, sürücü kursu hakkında bilgi almak istiyorum.',
-      color: 'bg-green-600 hover:bg-green-700',
-      text: 'WhatsApp'
-    }
+      label: "WhatsApp",
+      href: "https://wa.me/905324328695?text=Merhaba, sürücü kursu hakkında bilgi almak istiyorum.",
+      color: "bg-green-600 hover:bg-green-700",
+      text: "WhatsApp",
+    },
   ];
 
   return (
@@ -53,8 +53,12 @@ const FloatingContact = () => {
               <motion.a
                 key={index}
                 href={option.href}
-                target={option.href.startsWith('http') ? '_blank' : undefined}
-                rel={option.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                target={option.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  option.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -74,9 +78,9 @@ const FloatingContact = () => {
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 ${
-          isOpen 
-            ? 'bg-red-500 hover:bg-red-600 rotate-45' 
-            : 'bg-primary hover:bg-primary/90'
+          isOpen
+            ? "bg-red-500 hover:bg-red-600 rotate-45"
+            : "bg-primary hover:bg-primary/90"
         }`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

@@ -41,7 +41,7 @@ const About = () => {
       icon: ClockIcon,
       title: "Esnek Ders Saatleri",
       description:
-        "B sınıfı ve A2 sınıfı ehliyet için size uygun saatlerde direksiyon dersleri.",
+        "Ehliyet için size uygun zamanlarda, esnek ders programları.",
       color: "text-purple-500",
     },
     {

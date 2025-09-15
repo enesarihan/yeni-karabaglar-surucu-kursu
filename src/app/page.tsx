@@ -19,10 +19,10 @@ export default function Home() {
         <Hero />
         <Reviews />
         <MiniContact />
-        <About />
-        <DocumentsRoadmap />
-        <Services />
         <ExternalLinks />
+        <DocumentsRoadmap />
+        <About />
+        <Services />
         <Contact />
       </main>
       <Footer />

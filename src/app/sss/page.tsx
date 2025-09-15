@@ -14,15 +14,19 @@ const faqs = [
   },
   {
     q: "Sürücü kursu kayıt işlemleri için hangi belgeler gerekli?",
-    a: 'Kayıt için gereken temel belgeler şunlardır: Kimlik kartı, öğrenim belgesi (en az ilkokul mezunu), sağlık raporu (yetkili sağlık kuruluşlarından alınmış, "sürücü olur" ibareli), 3 adet biyometrik fotoğraf ve adli sicil kaydı belgesi (E-Devlet üzerinden alınabilir).',
+    a: 'Kayıt için gereken temel belgeler şunlardır: Kimlik fotokopisi, öğrenim belgesi (en az ilkokul mezunu), sağlık raporu (yetkili sağlık kuruluşlarından alınmış, "sürücü olur" ibareli), 3 adet biyometrik fotoğraf ve adli sicil kaydı belgesi (E-Devlet üzerinden alınabilir).',
   },
   {
-    q: "2024 ehliyet harçları ve sürücü kursu ücretleri ne kadar? Taksit imkanı var mı?",
-    a: "Sürücü kursu ücretleri ve resmi harçlar her yıl MEB ve Hazine ve Maliye Bakanlığı tarafından güncellenir. Güncel ücret bilgisi ve size özel taksit seçenekleri için kursumuzla iletişime geçebilirsiniz. Resmi harçlar ise kurs ücretinden ayrı olarak devlete ödenir.",
+    q: "2025 ehliyet harçları ve sürücü kursu ücretleri ne kadar? Taksit imkanı var mı?",
+    a: "“2025’te ehliyet almak isteyenler için harç, değerli kâğıt ve vakıf payı dahil B sınıfı toplam bedel 7.438,60 TL; motosiklet sınıfları (A, A1, A2, F) için toplam ücret yaklaşık 3.643,10 TL’dir. Sürücü kursu ücretleri için lütfen yeni karabağlar sürücü kursu ile iletişime geçiniz.",
   },
   {
     q: "Ehliyet alma süreci toplamda ne kadar sürer?",
     a: "Süreç, teorik eğitim ve direksiyon derslerinin tamamlanmasıyla birlikte sınav tarihlerine bağlı olarak değişir. Ortalama olarak 1,5 - 2 ay içinde tüm aşamalar tamamlanabilir. Yoğunluğa göre bu süre 1 ay kısalabilir veya uzayabilir.",
+  },
+  {
+    q: "Adli sicil kaydı olan kişiler ehliyet alabilir mi?",
+    a: "Adli sicil kaydı olan kişiler, her durumda ehliyet alma hakkını kaybetmezler. Ancak işlenen suçun niteliği burada belirleyici olur. Türk Ceza Kanunu’nda yer alan bazı ağır suçlar (uyuşturucu ticareti, cinsel suçlar, kaçakçılık, terör suçları gibi) ehliyet alınmasını engelleyebilir.",
   },
   {
     q: "Teorik sınavda başarılı olmak için kaç doğru yapmak gerekir?",
@@ -33,8 +37,8 @@ const faqs = [
     a: "Direksiyon sınavı yaklaşık 35 dakika sürer ve iki aşamadan oluşur. İlk 5 dakikada araç bilgisi (motor, lastik, far vb.) sorulur. Sonrasında ise kalkış, park etme (L ve paralel), ani fren, geri geri gitme gibi manevralar ve trafikteki genel sürüş kurallarınız değerlendirilir.",
   },
   {
-    q: "Sınavlarda başarısız olursam ne olur? Tekrar hakkım var mı?",
-    a: "Hem teorik hem de direksiyon sınavı için 4’er tekrar hakkınız bulunur. Her başarısız sınavdan sonra ek ders alarak bir sonraki sınava daha iyi hazırlanabilirsiniz. Tekrar sınavına giriş için ilgili sınav harcını yeniden yatırmanız gerekir.",
+    q: "Sınavlarda başarısız olursam ne olur? Tekrar hakkım var mı? 2025",
+    a: "Sürücü kursu sınavlarında teorik ve direksiyon için 4’er hakkınız vardır; her başarısızlıkta sınav harcı (teorik 900 TL, direksiyon 1.350 TL) yeniden ödenir, gerekirse ek ders ücreti alınır; 4 hakkın bitmesiyle dosya yanar ve ek 4 hak için yeniden başvuru yapılabilir.",
   },
   {
     q: "Ehliyetim ne zaman ve nasıl elime ulaşır?",
@@ -42,15 +46,15 @@ const faqs = [
   },
   {
     q: "Sağlık raporunu nereden alabilirim ve geçerlilik süresi ne kadardır?",
-    a: "Sağlık raporunuzu yetkilendirilmiş aile hekimlikleri veya özel hastanelerden alabilirsiniz. Raporun geçerlilik süresi genellikle 6 aydır.",
+    a: "Sağlık raporunuzu yetkilendirilmiş aile hekimlikleri veya özel hastanelerden alabilirsiniz. Raporun geçerlilik süresi genellikle 2 yıldır.",
   },
   {
-    q: "Yabancı ehliyetimi Türk ehliyetine nasıl çevirebilirim?",
-    a: "Ülkeler arası anlaşmalara göre farklılık gösteren bir süreçtir. Gerekli evraklar (pasaport, ikamet izni, tercüme edilmiş ehliyet vb.) ile Nüfus Müdürlüğü'ne başvurmanız gerekir. Detaylı bilgi için kurumumuzdan destek alabilirsiniz.",
+    q: "Yabancı uyruklu bireyler ehliyet alabilir mi? Yabancı ehliyet Türk ehliyetine çevirilebilir mi ? 2025",
+    a: "Yabancı uyruklu bireyler ikamet izniyle Türkiye’de ehliyet alabilir, ayrıca yabancı ehliyetler ülkenin taraf olduğu anlaşmalara göre gerekli belgelerle 6 ay içinde Türk ehliyetine çevrilebilir. Detaylı bilgi için kurumumuzdan destek alabilirsiniz.",
   },
   {
     q: "Ehliyetimi kaybedersem ne yapmalıyım?",
-    a: "Nüfus müdürlüğünden randevu alarak yeniden düzenleme başvurusu yapılır. Gerekli evrak ve ücret bilgisi için resmi kaynaklara bakınız.",
+    a: "Ehliyetinizi kaybettiğinizde Nüfus Müdürlüğü’ne başvurup kimlik, 2 biyometrik fotoğraf ve dilekçe ile yaklaşık 1.260 TL değerli kâğıt bedeli ödeyerek yenisini çıkarabilirsiniz.",
   },
 ];
 
