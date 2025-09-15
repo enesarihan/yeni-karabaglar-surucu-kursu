@@ -1,10 +1,23 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Car,Map, Users, MessageCircle, Home, Settings, Building2, CircleHelp, BookOpen } from 'lucide-react';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Car,
+  Map,
+  MessageCircle,
+  Home,
+  Settings,
+  Building2,
+  CircleHelp,
+  BookOpen,
+} from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,44 +26,38 @@ const Navbar = () => {
   const [isKurumsalDropdownOpen, setIsKurumsalDropdownOpen] = useState(false);
 
   const navItems = [
-    { name: 'Ana Sayfa', href: '/#hero', icon: Home },
-    { name: 'Yorumlar', href: '/#reviews', icon: MessageCircle },
+    { name: "Ana Sayfa", href: "/#hero", icon: Home },
+    { name: "Yorumlar", href: "/#reviews", icon: MessageCircle },
   ];
 
   const ehliyetPages = [
-    { 
-      name: 'Ehliyet Süreçleri', 
-      href: '/ehliyet-surecleri',
-      description: 'Ehliyet alma süreçleri hakkında detaylı bilgi',
-      icon: Map
+    {
+      name: "Ehliyet Süreçleri",
+      href: "/ehliyet-surecleri",
+      description: "Ehliyet alma süreçleri hakkında detaylı bilgi",
+      icon: Map,
     },
-    { 
-      name: 'Ehliyet Sınıfları', 
-      href: '/ehliyet-siniflari',
-      description: 'Tüm ehliyet sınıfları ve gereksinimleri',
-      icon: Car
-    }
+    {
+      name: "Ehliyet Sınıfları",
+      href: "/ehliyet-siniflari",
+      description: "Tüm ehliyet sınıfları ve gereksinimleri",
+      icon: Car,
+    },
   ];
 
   const kurumsalPages = [
-    { 
-      name: 'Eğitmenlerimiz', 
-      href: '/#teachers',
-      description: 'Deneyimli eğitmen kadromuz',
-      icon: Users
+    {
+      name: "Hakkımızda",
+      href: "/#about",
+      description: "Kurumumuz hakkında bilgiler",
+      icon: Building2,
     },
-    { 
-      name: 'Hakkımızda', 
-      href: '/#about',
-      description: 'Kurumumuz hakkında bilgiler',
-      icon: Building2
+    {
+      name: "Hizmetlerimiz",
+      href: "/#services",
+      description: "Sunduğumuz tüm hizmetler",
+      icon: Settings,
     },
-    { 
-      name: 'Hizmetlerimiz', 
-      href: '/#services',
-      description: 'Sunduğumuz tüm hizmetler',
-      icon: Settings
-    }
   ];
 
   useEffect(() => {
@@ -58,8 +65,8 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -68,19 +75,15 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white shadow-lg border-b border-gray-200' 
-          : 'bg-white/95 backdrop-blur-sm'
+        isScrolled
+          ? "bg-white shadow-lg border-b border-gray-200"
+          : "bg-white/95 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28">
-          
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link href="/" className="flex items-center">
               <span className="sr-only">Yeni Karabağlar Sürücü Kursu</span>
               <Image
@@ -120,18 +123,14 @@ const Navbar = () => {
                 />
               </Link>
             </motion.div>
-            
-            
 
             {/* Kurumsal Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsKurumsalDropdownOpen(true)}
               onMouseLeave={() => setIsKurumsalDropdownOpen(false)}
             >
-              <div 
-                className="flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 cursor-pointer"
-              >
+              <div className="flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 cursor-pointer">
                 <Building2 className="w-4 h-4" />
                 <span>Kurumsal</span>
                 <motion.div
@@ -147,7 +146,7 @@ const Navbar = () => {
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              
+
               <AnimatePresence>
                 {isKurumsalDropdownOpen && (
                   <motion.div
@@ -207,16 +206,14 @@ const Navbar = () => {
                 />
               </Link>
             </motion.div>
-            
+
             {/* Ehliyet Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsEhliyetDropdownOpen(true)}
               onMouseLeave={() => setIsEhliyetDropdownOpen(false)}
             >
-              <div 
-                className="flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 cursor-pointer"
-              >
+              <div className="flex items-center space-x-2 px-4 py-2 rounded-xl font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 cursor-pointer">
                 <Car className="w-4 h-4" />
                 <span>Ehliyet</span>
                 <motion.div
@@ -232,7 +229,7 @@ const Navbar = () => {
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              
+
               <AnimatePresence>
                 {isEhliyetDropdownOpen && (
                   <motion.div
@@ -253,9 +250,11 @@ const Navbar = () => {
                           href={page.href}
                           className="flex items-start space-x-3 px-4 py-3 hover:bg-teal-50 transition-all duration-300 group rounded-xl mx-2"
                         >
-                          <div className={`w-2 h-2 rounded-full mt-2 ${
-                            index === 0 ? 'bg-teal-500' : 'bg-blue-500'
-                          }`} />
+                          <div
+                            className={`w-2 h-2 rounded-full mt-2 ${
+                              index === 0 ? "bg-teal-500" : "bg-blue-500"
+                            }`}
+                          />
                           <div>
                             <div className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                               {page.name}
@@ -361,7 +360,7 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
@@ -385,10 +384,12 @@ const Navbar = () => {
                       </Link>
                     </motion.div>
                   ))}
-                  
+
                   {/* Ehliyet Pages */}
                   <div className="border-t border-gray-100 pt-4">
-                    <div className="text-sm font-semibold text-gray-500 px-4 mb-2">Ehliyet</div>
+                    <div className="text-sm font-semibold text-gray-500 px-4 mb-2">
+                      Ehliyet
+                    </div>
                     {ehliyetPages.map((page, index) => (
                       <motion.div
                         key={page.name}
@@ -412,7 +413,9 @@ const Navbar = () => {
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: (navItems.length + ehliyetPages.length) * 0.1 }}
+                    transition={{
+                      delay: (navItems.length + ehliyetPages.length) * 0.1,
+                    }}
                   >
                     <Link
                       href="/sss"
@@ -428,7 +431,9 @@ const Navbar = () => {
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: (navItems.length + ehliyetPages.length + 1) * 0.1 }}
+                    transition={{
+                      delay: (navItems.length + ehliyetPages.length + 1) * 0.1,
+                    }}
                   >
                     <Link
                       href="/blog"
@@ -442,13 +447,19 @@ const Navbar = () => {
 
                   {/* Kurumsal Pages */}
                   <div className="border-t border-gray-100 pt-4">
-                    <div className="text-sm font-semibold text-gray-500 px-4 mb-2">Kurumsal</div>
+                    <div className="text-sm font-semibold text-gray-500 px-4 mb-2">
+                      Kurumsal
+                    </div>
                     {kurumsalPages.map((page, index) => (
                       <motion.div
                         key={page.name}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: (navItems.length + ehliyetPages.length + index) * 0.1 }}
+                        transition={{
+                          delay:
+                            (navItems.length + ehliyetPages.length + index) *
+                            0.1,
+                        }}
                       >
                         <Link
                           href={page.href}
@@ -461,11 +472,13 @@ const Navbar = () => {
                       </motion.div>
                     ))}
                   </div>
-                  
+
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: (navItems.length + ehliyetPages.length) * 0.1 }}
+                    transition={{
+                      delay: (navItems.length + ehliyetPages.length) * 0.1,
+                    }}
                     className="pt-4 border-t border-gray-200"
                   >
                     <Link

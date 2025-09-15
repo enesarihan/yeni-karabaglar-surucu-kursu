@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Phone, MessageCircle } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Phone, MessageCircle } from "lucide-react";
 
 const MiniContact = () => {
   return (
@@ -17,8 +17,12 @@ const MiniContact = () => {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-1">Hemen İletişime Geçin</h3>
-              <p className="text-white/90">Soru ve kayıt için dakikalar içinde dönüş sağlayalım.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-1">
+                Hemen İletişime Geçin
+              </h3>
+              <p className="text-white/90">
+                Soru ve kayıt için dakikalar içinde dönüş sağlayalım.
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -29,11 +33,11 @@ const MiniContact = () => {
                 Formu Doldur
               </Link>
               <Link
-                href="tel:+902322644003"
+                href="tel:+905324328695"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-colors duration-200"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Ara: 0 (232) 264 40 03
+                Ara: +90 532 432 8695
               </Link>
             </div>
           </div>
@@ -44,5 +48,3 @@ const MiniContact = () => {
 };
 
 export default MiniContact;
-
-

@@ -29,9 +29,9 @@ const Hero = () => {
 
   const features = [
     "30+ yıllık deneyimli ve lisanslı eğitmenler",
-    "İzmir'de en yüksek memnuniyet oranı",
+    "İzmir'de en yüksek başarı oranı",
     "14 saatlik direksiyon dersi",
-    "İzmir'de en uygun sürücü kursu fiyatları",
+    "Ehliyet için memnuniyet odaklı eğitim",
   ];
 
   useEffect(() => {
@@ -125,16 +125,24 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-teal-600/20 to-cyan-600/20 backdrop-blur-xl px-6 py-3 rounded-2xl border border-teal-400/30"
+              className="inline-flex flex-col items-center space-y-2 bg-gradient-to-r from-emerald-500/25 via-teal-500/20 to-green-500/25 backdrop-blur-xl px-6 py-4 rounded-2xl border border-emerald-400/40 shadow-lg shadow-emerald-500/10"
             >
-              <div className="w-2 h-2 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold text-slate-800 tracking-wider uppercase">
-                İzmir'in En İyi Sürücü Kursu • 4.9/5
-              </span>
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-3 h-3 text-yellow-400" />
-                ))}
+              <div className="flex items-center space-x-3">
+                <span className="text-sm font-bold text-slate-700 tracking-widest uppercase letter-spacing-wide">
+                  Ehliyet İçin En Doğru Adres
+                </span>
+              </div>
+              <div className="flex flex-col items-center space-y-1">
+                <div>
+                  <span className="text-sm font-bold text-slate-700">
+                    4.9/5 Google Puanı
+                  </span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="w-3 h-3 text-yellow-400" />
+                  ))}
+                </div>
               </div>
             </motion.div>
 
@@ -251,7 +259,7 @@ const Hero = () => {
                 </Link>
 
                 <Link
-                  href="tel:+902322644003"
+                  href="tel:+905324328695"
                   className="group min-w-[265px] border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none"
                 >
                   <span className="flex items-center justify-center space-x-3">

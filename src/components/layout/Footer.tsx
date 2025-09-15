@@ -8,7 +8,6 @@ import { Instagram, MessageCircle, Phone, MapPin } from "lucide-react";
 const Footer = () => {
   const quickLinks = [
     { name: "Ana Sayfa", href: "/" },
-    { name: "Eğitmenlerimiz", href: "#teachers" },
     { name: "Hakkımızda", href: "#about" },
     { name: "Hizmetlerimiz", href: "#services" },
     { name: "Yorumlar", href: "#reviews" },
@@ -87,7 +86,7 @@ const Footer = () => {
                     <Phone className="w-5 h-5 text-teal-600" />
                   </div>
                   <span className="font-medium text-gray-700">
-                    0 (232) 264 40 03
+                    +90 532 432 8695
                   </span>
                 </motion.div>
 

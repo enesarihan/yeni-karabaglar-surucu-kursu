@@ -41,7 +41,7 @@ const About = () => {
       icon: ClockIcon,
       title: "Esnek Ders Saatleri",
       description:
-        "B sınıfı ve A2 sınıfı ehliyet için size uygun saatlerde direksiyon dersleri.",
+        "Ehliyet için size uygun zamanlarda, esnek ders programları.",
       color: "text-purple-500",
     },
     {
@@ -147,16 +147,16 @@ const About = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="text-center"
+              className="text-center h-full"
             >
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="mb-2 flex justify-center">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full min-h-[160px] flex flex-col justify-center items-center">
+                <div className="mb-3 flex justify-center">
                   <stat.icon className="w-10 h-10 text-primary" />
                 </div>
-                <div className="text-3xl font-bold text-primary mb-1">
+                <div className="text-3xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
-                <div className="text-foreground/70 font-medium">
+                <div className="text-foreground/70 font-medium text-center leading-tight">
                   {stat.label}
                 </div>
               </div>
