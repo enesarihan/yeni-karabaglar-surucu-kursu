@@ -5,7 +5,6 @@ import { useState } from "react";
 import {
   PhoneIcon,
   MapPinIcon,
-  ClockIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 

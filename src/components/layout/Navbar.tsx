@@ -11,7 +11,6 @@ import {
   Phone,
   Car,
   Map,
-  Users,
   MessageCircle,
   Home,
   Settings,
