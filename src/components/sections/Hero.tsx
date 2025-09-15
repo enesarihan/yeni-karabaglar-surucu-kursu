@@ -337,17 +337,7 @@ const Hero = () => {
                       }`}
                       style={{ willChange: "transform, opacity" }}
                     >
-                      <motion.div
-                        animate={{
-                          scale: index === currentSlide ? [1, 1.02, 1] : 1,
-                        }}
-                        transition={{
-                          duration: 8,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                        className="w-full h-full"
-                      >
+                      <motion.div className="w-full h-full">
                         <Image
                           src={image.src}
                           alt={`${image.alt} - Yeni Karabağlar Sürücü Kursu`}
@@ -373,21 +363,14 @@ const Hero = () => {
 
                       {/* Animated Badge */}
                       <motion.div
-                        initial={{ opacity: 0, y: -30, scale: 0.8 }}
+                        initial={{ opacity: 0, y: -20 }}
                         animate={{
                           opacity: index === currentSlide ? 1 : 0,
-                          y: index === currentSlide ? 0 : -30,
-                          scale: index === currentSlide ? 1 : 0.8,
-                          rotate: index === currentSlide ? [0, 2, 0] : 0,
+                          y: index === currentSlide ? 0 : -20,
                         }}
                         transition={{
-                          delay: 0.4,
-                          duration: 0.8,
-                          rotate: {
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                          },
+                          delay: 0.2,
+                          duration: 0.5,
                         }}
                         className="absolute top-6 left-6"
                       >
@@ -404,45 +387,33 @@ const Hero = () => {
 
                       {/* Enhanced Content Overlay */}
                       <motion.div
-                        initial={{ opacity: 0, y: 50, x: -30 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{
                           opacity: index === currentSlide ? 1 : 0,
-                          y: index === currentSlide ? 0 : 50,
-                          x: index === currentSlide ? 0 : -30,
+                          y: index === currentSlide ? 0 : 30,
                         }}
                         transition={{
-                          delay: 0.6,
-                          duration: 1.0,
-                          type: "spring",
-                          stiffness: 100,
-                          damping: 15,
+                          delay: 0.3,
+                          duration: 0.6,
                         }}
                         className="absolute left-4 right-4 bottom-32 md:bottom-16 text-white z-20 pointer-events-none"
                       >
-                        <motion.h3
+                        <h3
                           className="text-2xl md:text-3xl font-extrabold mb-3 leading-tight"
-                          animate={{
-                            textShadow: [
-                              "0 2px 10px rgba(0,0,0,0.8)",
-                              "0 4px 20px rgba(0,0,0,0.9)",
-                              "0 2px 10px rgba(0,0,0,0.8)",
-                            ],
+                          style={{
+                            textShadow: "0 2px 10px rgba(0,0,0,0.8)",
                           }}
-                          transition={{ duration: 4, repeat: Infinity }}
                         >
                           {image.title}
-                        </motion.h3>
-                        <motion.p
+                        </h3>
+                        <p
                           className="text-white/90 text-base md:text-lg leading-relaxed max-w-md"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: index === currentSlide ? 1 : 0 }}
-                          transition={{ delay: 0.8, duration: 0.6 }}
                           style={{
                             textShadow: "0 2px 8px rgba(0,0,0,0.7)",
                           }}
                         >
                           {image.subtitle}
-                        </motion.p>
+                        </p>
 
                         <div className="mt-4 relative z-30">
                           <Link
@@ -453,33 +424,6 @@ const Hero = () => {
                           </Link>
                         </div>
                       </motion.div>
-
-                      {/* Particle Effects */}
-                      {index === currentSlide && (
-                        <div className="hidden md:block absolute inset-0 pointer-events-none">
-                          {[...Array(6)].map((_, i) => (
-                            <motion.div
-                              key={i}
-                              className="absolute w-2 h-2 bg-white/40 rounded-full"
-                              style={{
-                                left: `${20 + i * 15}%`,
-                                top: `${30 + (i % 2) * 40}%`,
-                              }}
-                              animate={{
-                                y: [-10, -30, -10],
-                                opacity: [0, 1, 0],
-                                scale: [0.5, 1, 0.5],
-                              }}
-                              transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                delay: i * 0.5,
-                                ease: "easeInOut",
-                              }}
-                            />
-                          ))}
-                        </div>
-                      )}
                     </motion.div>
                   ))}
 
@@ -487,129 +431,43 @@ const Hero = () => {
                   <div className="absolute inset-0 md:flex hidden items-center justify-between px-4 pointer-events-none z-10">
                     <motion.button
                       onClick={prevSlide}
-                      className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
-                      whileHover={{
-                        scale: 1.1,
-                        backgroundColor: "rgba(255,255,255,0.4)",
-                        boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
-                      }}
-                      whileTap={{ scale: 0.95 }}
+                      className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl hover:scale-105 transition-transform duration-200"
                     >
-                      <motion.div
-                        animate={{ x: [-2, 2, -2] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <ChevronLeftIcon className="w-8 h-8 text-white group-hover:scale-125 transition-transform duration-300" />
-                      </motion.div>
+                      <ChevronLeftIcon className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-200" />
                     </motion.button>
 
                     <motion.button
                       onClick={nextSlide}
-                      className="w-16 h-16 bg-gradient-to-l from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
-                      whileHover={{
-                        scale: 1.1,
-                        backgroundColor: "rgba(255,255,255,0.4)",
-                        boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
-                      }}
-                      whileTap={{ scale: 0.95 }}
+                      className="w-16 h-16 bg-gradient-to-l from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl hover:scale-105 transition-transform duration-200"
                     >
-                      <motion.div
-                        animate={{ x: [2, -2, 2] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <ChevronRightIcon className="w-8 h-8 text-white group-hover:scale-125 transition-transform duration-300" />
-                      </motion.div>
+                      <ChevronRightIcon className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-200" />
                     </motion.button>
                   </div>
 
                   {/* Enhanced Progress Indicators */}
                   <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3 z-10">
                     {heroImages.map((_, index) => (
-                      <motion.button
+                      <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`relative h-1.5 md:h-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
+                        className={`relative h-1.5 md:h-2 transition-all duration-300 backdrop-blur-sm overflow-hidden hover:scale-105 ${
                           index === currentSlide
-                            ? "w-12 bg-primary/30 shadow-2xl"
+                            ? "w-12 bg-primary/30 shadow-lg"
                             : "w-8 bg-primary/20 hover:bg-primary/30"
                         }`}
-                        whileHover={{
-                          scale: 1.1,
-                          boxShadow: "0 8px 25px rgba(255,255,255,0.3)",
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        animate={{
-                          boxShadow:
-                            index === currentSlide
-                              ? [
-                                  "0 4px 15px rgba(13, 148, 136, 0.4)",
-                                  "0 8px 25px rgba(45, 212, 191, 0.6)",
-                                  "0 4px 15px rgba(13, 148, 136, 0.4)",
-                                ]
-                              : "0 2px 8px rgba(255,255,255,0.1)",
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: index === currentSlide ? Infinity : 0,
-                        }}
                       >
                         {/* Background gradient */}
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/30"
-                          animate={{
-                            opacity:
-                              index === currentSlide ? [0.3, 0.6, 0.3] : 0.1,
-                          }}
-                          transition={{ duration: 2, repeat: Infinity }}
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/30 transition-opacity duration-300 ${
+                            index === currentSlide ? "opacity-60" : "opacity-20"
+                          }`}
                         />
 
                         {/* Active indicator */}
                         {index === currentSlide && (
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary"
-                            layoutId="activeSlideIndicator"
-                            transition={{
-                              type: "spring",
-                              stiffness: 400,
-                              damping: 30,
-                              duration: 0.6,
-                            }}
-                            animate={{
-                              background: [
-                                "linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to))",
-                              ],
-                              transition: { duration: 4, repeat: Infinity },
-                            }}
-                          />
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary" />
                         )}
-
-                        {/* Progress fill */}
-                        {index === currentSlide && (
-                          <motion.div
-                            className="hidden md:block absolute inset-0 bg-gradient-to-r from-white/80 to-white/40"
-                            initial={{ width: "0%" }}
-                            animate={{ width: "100%" }}
-                            transition={{ duration: 5, ease: "linear" }}
-                            key={currentSlide} // Reset animation when slide changes
-                          />
-                        )}
-
-                        {/* Sparkle effect */}
-                        {index === currentSlide && (
-                          <motion.div
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-white"
-                            animate={{
-                              scale: [0, 1.5, 0],
-                              opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                              duration: 1.5,
-                              repeat: Infinity,
-                              delay: 0.5,
-                            }}
-                          />
-                        )}
-                      </motion.button>
+                      </button>
                     ))}
                   </div>
                 </div>

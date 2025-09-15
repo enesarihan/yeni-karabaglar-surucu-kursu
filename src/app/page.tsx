@@ -1,6 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
-import Teachers from "@/components/sections/Teachers";
 import MiniContact from "@/components/sections/MiniContact";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
@@ -14,6 +13,7 @@ import DocumentsRoadmap from "@/components/sections/DocumentsRoadmap";
 export default function Home() {
   return (
     <div className="min-h-screen">
+      S
       <Navbar />
       <main>
         <Hero />

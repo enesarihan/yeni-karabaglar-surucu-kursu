@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, MessageCircle, Phone, MapPin, Clock } from "lucide-react";
+import { Instagram, MessageCircle, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
