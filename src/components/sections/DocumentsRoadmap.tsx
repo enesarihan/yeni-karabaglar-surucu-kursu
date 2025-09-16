@@ -56,7 +56,7 @@ const DocumentsRoadmap = () => {
     {
       icon: BookOpen,
       title: "Teorik Eğitim",
-      desc: "28 saat teorik ders ve trafik kuralları eğitimi",
+      desc: "15 saat teorik ders ve trafik kuralları eğitimi",
       duration: "2-3 Hafta",
       step: 2,
     },
@@ -70,7 +70,7 @@ const DocumentsRoadmap = () => {
     {
       icon: Car,
       title: "Direksiyon Eğitimi",
-      desc: "20 saat uygulamalı direksiyon dersi",
+      desc: "14 saat uygulamalı direksiyon dersi",
       duration: "3-4 Hafta",
       step: 4,
     },

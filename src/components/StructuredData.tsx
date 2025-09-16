@@ -1,182 +1,185 @@
-'use client';
+"use client";
 
-import Script from 'next/script';
+import Script from "next/script";
 
 const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Yeni Karabağlar Sürücü Kursu",
-    "alternateName": "İzmir Karabağlar Sürücü Kursu",
-    "description": "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ve A2 sınıfı ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
-    "url": "https://yenikarabaglar.com",
-    "logo": "https://yenikarabaglar.com/logo.png",
-    "image": "https://yenikarabaglar.com/logo.png",
-    "telephone": "+902322644003",
-    "email": "info@yenikarabaglar.com",
-    "address": {
+    name: "Yeni Karabağlar Sürücü Kursu",
+    alternateName: "İzmir Karabağlar Sürücü Kursu",
+    description:
+      "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
+    url: "https://yenikarabaglar.com",
+    logo: "https://yenikarabaglar.com/logo.png",
+    image: "https://yenikarabaglar.com/logo.png",
+    telephone: "+902322644003",
+    email: "info@yenikarabaglar.com",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Kestelli Parkının Karşısı, Gülyaka, 3011. Sk. No:6/A",
-      "addressLocality": "Karabağlar",
-      "addressRegion": "İzmir",
-      "postalCode": "35050",
-      "addressCountry": "TR"
+      streetAddress: "Kestelli Parkının Karşısı, Gülyaka, 3011. Sk. No:6/A",
+      addressLocality: "Karabağlar",
+      addressRegion: "İzmir",
+      postalCode: "35050",
+      addressCountry: "TR",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "38.4000",
-      "longitude": "27.2000"
+      latitude: "38.4000",
+      longitude: "27.2000",
     },
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "priceRange": "$$",
-    "currenciesAccepted": "TRY",
-    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-    "areaServed": [
+    openingHours: "Mo-Sa 08:00-18:00",
+    priceRange: "$$",
+    currenciesAccepted: "TRY",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer",
+    areaServed: [
       {
         "@type": "City",
-        "name": "İzmir"
+        name: "İzmir",
       },
       {
-        "@type": "City", 
-        "name": "Karabağlar"
-      }
+        "@type": "City",
+        name: "Karabağlar",
+      },
     ],
-    "hasOfferCatalog": {
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Ehliyet Eğitim Hizmetleri",
-      "itemListElement": [
+      name: "Ehliyet Eğitim Hizmetleri",
+      itemListElement: [
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Course",
-            "name": "B Sınıfı Ehliyet Eğitimi",
-            "description": "Otomobil kullanımı için B sınıfı ehliyet eğitimi",
-            "provider": {
+            name: "B Sınıfı Ehliyet Eğitimi",
+            description: "Otomobil kullanımı için B sınıfı ehliyet eğitimi",
+            provider: {
               "@type": "EducationalOrganization",
-              "name": "Yeni Karabağlar Sürücü Kursu"
-            }
-          }
+              name: "Yeni Karabağlar Sürücü Kursu",
+            },
+          },
         },
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Course",
-            "name": "A2 Sınıfı Ehliyet Eğitimi", 
-            "description": "Motosiklet kullanımı için A2 sınıfı ehliyet eğitimi",
-            "provider": {
+            name: "A2 Sınıfı Ehliyet Eğitimi",
+            description: "Motosiklet kullanımı için A2 sınıfı ehliyet eğitimi",
+            provider: {
               "@type": "EducationalOrganization",
-              "name": "Yeni Karabağlar Sürücü Kursu"
-            }
-          }
-        }
-      ]
+              name: "Yeni Karabağlar Sürücü Kursu",
+            },
+          },
+        },
+      ],
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "15000",
-      "bestRating": "5",
-      "worstRating": "1"
+      ratingValue: "4.9",
+      reviewCount: "15000",
+      bestRating: "5",
+      worstRating: "1",
     },
-    "sameAs": [
+    sameAs: [
       "https://www.instagram.com/yenikarabaglar",
-      "https://wa.me/902321234567"
+      "https://wa.me/902321234567",
     ],
-    "foundingDate": "1994",
-    "numberOfEmployees": "10-20",
-    "slogan": "İzmir'de En İyi Sürücü Kursu",
-    "keywords": "izmir sürücü kursu, karabağlar sürücü kursu, ehliyet kursu izmir, b sınıfı ehliyet, a2 sınıfı ehliyet, direksiyon dersleri, sürücü kursu karabağlar, ehliyet sınavı, mtsk, sürücü belgesi, motorlu taşıt sürücü kursu, izmir ehliyet, karabağlar ehliyet, sürüş eğitimi, ehliyet fiyatları, ehliyet süreçleri, ehliyet sınıfları, sürücü kursu fiyatları, ehliyet randevu, e-sınav, sağlık raporu, biyometrik fotoğraf, adli sicil kaydı"
+    foundingDate: "1994",
+    numberOfEmployees: "10-20",
+    slogan: "İzmir'de En İyi Sürücü Kursu",
+    keywords:
+      "izmir sürücü kursu, karabağlar sürücü kursu, ehliyet kursu izmir, b sınıfı ehliyet, a2 sınıfı ehliyet, direksiyon dersleri, sürücü kursu karabağlar, ehliyet sınavı, mtsk, sürücü belgesi, motorlu taşıt sürücü kursu, izmir ehliyet, karabağlar ehliyet, sürüş eğitimi, ehliyet fiyatları, ehliyet süreçleri, ehliyet sınıfları, sürücü kursu fiyatları, ehliyet randevu, e-sınav, sağlık raporu, biyometrik fotoğraf, adli sicil kaydı",
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://yenikarabaglar.com/#organization",
-    "name": "Yeni Karabağlar Sürücü Kursu",
-    "description": "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ve A2 sınıfı ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
-    "url": "https://yenikarabaglar.com",
-    "telephone": "+902322644003",
-    "email": "info@yenikarabaglar.com",
-    "address": {
+    name: "Yeni Karabağlar Sürücü Kursu",
+    description:
+      "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
+    url: "https://yenikarabaglar.com",
+    telephone: "+902322644003",
+    email: "info@yenikarabaglar.com",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Kestelli Parkının Karşısı, Gülyaka, 3011. Sk. No:6/A",
-      "addressLocality": "Karabağlar",
-      "addressRegion": "İzmir",
-      "postalCode": "35050",
-      "addressCountry": "TR"
+      streetAddress: "Kestelli Parkının Karşısı, Gülyaka, 3011. Sk. No:6/A",
+      addressLocality: "Karabağlar",
+      addressRegion: "İzmir",
+      postalCode: "35050",
+      addressCountry: "TR",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "38.4000",
-      "longitude": "27.2000"
+      latitude: "38.4000",
+      longitude: "27.2000",
     },
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "priceRange": "$$",
-    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-    "areaServed": "İzmir, Karabağlar",
-    "serviceArea": {
+    openingHours: "Mo-Sa 08:00-18:00",
+    priceRange: "$$",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer",
+    areaServed: "İzmir, Karabağlar",
+    serviceArea: {
       "@type": "GeoCircle",
-      "geoMidpoint": {
+      geoMidpoint: {
         "@type": "GeoCoordinates",
-        "latitude": "38.4000",
-        "longitude": "27.2000"
+        latitude: "38.4000",
+        longitude: "27.2000",
       },
-      "geoRadius": "50000"
+      geoRadius: "50000",
     },
-    "hasOfferCatalog": {
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Ehliyet Eğitim Hizmetleri",
-      "itemListElement": [
+      name: "Ehliyet Eğitim Hizmetleri",
+      itemListElement: [
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "B Sınıfı Ehliyet Eğitimi",
-            "description": "Otomobil kullanımı için B sınıfı ehliyet eğitimi"
-          }
+            name: "B Sınıfı Ehliyet Eğitimi",
+            description: "Otomobil kullanımı için B sınıfı ehliyet eğitimi",
+          },
         },
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "A2 Sınıfı Ehliyet Eğitimi",
-            "description": "Motosiklet kullanımı için A2 sınıfı ehliyet eğitimi"
-          }
-        }
-      ]
+            name: "A2 Sınıfı Ehliyet Eğitimi",
+            description: "Motosiklet kullanımı için A2 sınıfı ehliyet eğitimi",
+          },
+        },
+      ],
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "15000",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+      ratingValue: "4.9",
+      reviewCount: "15000",
+      bestRating: "5",
+      worstRating: "1",
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Ana Sayfa",
-        "item": "https://yenikarabaglar.com"
+        position: 1,
+        name: "Ana Sayfa",
+        item: "https://yenikarabaglar.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Hizmetlerimiz",
-        "item": "https://yenikarabaglar.com/#services"
+        position: 2,
+        name: "Hizmetlerimiz",
+        item: "https://yenikarabaglar.com/#services",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": "Blog",
-        "item": "https://yenikarabaglar.com/blog"
-      }
-    ]
+        position: 3,
+        name: "Blog",
+        item: "https://yenikarabaglar.com/blog",
+      },
+    ],
   };
 
   return (
@@ -185,21 +188,21 @@ const StructuredData = () => {
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema)
+          __html: JSON.stringify(organizationSchema),
         }}
       />
       <Script
         id="local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema)
+          __html: JSON.stringify(localBusinessSchema),
         }}
       />
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema)
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
     </>

@@ -86,7 +86,7 @@ const Footer = () => {
                     <Phone className="w-5 h-5 text-teal-600" />
                   </div>
                   <span className="font-medium text-gray-700">
-                    +90 532 432 8695
+                    +90 232 264 40 03
                   </span>
                 </motion.div>
 

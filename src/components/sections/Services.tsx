@@ -121,7 +121,7 @@ const Services = () => {
         </motion.div>
 
         {/* Main Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 flex flex-col">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -129,7 +129,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 flex flex-col h-full"
             >
               {/* Service Icon */}
               <div
@@ -167,7 +167,7 @@ const Services = () => {
 
               {/* Service CTA */}
               <motion.div
-                className="mt-6 pt-6 border-t border-gray-100"
+                className="mt-auto pt-6 border-t border-gray-100"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
