@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, MessageCircle, Phone, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const quickLinks = [
@@ -26,13 +27,13 @@ const Footer = () => {
     {
       name: "Instagram",
       href: "#",
-      icon: Instagram,
+      icon: FaInstagram,
       color: "text-pink-500 hover:text-pink-600",
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/902321234567",
-      icon: MessageCircle,
+      href: "https://wa.me/905324328695",
+      icon: FaWhatsapp,
       color: "text-green-500 hover:text-green-600",
     },
   ];
@@ -78,8 +79,9 @@ const Footer = () => {
 
               {/* Contact Info */}
               <div className="space-y-4">
-                <motion.div
-                  className="flex items-center space-x-4 p-3 bg-white/50 rounded-xl hover:bg-white/70 transition-all duration-300 group"
+                <motion.a
+                  href="tel:+902322644003"
+                  className="flex items-center space-x-4 p-3 bg-white/50 rounded-xl hover:bg-white/70 transition-all duration-300 group cursor-pointer"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="p-2 bg-teal-100 rounded-lg group-hover:bg-teal-200 transition-colors duration-300">
@@ -88,7 +90,7 @@ const Footer = () => {
                   <span className="font-medium text-gray-700">
                     +90 232 264 40 03
                   </span>
-                </motion.div>
+                </motion.a>
 
                 <motion.div
                   className="flex items-start space-x-4 p-3 bg-white/50 rounded-xl hover:bg-white/70 transition-all duration-300 group"
