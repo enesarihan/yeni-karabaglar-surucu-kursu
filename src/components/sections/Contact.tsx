@@ -18,6 +18,12 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{
+    name?: string;
+    phone?: string;
+    email?: string;
+    message?: string;
+  }>({});
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -25,14 +31,49 @@ const Contact = () => {
     >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    // Telefon için sadece rakam ve TR formatına uygun uzunluk kısıtlaması uygula
+    if (name === "phone") {
+      let digitsOnly = value.replace(/\D/g, "");
+      if (digitsOnly.length > 11) digitsOnly = digitsOnly.slice(0, 11);
+      setFormData((prev) => ({
+        ...prev,
+        phone: digitsOnly,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+
+    // Alan düzenlenirken hata mesajını temizle
+    setErrors((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: undefined,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Basit istemci doğrulaması
+    const newErrors: typeof errors = {};
+    if (!formData.name.trim()) newErrors.name = "Ad Soyad zorunludur";
+    if (!formData.phone.trim()) newErrors.phone = "Telefon zorunludur";
+    else {
+      const isTRPhone = /^0\d{10}$/.test(formData.phone);
+      if (!isTRPhone) {
+        newErrors.phone = "Geçerli bir Türkiye telefonu girin (0xxxxxxxxxx)";
+      }
+    }
+    if (!formData.email.trim()) newErrors.email = "E-posta zorunludur";
+    if (!formData.message.trim()) newErrors.message = "Mesaj zorunludur";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -48,7 +89,7 @@ const Contact = () => {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // Reset form after 3 seconds
+        // 3 sn sonra formu sıfırla ve butonu normale döndür
         setTimeout(() => {
           setIsSubmitted(false);
           setFormData({
@@ -60,7 +101,15 @@ const Contact = () => {
           });
         }, 3000);
       } else {
-        alert(result.error || "Mesaj gönderilirken bir hata oluştu");
+        // Sunucu dönen genel hatayı göster ve gerekli alanları işaretle
+        const genericError = result.error || "Mesaj gönderilirken bir hata oluştu";
+        const serverErrors: typeof errors = { ...errors };
+        if (!formData.name.trim()) serverErrors.name = "Ad Soyad zorunludur";
+        if (!formData.phone.trim()) serverErrors.phone = "Telefon zorunludur";
+        if (!formData.email.trim()) serverErrors.email = "E-posta zorunludur";
+        if (!formData.message.trim()) serverErrors.message = "Mesaj zorunludur";
+        setErrors(serverErrors);
+        alert(genericError);
       }
     } catch (error) {
       console.error("Form gönderme hatası:", error);
@@ -176,22 +225,7 @@ const Contact = () => {
                   Hemen İletişime Geçin
                 </h3>
 
-                {isSubmitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-8"
-                  >
-                    <CheckCircleIcon className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                    <h4 className="text-xl font-semibold text-green-600 mb-2">
-                      Mesajınız Gönderildi!
-                    </h4>
-                    <p className="text-foreground/70">
-                      En kısa sürede size dönüş yapacağız.
-                    </p>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -207,9 +241,15 @@ const Contact = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                          disabled={isSubmitting || isSubmitted}
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
+                            errors.name ? "border-red-500" : "border-gray-300"
+                          }`}
                           placeholder="Adınız ve soyadınız"
                         />
+                        {errors.name && (
+                          <p className="text-red-600 text-sm mt-1">{errors.name}</p>
+                        )}
                       </div>
                       <div>
                         <label
@@ -225,9 +265,15 @@ const Contact = () => {
                           required
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                          disabled={isSubmitting || isSubmitted}
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
+                            errors.phone ? "border-red-500" : "border-gray-300"
+                          }`}
                           placeholder="0532 123 45 67"
                         />
+                        {errors.phone && (
+                          <p className="text-red-600 text-sm mt-1">{errors.phone}</p>
+                        )}
                       </div>
                     </div>
 
@@ -244,9 +290,15 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                        disabled={isSubmitting || isSubmitted}
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
+                          errors.email ? "border-red-500" : "border-gray-300"
+                        }`}
                         placeholder="ornek@email.com"
                       />
+                      {errors.email && (
+                        <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+                      )}
                     </div>
 
                     <div>
@@ -261,6 +313,7 @@ const Contact = () => {
                         name="courseType"
                         value={formData.courseType}
                         onChange={handleInputChange}
+                        disabled={isSubmitting || isSubmitted}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                       >
                         <option value="B Sınıfı Ehliyet">
@@ -286,20 +339,38 @@ const Contact = () => {
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
+                        disabled={isSubmitting || isSubmitted}
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none ${
+                          errors.message ? "border-red-500" : "border-gray-300"
+                        }`}
                         placeholder="Sorularınızı veya özel isteklerinizi yazabilirsiniz..."
                       ></textarea>
+                      {errors.message && (
+                        <p className="text-red-600 text-sm mt-1">{errors.message}</p>
+                      )}
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className={`w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
+                        isSubmitted
+                          ? "bg-green-600 hover:bg-green-600/90"
+                          : "bg-primary hover:bg-primary/90"
+                      }`}
                     >
-                      {isSubmitting ? "Gönderiliyor..." : "Mesaj Gönder"}
+                      {isSubmitting ? (
+                        "Gönderiliyor..."
+                      ) : isSubmitted ? (
+                        <span className="inline-flex items-center justify-center gap-2">
+                          <CheckCircleIcon className="w-5 h-5 text-white" />
+                          Gönderildi
+                        </span>
+                      ) : (
+                        "Mesaj Gönder"
+                      )}
                     </button>
                   </form>
-                )}
               </div>
             </motion.div>
 

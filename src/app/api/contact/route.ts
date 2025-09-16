@@ -13,14 +13,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter (Outlook/Hotmail için)
+    // Gmail SMTP ile taşıyıcı oluşturma
     const transporter = nodemailer.createTransport({
-      service: "hotmail", // Outlook için 'hotmail' kullanın
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // 465 için true, 587 kullanılırsa false yapın
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // Gmail adresi
+        pass: process.env.EMAIL_PASS, // Google Uygulama Şifresi
       },
     });
+
+    // Telefon biçimlendirme (0xxx xxx xxxx)
+    const formatTRPhone = (raw: string) => {
+      const digits = (raw || "").replace(/\D/g, "");
+      if (digits.length === 11 && digits.startsWith("0")) {
+        const p1 = digits.slice(0, 4);
+        const p2 = digits.slice(4, 7);
+        const p3 = digits.slice(7);
+        return `${p1} ${p2} ${p3}`;
+      }
+      return raw;
+    };
+    const formattedPhone = formatTRPhone(phone);
 
     // Email template
     const htmlTemplate = `
@@ -39,8 +54,8 @@ export async function POST(request: NextRequest) {
         body {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           line-height: 1.6;
-          color: #333;
-          background-color: #f8fafc;
+          color: #1f2937;
+          background-color: #edf6f9; /* Accent/Background */
         }
         .container {
           max-width: 600px;
@@ -51,7 +66,8 @@ export async function POST(request: NextRequest) {
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header {
-          background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+          /* Primary to Secondary */
+          background: linear-gradient(135deg, #006d77 0%, #83c5be 100%);
           color: white;
           padding: 2rem;
           text-align: center;
@@ -71,13 +87,13 @@ export async function POST(request: NextRequest) {
         .form-group {
           margin-bottom: 1.5rem;
           padding: 1rem;
-          background-color: #f8fafc;
+          background-color: #edf6f9; /* Accent */
           border-radius: 8px;
-          border-left: 4px solid #3b82f6;
+          border-left: 4px solid #006d77; /* Primary */
         }
         .form-group label {
           font-weight: 600;
-          color: #374151;
+          color: #0f172a;
           display: block;
           margin-bottom: 0.5rem;
           font-size: 0.9rem;
@@ -85,13 +101,14 @@ export async function POST(request: NextRequest) {
           letter-spacing: 0.5px;
         }
         .form-group .value {
-          color: #1f2937;
+          color: #334155;
           font-size: 1rem;
           line-height: 1.5;
         }
         .course-badge {
           display: inline-block;
-          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+          /* Primary to Secondary */
+          background: linear-gradient(135deg, #006d77 0%, #83c5be 100%);
           color: white;
           padding: 0.5rem 1rem;
           border-radius: 20px;
@@ -99,7 +116,7 @@ export async function POST(request: NextRequest) {
           font-weight: 600;
         }
         .footer {
-          background-color: #f3f4f6;
+          background-color: #edf6f9; /* Accent */
           padding: 1.5rem 2rem;
           border-top: 1px solid #e5e7eb;
         }
@@ -111,16 +128,19 @@ export async function POST(request: NextRequest) {
           gap: 1rem;
         }
         .contact-info {
-          color: #6b7280;
+          color: #475569;
           font-size: 0.9rem;
         }
+        .contact-info .contact-line + .contact-line {
+          margin-top: 6px;
+        }
         .contact-info strong {
-          color: #374151;
+          color: #0f172a;
         }
         .logo {
           font-size: 1.2rem;
           font-weight: 700;
-          color: #3b82f6;
+          color: #006d77; /* Primary */
         }
         @media (max-width: 600px) {
           .container {
@@ -152,7 +172,7 @@ export async function POST(request: NextRequest) {
 
           <div class="form-group">
             <label>📞 Telefon</label>
-            <div class="value">${phone}</div>
+            <div class="value">${formattedPhone}</div>
           </div>
 
           <div class="form-group">
@@ -177,8 +197,8 @@ export async function POST(request: NextRequest) {
           <div class="footer-info">
             <div class="logo">Yeni Karabağlar Sürücü Kursu</div>
             <div class="contact-info">
-              <strong>Tel:</strong> +90 232 264 40 03<br>
-              <strong>Adres:</strong> Gülyaka, Karabağlar/İzmir
+              <div class="contact-line"><strong>Tel:</strong> +90 232 264 40 03</div>
+              <div class="contact-line"><strong>Adres:</strong> Gülyaka, Karabağlar/İzmir</div>
             </div>
           </div>
         </div>
