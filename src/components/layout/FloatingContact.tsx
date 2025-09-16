@@ -25,7 +25,7 @@ const FloatingContact = () => {
     {
       icon: PhoneIcon,
       label: "Telefon",
-      href: "tel:+905324328695",
+      href: "tel:+902322644003",
       color: "bg-blue-500 hover:bg-blue-600",
       text: "Hemen Ara",
     },
