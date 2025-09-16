@@ -208,7 +208,7 @@ const Services = () => {
                 İletişime Geç
               </motion.a>
               <motion.a
-                href="tel:02322644003"
+                href="tel:+902322644003"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"

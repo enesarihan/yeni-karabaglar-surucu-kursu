@@ -75,7 +75,7 @@ const Contact = () => {
       icon: PhoneIcon,
       title: "Telefon",
       info: "+90 232 264 40 03",
-      href: "tel:+905324328695",
+      href: "tel:+902322644003",
       color: "text-green-500",
     },
     {

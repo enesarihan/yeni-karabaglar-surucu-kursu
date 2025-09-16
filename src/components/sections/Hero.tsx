@@ -259,7 +259,7 @@ const Hero = () => {
                 </Link>
 
                 <Link
-                  href="tel:+905324328695"
+                  href="tel:+902322644003"
                   className="group min-w-[265px] border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none"
                 >
                   <span className="flex items-center justify-center space-x-3">
