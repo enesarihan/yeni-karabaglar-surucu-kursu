@@ -63,7 +63,7 @@ const ExternalLinks = () => {
     },
     {
       title: "Ehliyet Ceza Puanı Sorgulama",
-      href: "https://www.turkiye.gov.tr/emniyet-surucu-belgesi-ceza-puani-sorgulama",
+      href: "https://www.turkiye.gov.tr/emniyet-surucu-belgesi-ve-sahislara-yazilan-ceza-sorgulama",
       desc: "Ceza puanınızı e‑Devlet üzerinden hızlıca öğrenin.",
       icon: Gauge,
       color: "from-red-500 to-amber-600",

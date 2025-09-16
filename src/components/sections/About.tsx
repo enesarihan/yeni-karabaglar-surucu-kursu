@@ -68,8 +68,7 @@ const About = () => {
     {
       icon: TruckIcon,
       title: "Modern Eğitim Araçları",
-      description:
-        "B sınıfı ve A2 sınıfı ehliyet için güncel ve bakımlı araçlarla güvenli eğitim.",
+      description: "Ehliyet için güncel ve bakımlı araçlarla güvenli eğitim.",
       color: "text-indigo-500",
     },
     {
@@ -128,10 +127,9 @@ const About = () => {
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
             Karabağlar'da 30 yılı aşkın süredir direksiyon başındayız. Bu
-            süreçte 15.000'den fazla kursiyerimizi B ve A2 sınıfı ehliyet
-            hayallerine kavuşturduk. İzmir'deki en yüksek memnuniyet oranımız,
-            tecrübemizin ve her öğrencimize gösterdiğimiz özel ilginin en net
-            kanıtıdır.
+            süreçte 15.000'den fazla kursiyerimizi ehliyet hayallerine
+            kavuşturduk. İzmir'deki en yüksek memnuniyet oranımız, tecrübemizin
+            ve her öğrencimize gösterdiğimiz özel ilginin en net kanıtıdır.
           </p>
         </motion.div>
 
