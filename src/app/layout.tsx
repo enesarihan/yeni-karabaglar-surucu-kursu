@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   robots:
     "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   alternates: {
-    canonical: "https://yenikarabaglar.com",
+    canonical: "https://www.karabaglarsurucukursu.com",
   },
   openGraph: {
     title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu 2025",
@@ -29,11 +29,11 @@ export const metadata: Metadata = {
       "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet için sürücü kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler.",
     type: "website",
     locale: "tr_TR",
-    url: "https://yenikarabaglar.com",
+    url: "https://www.karabaglarsurucukursu.com",
     siteName: "Yeni Karabağlar Sürücü Kursu",
     images: [
       {
-        url: "https://yenikarabaglar.com/logo.png",
+        url: "https://www.karabaglarsurucukursu.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Yeni Karabağlar Sürücü Kursu Logo",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu",
     description:
       "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi.",
-    images: ["https://yenikarabaglar.com/logo.png"],
+    images: ["https://www.karabaglarsurucukursu.com/logo.png"],
   },
   verification: {
     google: "your-google-verification-code",

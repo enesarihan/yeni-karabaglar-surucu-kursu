@@ -10,9 +10,9 @@ const StructuredData = () => {
     alternateName: "İzmir Karabağlar Sürücü Kursu",
     description:
       "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
-    url: "https://yenikarabaglar.com",
-    logo: "https://yenikarabaglar.com/logo.png",
-    image: "https://yenikarabaglar.com/logo.png",
+    url: "https://www.karabaglarsurucukursu.com",
+    logo: "https://www.karabaglarsurucukursu.com/logo.png",
+    image: "https://www.karabaglarsurucukursu.com/logo.png",
     telephone: "+902322644003",
     email: "info@yenikarabaglar.com",
     address: {
@@ -93,11 +93,11 @@ const StructuredData = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://yenikarabaglar.com/#organization",
+    "@id": "https://www.karabaglarsurucukursu.com/#organization",
     name: "Yeni Karabağlar Sürücü Kursu",
     description:
       "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
-    url: "https://yenikarabaglar.com",
+    url: "https://www.karabaglarsurucukursu.com",
     telephone: "+902322644003",
     email: "info@yenikarabaglar.com",
     address: {
@@ -165,19 +165,19 @@ const StructuredData = () => {
         "@type": "ListItem",
         position: 1,
         name: "Ana Sayfa",
-        item: "https://yenikarabaglar.com",
+        item: "https://www.karabaglarsurucukursu.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Hizmetlerimiz",
-        item: "https://yenikarabaglar.com/#services",
+        item: "https://www.karabaglarsurucukursu.com/#services",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Blog",
-        item: "https://yenikarabaglar.com/blog",
+        item: "https://www.karabaglarsurucukursu.com/blog",
       },
     ],
   };

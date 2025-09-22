@@ -6,7 +6,7 @@ Disallow: /api/
 Disallow: /_next/
 
 # Sitemap
-Sitemap: https://yenikarabaglar.com/sitemap.xml
+Sitemap: https://www.karabaglarsurucukursu.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

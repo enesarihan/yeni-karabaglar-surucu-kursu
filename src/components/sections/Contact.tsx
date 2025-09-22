@@ -159,7 +159,7 @@ const Contact = () => {
             name: "Yeni Karabağlar Sürücü Kursu",
             description:
               "Karabağlar'da güvenilir sürücü kursu. Deneyimli eğitmenler, uygun fiyatlar ve başarı garantisi ile ehliyet alın.",
-            url: "https://yenikarabaglarsurucu.com",
+            url: "https://www.karabaglarsurucukursu.com",
             telephone: "+902322644003",
             address: {
               "@type": "PostalAddress",
