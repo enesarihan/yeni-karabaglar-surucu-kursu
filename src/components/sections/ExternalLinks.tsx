@@ -26,7 +26,7 @@ const ExternalLinks = () => {
 
   const links: LinkItem[] = [
     {
-      title: "E‑Sınav Yap",
+      title: "E‑Sınav Platformu",
       href: "https://www.esinavyap.com/esinav",
       desc: "Ehliyet e‑Sınav giriş ve başlatma: MEB e‑Sınav sistemiyle online teorik sınavınıza hemen başlayın veya kaldığınız yerden devam edin — güvenli ve hızlı erişim.",
       icon: GraduationCap,
