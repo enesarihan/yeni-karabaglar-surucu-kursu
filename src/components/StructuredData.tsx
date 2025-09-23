@@ -11,7 +11,12 @@ const StructuredData = () => {
     description:
       "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet eğitimi veren MTSK lisanslı sürücü kursu.",
     url: "https://www.karabaglarsurucukursu.com",
-    logo: "https://www.karabaglarsurucukursu.com/logo.png",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.karabaglarsurucukursu.com/logo.png",
+      width: 512,
+      height: 512,
+    },
     image: "https://www.karabaglarsurucukursu.com/logo.png",
     telephone: "+902322644003",
     email: "info@yenikarabaglar.com",
@@ -182,6 +187,28 @@ const StructuredData = () => {
     ],
   };
 
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: "https://www.karabaglarsurucukursu.com",
+    name: "Yeni Karabağlar Sürücü Kursu",
+    publisher: {
+      "@type": "Organization",
+      name: "Yeni Karabağlar Sürücü Kursu",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.karabaglarsurucukursu.com/logo.png",
+        width: 512,
+        height: 512,
+      },
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.karabaglarsurucukursu.com/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <>
       <Script
@@ -203,6 +230,13 @@ const StructuredData = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webSiteSchema),
         }}
       />
     </>

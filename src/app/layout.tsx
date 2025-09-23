@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.karabaglarsurucukursu.com"),
   title: "Yeni Karabağlar Sürücü Kursu | İzmir'de Yüksek Puanlı Ehliyet Kursu",
   description:
     "İzmir Karabağlar'da 30+ yıllık deneyimle yüksek puanlı ehliyet için sürücü kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler. Hemen kayıt ol!",
@@ -47,10 +48,19 @@ export const metadata: Metadata = {
       "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi.",
     images: ["https://www.karabaglarsurucukursu.com/logo.png"],
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   category: "education",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/logo.png"],
+  },
 };
 
 export const viewport = {
@@ -67,6 +77,11 @@ export default function RootLayout({
     <html lang="tr">
       <head>
         <StructuredData />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-6D48RG9C8H"
