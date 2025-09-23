@@ -13,7 +13,6 @@ import DocumentsRoadmap from "@/components/sections/DocumentsRoadmap";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      S
       <Navbar />
       <main>
         <Hero />
