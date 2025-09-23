@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu 2025",
+  title: "Yeni Karabağlar Sürücü Kursu | İzmir'de Yüksek Puanlı Ehliyet Kursu",
   description:
-    "İzmir Karabağlar'da 30+ yıllık deneyimle B sınıfı ehliyet, A2 sınıfı ehliyet kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler. Hemen kayıt ol!",
+    "İzmir Karabağlar'da 30+ yıllık deneyimle yüksek puanlı ehliyet için sürücü kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler. Hemen kayıt ol!",
   keywords:
     "izmir sürücü kursu, karabağlar sürücü kursu, ehliyet kursu izmir, b sınıfı ehliyet, a2 sınıfı ehliyet, direksiyon dersleri, sürücü kursu karabağlar, ehliyet sınavı, mtsk, sürücü belgesi, motorlu taşıt sürücü kursu, izmir ehliyet, karabağlar ehliyet, sürüş eğitimi, ehliyet fiyatları, ehliyet süreçleri, ehliyet sınıfları, sürücü kursu fiyatları, ehliyet randevu, e-sınav, sağlık raporu, biyometrik fotoğraf, adli sicil kaydı",
   authors: [{ name: "Yeni Karabağlar Sürücü Kursu" }],
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://www.karabaglarsurucukursu.com",
   },
   openGraph: {
-    title: "Yeni Karabağlar Sürücü Kursu | İzmir'de En İyi Ehliyet Kursu 2025",
+    title: "Yeni Karabağlar Sürücü Kursu | İzmir'de Yüksek Puanlı Ehliyet Kursu",
     description:
-      "İzmir Karabağlar'da 30+ yıllık deneyimle ehliyet için sürücü kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler.",
+      "İzmir Karabağlar'da 30+ yıllık deneyimle yüksek puanlı ehliyet için sürücü kursu. Uygun fiyat, başarı garantisi, deneyimli eğitmenler.",
     type: "website",
     locale: "tr_TR",
     url: "https://www.karabaglarsurucukursu.com",
