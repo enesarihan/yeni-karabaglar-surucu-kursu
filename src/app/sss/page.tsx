@@ -99,6 +99,8 @@ export default function FAQPage() {
                 <button
                   onClick={() => toggle(index)}
                   className="w-full flex items-center justify-between p-5 text-left"
+                  aria-label={isOpen ? `${item.q} sorusunu kapat` : `${item.q} sorusunu aç`}
+                  aria-expanded={isOpen}
                 >
                   <span className="text-primary font-semibold">{item.q}</span>
                   <ChevronDown

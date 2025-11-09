@@ -209,12 +209,14 @@ const Reviews = () => {
             <button
               onClick={prevReview}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+              aria-label="Önceki yorum"
             >
               ←
             </button>
             <button
               onClick={nextReview}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+              aria-label="Sonraki yorum"
             >
               →
             </button>
@@ -232,6 +234,7 @@ const Reviews = () => {
                   ? 'bg-primary'
                   : 'bg-primary/30 hover:bg-primary/50'
               }`}
+              aria-label={`${index + 1}. yoruma git`}
             />
           ))}
         </div>

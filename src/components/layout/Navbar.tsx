@@ -341,6 +341,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 rounded-xl text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-colors duration-300"
+            aria-label={isMobileMenuOpen ? "Mobil menüyü kapat" : "Mobil menüyü aç"}
           >
             <motion.div
               animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}

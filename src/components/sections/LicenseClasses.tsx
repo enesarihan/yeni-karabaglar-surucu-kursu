@@ -325,6 +325,7 @@ const LicenseClasses = () => {
                     ? `${license.color} text-white border-transparent shadow-lg`
                     : "bg-white text-foreground border-gray-300 hover:border-primary/50"
                 }`}
+                aria-label={`${license.class} sınıfı ehliyet seç: ${license.name}`}
               >
                 <div className="mb-2 flex justify-center">
                   <license.icon className="w-6 h-6" />

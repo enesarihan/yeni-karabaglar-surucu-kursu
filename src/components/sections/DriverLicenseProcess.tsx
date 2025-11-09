@@ -368,6 +368,8 @@ const DriverLicenseProcess = () => {
                   ? "bg-primary text-white shadow-lg"
                   : "bg-white text-foreground hover:bg-primary/10 shadow-md"
               }`}
+              aria-label={`${tab.label} sekmesini aç`}
+              aria-pressed={activeTab === tab.id}
             >
               <tab.icon className="w-5 h-5" />
               <span>{tab.label}</span>

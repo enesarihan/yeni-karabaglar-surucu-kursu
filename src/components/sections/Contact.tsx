@@ -358,6 +358,7 @@ const Contact = () => {
                           ? "bg-green-600 hover:bg-green-600/90"
                           : "bg-primary hover:bg-primary/90"
                       }`}
+                      aria-label="İletişim formunu gönder"
                     >
                       {isSubmitting ? (
                         "Gönderiliyor..."

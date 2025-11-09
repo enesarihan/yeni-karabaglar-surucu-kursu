@@ -440,6 +440,7 @@ const Hero = () => {
                     <motion.button
                       onClick={prevSlide}
                       className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl hover:scale-105 transition-transform duration-200"
+                      aria-label="Önceki slayt"
                     >
                       <ChevronLeftIcon className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-200" />
                     </motion.button>
@@ -447,6 +448,7 @@ const Hero = () => {
                     <motion.button
                       onClick={nextSlide}
                       className="w-16 h-16 bg-gradient-to-l from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl hover:scale-105 transition-transform duration-200"
+                      aria-label="Sonraki slayt"
                     >
                       <ChevronRightIcon className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-200" />
                     </motion.button>
@@ -463,6 +465,7 @@ const Hero = () => {
                             ? "w-12 bg-primary/30 shadow-lg"
                             : "w-8 bg-primary/20 hover:bg-primary/30"
                         }`}
+                        aria-label={`Slayt ${index + 1}'e git`}
                       >
                         {/* Background gradient */}
                         <div

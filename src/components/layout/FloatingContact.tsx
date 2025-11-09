@@ -84,6 +84,7 @@ const FloatingContact = () => {
         }`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
+        aria-label={isOpen ? "İletişim seçeneklerini kapat" : "İletişim seçeneklerini aç"}
       >
         {isOpen ? (
           <PlusIcon className="w-6 h-6" />
