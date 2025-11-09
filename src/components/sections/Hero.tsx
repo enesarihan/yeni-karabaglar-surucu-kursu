@@ -257,7 +257,6 @@ const Hero = () => {
                     transition={{ duration: 0.5 }}
                   />
                 </Link>
-
                 <Link
                   href="tel:+902322644003"
                   className="group min-w-[265px] border-2 border-slate-300 text-slate-700 px-12 py-5 rounded-none font-light text-lg tracking-wider uppercase hover:border-teal-400 hover:bg-teal-50 transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none"
@@ -542,6 +541,7 @@ const Hero = () => {
                 <div className="absolute inset-0 md:flex hidden items-center justify-between px-4 pointer-events-none z-10">
                   <motion.button
                     onClick={prevSlide}
+                    aria-label="Önceki slayt"
                     className="w-16 h-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
                     whileHover={{
                       scale: 1.1,
@@ -560,6 +560,7 @@ const Hero = () => {
 
                   <motion.button
                     onClick={nextSlide}
+                    aria-label="Sonraki slayt"
                     className="w-16 h-16 bg-gradient-to-l from-white/20 to-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center pointer-events-auto group border border-white/40 shadow-2xl"
                     whileHover={{
                       scale: 1.1,
@@ -583,6 +584,8 @@ const Hero = () => {
                     <motion.button
                       key={index}
                       onClick={() => goToSlide(index)}
+                      aria-label={`Slayt ${index + 1}'e git`}
+                      aria-current={index === currentSlide ? "true" : "false"}
                       className={`relative h-1.5 md:h-2 transition-all duration-500 backdrop-blur-sm overflow-hidden ${
                         index === currentSlide
                           ? "w-12 bg-primary/30 shadow-2xl"

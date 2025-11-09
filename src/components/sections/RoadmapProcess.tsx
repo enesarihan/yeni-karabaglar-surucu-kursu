@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   FileText,
   UserCheck,
@@ -10,181 +10,177 @@ import {
   Clock,
   AlertCircle,
   ChevronRight,
-  Calendar,
-  Users
-} from 'lucide-react';
-import Link from 'next/link';
+  Users,
+} from "lucide-react";
+import Link from "next/link";
 
 const RoadmapProcess = () => {
-
   const roadmapSteps = [
     {
       id: 1,
-      title: 'Belge Hazırlığı',
-      subtitle: 'Gerekli Evrakları Toplayın',
+      title: "Belge Hazırlığı",
+      subtitle: "Gerekli Evrakları Toplayın",
       icon: FileText,
-     
-      color: 'from-blue-500 to-blue-600',
-      description: 'Ehliyet başvurusu için gerekli tüm belgeleri hazırlayın.',
+
+      color: "from-blue-500 to-blue-600",
+      description: "Ehliyet başvurusu için gerekli tüm belgeleri hazırlayın.",
       details: [
-        'T.C. Kimlik Kartı (Asıl ve fotokopi)',
-        'İkametgah belgesi (6 aydan yeni)',
-        'Mezuniyet belgesi',
-        'Biyometrik fotoğraf (3 adet)',
-        'Adli sicil kaydı'
+        "T.C. Kimlik Kartı (Asıl ve fotokopi)",
+        "İkametgah belgesi (6 aydan yeni)",
+        "Mezuniyet belgesi",
+        "Biyometrik fotoğraf (3 adet)",
+        "Adli sicil kaydı",
       ],
       tips: [
-        'Belgelerin hepsinin güncel olduğundan emin olun',
-        'Fotokopiler net ve okunabilir olmalı',
-        'Biyometrik fotoğraflar son 6 ay içinde çekilmiş olmalı'
-      ]
+        "Belgelerin hepsinin güncel olduğundan emin olun",
+        "Fotokopiler net ve okunabilir olmalı",
+        "Biyometrik fotoğraflar son 6 ay içinde çekilmiş olmalı",
+      ],
     },
     {
       id: 2,
-      title: 'Sağlık Kontrolleri',
-      subtitle: 'Sağlık ve Psikoteknik Raporu',
+      title: "Sağlık Kontrolleri",
+      subtitle: "Sağlık ve Psikoteknik Raporu",
       icon: UserCheck,
-     
-      color: 'from-green-500 to-green-600',
-      description: 'Sürücü belgesi için gerekli sağlık muayenelerini yaptırın.',
-      details: [
-        'Yetkili hastaneden sağlık raporu(sürücü olur)',
 
-      ],
+      color: "from-green-500 to-green-600",
+      description: "Sürücü belgesi için gerekli sağlık muayenelerini yaptırın.",
+      details: ["Yetkili hastaneden sağlık raporu(sürücü olur)"],
       tips: [
-        'Randevu alarak gidip bekleme süresini azaltın',
-        'Gözlük kullanıyorsanız yanınızda götürün',
-        'Sağlık raporları 6 ay geçerlidir'
-      ]
+        "Randevu alarak gidip bekleme süresini azaltın",
+        "Gözlük kullanıyorsanız yanınızda götürün",
+        "Sağlık raporları 6 ay geçerlidir",
+      ],
     },
     {
       id: 3,
-      title: 'Kursa Kayıt',
-      subtitle: 'Sürücü Kursuna Başvuru',
+      title: "Kursa Kayıt",
+      subtitle: "Sürücü Kursuna Başvuru",
       icon: BookOpen,
-   
-      color: 'from-purple-500 to-purple-600',
-      description: 'Seçtiğiniz sürücü kursuna kayıt olun ve eğitime başlayın.',
+
+      color: "from-purple-500 to-purple-600",
+      description: "Seçtiğiniz sürücü kursuna kayıt olun ve eğitime başlayın.",
       details: [
-        'Kurs seçimi ve kayıt işlemleri',
-        'Ders programı belirleme',
-        'Teorik eğitim başlangıcı',
-        'Eğitim materyallerinin teslim alınması',
-        'Kurs ücretinin ödenmesi'
+        "Kurs seçimi ve kayıt işlemleri",
+        "Ders programı belirleme",
+        "Teorik eğitim başlangıcı",
+        "Eğitim materyallerinin teslim alınması",
+        "Kurs ücretinin ödenmesi",
       ],
       tips: [
-        'Kursu seçerken başarı oranlarını araştırın',
-        'Ders saatlerinin size uygun olduğundan emin olun',
-        'Kurs ücretini peşin ödeyerek indirim alabilirsiniz'
-      ]
+        "Kursu seçerken başarı oranlarını araştırın",
+        "Ders saatlerinin size uygun olduğundan emin olun",
+        "Kurs ücretini peşin ödeyerek indirim alabilirsiniz",
+      ],
     },
     {
       id: 4,
-      title: 'Teorik Eğitim',
-      subtitle: 'Trafik Kuralları Dersleri',
+      title: "Teorik Eğitim",
+      subtitle: "Trafik Kuralları Dersleri",
       icon: BookOpen,
-     
-      color: 'from-orange-500 to-orange-600',
-      description: 'Trafik kuralları ve işaretleri hakkında teorik eğitim alın.',
+
+      color: "from-orange-500 to-orange-600",
+      description:
+        "Trafik kuralları ve işaretleri hakkında teorik eğitim alın.",
       details: [
-        '30 saat teorik ders (B sınıfı için)',
-        'Trafik kuralları ve işaretleri',
-        'İlk yardım eğitimi',
-        'Motor ve araç bilgisi',
-        'Çevre bilinci ve yakıt tasarrufu',
-        'Deneme sınavları'
+        "30 saat teorik ders (B sınıfı için)",
+        "Trafik kuralları ve işaretleri",
+        "İlk yardım eğitimi",
+        "Motor ve araç bilgisi",
+        "Çevre bilinci ve yakıt tasarrufu",
+        "Deneme sınavları",
       ],
       tips: [
-        'Derslere düzenli katılım sağlayın',
-        'Ders notlarınızı düzenli olarak tekrar edin',
-        'Deneme sınavlarını ciddiye alın'
-      ]
+        "Derslere düzenli katılım sağlayın",
+        "Ders notlarınızı düzenli olarak tekrar edin",
+        "Deneme sınavlarını ciddiye alın",
+      ],
     },
     {
       id: 5,
-      title: 'Teorik Sınav',
-      subtitle: 'Bilgisayarlı Test Sınavı',
+      title: "Teorik Sınav",
+      subtitle: "Bilgisayarlı Test Sınavı",
       icon: CheckCircle,
-     
-      color: 'from-red-500 to-red-600',
-      description: 'Emniyet Müdürlüğü\'nde teorik sınavınıza girin.',
+
+      color: "from-red-500 to-red-600",
+      description: "Emniyet Müdürlüğü'nde teorik sınavınıza girin.",
       details: [
-        '50 soruluk çoktan seçmeli test',
-        'En az 35 doğru cevap gerekli (%70)',
-        'Sınav süresi 45 dakika',
-        'Bilgisayar ortamında yapılır',
-        'Sonuç anında açıklanır'
+        "50 soruluk çoktan seçmeli test",
+        "En az 35 doğru cevap gerekli (%70)",
+        "Sınav süresi 45 dakika",
+        "Bilgisayar ortamında yapılır",
+        "Sonuç anında açıklanır",
       ],
       tips: [
-        'Sınavdan önce bol bol deneme testi çözün',
-        'Erken giderek stres yapmayın',
-        'Sorulari dikkatli okuyun, acele etmeyin'
-      ]
+        "Sınavdan önce bol bol deneme testi çözün",
+        "Erken giderek stres yapmayın",
+        "Sorulari dikkatli okuyun, acele etmeyin",
+      ],
     },
     {
       id: 6,
-      title: 'Pratik Eğitim',
-      subtitle: 'Direksiyon Dersleri',
+      title: "Pratik Eğitim",
+      subtitle: "Direksiyon Dersleri",
       icon: Car,
-     
-      color: 'from-teal-500 to-teal-600',
-      description: 'Eğitmenle birlikte araç kullanmayı öğrenin.',
+
+      color: "from-teal-500 to-teal-600",
+      description: "Eğitmenle birlikte araç kullanmayı öğrenin.",
       details: [
-        '12 saat pratik ders (B sınıfı için)',
-        'Araç kontrol ve kullanımı',
-        'Park etme teknikleri',
-        'Trafik içinde sürüş',
-        'Savunmalı sürüş teknikleri',
-        'Acil durumlar'
+        "12 saat pratik ders (B sınıfı için)",
+        "Araç kontrol ve kullanımı",
+        "Park etme teknikleri",
+        "Trafik içinde sürüş",
+        "Savunmalı sürüş teknikleri",
+        "Acil durumlar",
       ],
       tips: [
-        'Eğitmeninizin talimatlarını dikkatle dinleyin',
-        'Sabırlı olun, herkes farklı hızda öğrenir',
-        'Ek ders almaktan çekinmeyin'
-      ]
+        "Eğitmeninizin talimatlarını dikkatle dinleyin",
+        "Sabırlı olun, herkes farklı hızda öğrenir",
+        "Ek ders almaktan çekinmeyin",
+      ],
     },
     {
       id: 7,
-      title: 'Pratik Sınav',
-      subtitle: 'Direksiyon Sınavı',
+      title: "Pratik Sınav",
+      subtitle: "Direksiyon Sınavı",
       icon: Car,
-      
-      color: 'from-indigo-500 to-indigo-600',
-      description: 'Sınav memuru eşliğinde direksiyon sınavınıza girin.',
+
+      color: "from-indigo-500 to-indigo-600",
+      description: "Sınav memuru eşliğinde direksiyon sınavınıza girin.",
       details: [
-        'Araç kontrol bilgisi sınavı',
-        'Kapalı alan manevra sınavı',
-        'Trafik içi sürüş sınavı',
-        'Park etme ve geri gitme',
-        'Genel sürüş değerlendirmesi'
+        "Araç kontrol bilgisi sınavı",
+        "Kapalı alan manevra sınavı",
+        "Trafik içi sürüş sınavı",
+        "Park etme ve geri gitme",
+        "Genel sürüş değerlendirmesi",
       ],
       tips: [
-        'Sakin kalın ve kendinize güvenin',
-        'Trafik kurallarına kesinlikle uyun',
-        'Sınav aracına önceden alışmaya çalışın'
-      ]
+        "Sakin kalın ve kendinize güvenin",
+        "Trafik kurallarına kesinlikle uyun",
+        "Sınav aracına önceden alışmaya çalışın",
+      ],
     },
     {
       id: 8,
-      title: 'Ehliyet Teslimi',
-      subtitle: 'Sürücü Belgenizi Alın',
+      title: "Ehliyet Teslimi",
+      subtitle: "Sürücü Belgenizi Alın",
       icon: CheckCircle,
-     
-      color: 'from-green-600 to-green-700',
-      description: 'Başarılı olduktan sonra ehliyetinizi teslim alın.',
+
+      color: "from-green-600 to-green-700",
+      description: "Başarılı olduktan sonra ehliyetinizi teslim alın.",
       details: [
-        'Sınav sonucu açıklanması',
-        'Geçici ehliyet belgesi',
-        'Asıl ehliyet için başvuru',
-        'Ehliyet ücretinin ödenmesi',
-        'Ehliyet teslim alma'
+        "Sınav sonucu açıklanması",
+        "Geçici ehliyet belgesi",
+        "Asıl ehliyet için başvuru",
+        "Ehliyet ücretinin ödenmesi",
+        "Ehliyet teslim alma",
       ],
       tips: [
-        'Geçici belge ile araç kullanabilirsiniz',
-        'Asıl ehliyet 1 hafta içinde hazır olur',
-        'Ehliyet ücretini peşin ödeyebilirsiniz'
-      ]
-    }
+        "Geçici belge ile araç kullanabilirsiniz",
+        "Asıl ehliyet 1 hafta içinde hazır olur",
+        "Ehliyet ücretini peşin ödeyebilirsiniz",
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -192,14 +188,14 @@ const RoadmapProcess = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -216,8 +212,9 @@ const RoadmapProcess = () => {
             Ehliyet Alma Süreci
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ehliyet almak için izlemeniz gereken adımları bir yol haritası şeklinde hazırladık. 
-            Her adımda ne yapmanız gerektiğini detaylıca öğrenin.
+            Ehliyet almak için izlemeniz gereken adımları bir yol haritası
+            şeklinde hazırladık. Her adımda ne yapmanız gerektiğini detaylıca
+            öğrenin.
           </p>
         </motion.div>
 
@@ -238,12 +235,14 @@ const RoadmapProcess = () => {
                 key={step.id}
                 variants={itemVariants}
                 className={`relative flex flex-col md:flex-row items-start md:items-center ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
                 {/* Step Number & Icon */}
                 <div className="flex-shrink-0 relative">
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center text-white shadow-lg`}>
+                  <div
+                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center text-white shadow-lg`}
+                  >
                     <step.icon className="w-8 h-8" />
                   </div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white px-2 py-1 rounded-full text-xs font-bold text-gray-600 border border-gray-200">
@@ -252,9 +251,11 @@ const RoadmapProcess = () => {
                 </div>
 
                 {/* Content */}
-                <div className={`flex-1 ml-8 md:ml-0 ${
-                  index % 2 === 0 ? 'md:ml-12' : 'md:mr-12'
-                }`}>
+                <div
+                  className={`flex-1 ml-8 md:ml-0 ${
+                    index % 2 === 0 ? "md:ml-12" : "md:mr-12"
+                  }`}
+                >
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300"
@@ -271,7 +272,6 @@ const RoadmapProcess = () => {
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-500">
                         <Clock className="w-4 h-4" />
-                       
                       </div>
                     </div>
 
@@ -288,9 +288,14 @@ const RoadmapProcess = () => {
                         </h4>
                         <ul className="space-y-2">
                           {step.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start space-x-2">
+                            <li
+                              key={idx}
+                              className="flex items-start space-x-2"
+                            >
                               <ChevronRight className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm text-gray-600">{detail}</span>
+                              <span className="text-sm text-gray-600">
+                                {detail}
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -302,9 +307,14 @@ const RoadmapProcess = () => {
                         </h4>
                         <ul className="space-y-2">
                           {step.tips.map((tip, idx) => (
-                            <li key={idx} className="flex items-start space-x-2">
+                            <li
+                              key={idx}
+                              className="flex items-start space-x-2"
+                            >
                               <ChevronRight className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm text-gray-600">{tip}</span>
+                              <span className="text-sm text-gray-600">
+                                {tip}
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -329,8 +339,8 @@ const RoadmapProcess = () => {
               Ehliyet Alma Yolculuğunuza Başlayın!
             </h3>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Yeni Karabağlar Sürücü Kursu ile güvenli ve hızlı bir şekilde ehliyetinizi alın. 
-              Deneyimli eğitmenlerimiz her adımda yanınızda.
+              Yeni Karabağlar Sürücü Kursu ile güvenli ve hızlı bir şekilde
+              ehliyetinizi alın. Deneyimli eğitmenlerimiz her adımda yanınızda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -340,18 +350,9 @@ const RoadmapProcess = () => {
                 <Users className="w-5 h-5 mr-2" />
                 Hemen Kayıt Ol
               </Link>
-              <Link
-                href="tel:02322644003"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-teal-600 transition-colors duration-300"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Randevu Al
-              </Link>
             </div>
           </div>
         </motion.div>
-
-       
       </div>
     </section>
   );

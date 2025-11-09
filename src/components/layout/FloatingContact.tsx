@@ -77,6 +77,8 @@ const FloatingContact = () => {
       {/* Main Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "İletişim menüsünü kapat" : "İletişim menüsünü aç"}
+        aria-expanded={isOpen}
         className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 ${
           isOpen
             ? "bg-red-500 hover:bg-red-600 rotate-45"
